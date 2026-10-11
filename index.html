@@ -108,6 +108,12 @@ section{padding:88px 0}
 .medio-precio{font-family:var(--ff-d);font-size:38px;line-height:1;white-space:nowrap}
 .partido{background:var(--tinta);color:#fff;padding:14px 18px;margin:0 0 32px;font-size:16px;letter-spacing:.02em}
 .partido b{margin-right:6px}
+.navidad{margin-top:40px;padding:28px 28px 30px;border:1.5px solid var(--tinta);background:var(--crema)}
+.navidad h3{margin:0 0 12px}
+.navidad .eyebrow{margin-bottom:12px}
+.navidad p{margin:0 0 14px}
+.nav-nota{font-size:15px;color:var(--gris);font-style:italic}
+.navidad .btn{margin-top:6px}
 
 /* carta */
 .tira{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:0 0 56px}
@@ -315,6 +321,13 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <p data-i18n="cel_p1">Montamos mesa larga para hasta dieciséis personas, con menús cerrados para que nadie se pelee con la cuenta. Si llegáis tarde o por turnos, no pasa nada: estamos acostumbrados.</p>
       <p data-i18n="cel_p2">Cuéntanos cuántos sois y qué día, y te mandamos las opciones por WhatsApp.</p>
       <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20celebraci%C3%B3n%20en%20grupo" target="_blank" rel="noopener" data-i18n="cel_btn">Pedir menú para grupos</a>
+      <div class="navidad" id="navidad">
+        <p class="eyebrow" data-i18n="nav_eyebrow">Navidad · empresas</p>
+        <h3 data-i18n="nav_h3">Comidas y cenas de empresa</h3>
+        <p data-i18n="nav_p">Menú cerrado de Navidad para grupos de empresa: <b>20 € por persona</b>, mínimo 4 personas. Reserva con antelación; las fechas de diciembre vuelan.</p>
+        <p class="nav-nota" data-i18n="nav_nota">El menú de este año lo publicamos aquí en cuanto esté listo.</p>
+        <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20una%20comida%20de%20empresa%20de%20Navidad%20(men%C3%BA%20cerrado%2C%2020%20%E2%82%AC)" target="_blank" rel="noopener" data-i18n="nav_btn">Reservar cena de empresa</a>
+      </div>
     </div>
     <figure><img src="img/wa_pinchos_evento.jpg" style="aspect-ratio:1" alt="Bandejas de pinchos de tomate cherry y mozzarella preparadas para una celebración" loading="lazy"></figure>
   </div>
@@ -485,7 +498,7 @@ ca: {
  carta_alerg:"Si tens alguna al·lèrgia o intolerància, digues-ho a qui t'atengui: la carta física porta les icones d'al·lèrgens de cada plat i a cuina t'ho confirmen.",
  cel_eyebrow:"Celebracions", cel_h2:"Aniversaris, dinars en família i reunions",
  cel_p1:"Muntem taula llarga per a fins a setze persones, amb menús tancats perquè ningú es baralli amb el compte. Si arribeu tard o per torns, no passa res: hi estem acostumats.",
- cel_p2:"Digues-nos quants sou i quin dia, i t'enviem les opcions per WhatsApp.", cel_btn:"Demanar menú per a grups",
+ cel_p2:"Digues-nos quants sou i quin dia, i t'enviem les opcions per WhatsApp.", cel_btn:"Demanar menú per a grups", nav_eyebrow:"Nadal · empreses", nav_h3:"Dinars i sopars d'empresa", nav_p:"Menú tancat de Nadal per a grups d'empresa: <b>20 € per persona</b>, mínim 4 persones. Reserva amb antelació; les dates de desembre volen.", nav_nota:"El menú d'enguany el publicarem aquí quan estigui llest.", nav_btn:"Reservar sopar d'empresa",
  op_eyebrow:"Opinions", op_h2:"El que diu la gent", op_n:"350 ressenyes a Google", op_btn:"Deixa'ns la teva ressenya",
  op_q1:"Hem estat 16 persones celebrant tres aniversaris i no hem pogut sortir més satisfets. Primer dia que hi anàvem i el tracte ha estat com si fóssim clients de tota la vida.",
  op_q2:"El cachopo estava massa bo. Recomanadíssim. Excel·lent atenció i bon servei.",
@@ -524,7 +537,7 @@ en: {
  carta_alerg:"If you have any allergy or intolerance, tell your server: the printed menu shows the allergen icons for every dish and the kitchen will confirm.",
  cel_eyebrow:"Celebrations", cel_h2:"Birthdays, family lunches and get-togethers",
  cel_p1:"We set up a long table for up to sixteen people, with fixed menus so nobody fights over the bill. If you arrive late or in shifts, no problem: we're used to it.",
- cel_p2:"Tell us how many you are and which day, and we'll send you the options on WhatsApp.", cel_btn:"Ask for a group menu",
+ cel_p2:"Tell us how many you are and which day, and we'll send you the options on WhatsApp.", cel_btn:"Ask for a group menu", nav_eyebrow:"Christmas · companies", nav_h3:"Office Christmas lunches and dinners", nav_p:"Set Christmas menu for company groups: <b>€20 per person</b>, minimum 4 people. Book early; December dates go fast.", nav_nota:"This year's menu will be published here as soon as it's ready.", nav_btn:"Book a company dinner",
  op_eyebrow:"Reviews", op_h2:"What people say", op_n:"350 reviews on Google", op_btn:"Leave us a review",
  op_q1:"We were 16 people celebrating three birthdays and couldn't have left happier. First time there and they treated us like lifelong regulars.",
  op_q2:"The cachopo was way too good. Highly recommended. Excellent attention and good service.",
@@ -563,7 +576,7 @@ fr: {
  carta_alerg:"En cas d'allergie ou d'intolérance, dites-le à votre serveur : la carte papier indique les allergènes de chaque plat et la cuisine vous le confirme.",
  cel_eyebrow:"Fêtes", cel_h2:"Anniversaires, repas de famille et réunions",
  cel_p1:"Nous dressons une grande table jusqu'à seize personnes, avec des menus fixes pour que personne ne se dispute l'addition. Si vous arrivez en retard ou par vagues, aucun souci : on a l'habitude.",
- cel_p2:"Dites-nous combien vous êtes et quel jour, et on vous envoie les options sur WhatsApp.", cel_btn:"Demander un menu groupe",
+ cel_p2:"Dites-nous combien vous êtes et quel jour, et on vous envoie les options sur WhatsApp.", cel_btn:"Demander un menu groupe", nav_eyebrow:"Noël · entreprises", nav_h3:"Déjeuners et dîners d'entreprise", nav_p:"Menu de Noël fixe pour les groupes d'entreprise : <b>20 € par personne</b>, minimum 4 personnes. Réservez tôt, les dates de décembre partent vite.", nav_nota:"Le menu de cette année sera publié ici dès qu'il sera prêt.", nav_btn:"Réserver un dîner d'entreprise",
  op_eyebrow:"Avis", op_h2:"Ce qu'en disent les gens", op_n:"350 avis sur Google", op_btn:"Laissez-nous un avis",
  op_q1:"Nous étions 16 à fêter trois anniversaires et nous n'aurions pas pu repartir plus satisfaits. Première visite et on nous a traités comme des habitués de toujours.",
  op_q2:"Le cachopo était bien trop bon. À recommander absolument. Excellent accueil et bon service.",
@@ -602,7 +615,7 @@ it: {
  carta_alerg:"Se hai allergie o intolleranze, dillo a chi ti serve: il menù cartaceo riporta le icone degli allergeni di ogni piatto e la cucina te lo conferma.",
  cel_eyebrow:"Feste", cel_h2:"Compleanni, pranzi in famiglia e riunioni",
  cel_p1:"Prepariamo un tavolo lungo fino a sedici persone, con menù fissi perché nessuno litighi per il conto. Se arrivate in ritardo o a turni, nessun problema: ci siamo abituati.",
- cel_p2:"Dicci quanti siete e che giorno, e ti mandiamo le opzioni su WhatsApp.", cel_btn:"Chiedi il menù per gruppi",
+ cel_p2:"Dicci quanti siete e che giorno, e ti mandiamo le opzioni su WhatsApp.", cel_btn:"Chiedi il menù per gruppi", nav_eyebrow:"Natale · aziende", nav_h3:"Pranzi e cene aziendali", nav_p:"Menù fisso di Natale per gruppi aziendali: <b>20 € a persona</b>, minimo 4 persone. Prenota per tempo: le date di dicembre finiscono presto.", nav_nota:"Il menù di quest'anno lo pubblichiamo qui appena pronto.", nav_btn:"Prenota una cena aziendale",
  op_eyebrow:"Recensioni", op_h2:"Cosa dice la gente", op_n:"350 recensioni su Google", op_btn:"Lasciaci una recensione",
  op_q1:"Eravamo in 16 a festeggiare tre compleanni e non potevamo uscire più soddisfatti. Prima volta lì e ci hanno trattato come clienti di sempre.",
  op_q2:"Il cachopo era troppo buono. Consigliatissimo. Ottima attenzione e buon servizio.",
@@ -641,7 +654,7 @@ pt: {
  carta_alerg:"Se tem alguma alergia ou intolerância, diga a quem o atende: a carta em papel tem os ícones dos alergénios de cada prato e a cozinha confirma.",
  cel_eyebrow:"Celebrações", cel_h2:"Aniversários, almoços em família e encontros",
  cel_p1:"Montamos uma mesa comprida até dezasseis pessoas, com menus fechados para ninguém discutir a conta. Se chegarem atrasados ou por turnos, não há problema: estamos habituados.",
- cel_p2:"Diga-nos quantos são e que dia, e enviamos as opções por WhatsApp.", cel_btn:"Pedir menu para grupos",
+ cel_p2:"Diga-nos quantos são e que dia, e enviamos as opções por WhatsApp.", cel_btn:"Pedir menu para grupos", nav_eyebrow:"Natal · empresas", nav_h3:"Almoços e jantares de empresa", nav_p:"Menu fechado de Natal para grupos de empresa: <b>20 € por pessoa</b>, mínimo 4 pessoas. Reserve com antecedência; as datas de dezembro esgotam depressa.", nav_nota:"O menu deste ano será publicado aqui assim que estiver pronto.", nav_btn:"Reservar jantar de empresa",
  op_eyebrow:"Opiniões", op_h2:"O que dizem as pessoas", op_n:"350 avaliações no Google", op_btn:"Deixe a sua avaliação",
  op_q1:"Fomos 16 pessoas a celebrar três aniversários e não podíamos ter saído mais satisfeitos. Primeira vez lá e trataram-nos como clientes de sempre.",
  op_q2:"O cachopo estava bom demais. Recomendadíssimo. Excelente atenção e bom serviço.",
@@ -680,7 +693,7 @@ de: {
  carta_alerg:"Bei Allergien oder Unverträglichkeiten sagen Sie es dem Service: Die gedruckte Karte zeigt die Allergen-Symbole jedes Gerichts, die Küche bestätigt es Ihnen.",
  cel_eyebrow:"Feiern", cel_h2:"Geburtstage, Familienessen und Treffen",
  cel_p1:"Wir decken eine lange Tafel für bis zu sechzehn Personen, mit festen Menüs, damit sich niemand um die Rechnung streitet. Wer zu spät oder in Etappen kommt: kein Problem, das kennen wir.",
- cel_p2:"Sagen Sie uns, wie viele Sie sind und an welchem Tag, und wir schicken Ihnen die Optionen per WhatsApp.", cel_btn:"Gruppenmenü anfragen",
+ cel_p2:"Sagen Sie uns, wie viele Sie sind und an welchem Tag, und wir schicken Ihnen die Optionen per WhatsApp.", cel_btn:"Gruppenmenü anfragen", nav_eyebrow:"Weihnachten · Firmen", nav_h3:"Weihnachtsessen für Firmen", nav_p:"Festes Weihnachtsmenü für Firmengruppen: <b>20 € pro Person</b>, mindestens 4 Personen. Früh reservieren, die Dezember-Termine sind schnell weg.", nav_nota:"Das diesjährige Menü veröffentlichen wir hier, sobald es feststeht.", nav_btn:"Firmenessen reservieren",
  op_eyebrow:"Bewertungen", op_h2:"Was die Leute sagen", op_n:"350 Bewertungen auf Google", op_btn:"Bewerten Sie uns",
  op_q1:"Wir waren 16 Personen und haben drei Geburtstage gefeiert – zufriedener hätten wir nicht gehen können. Erster Besuch, und wir wurden wie Stammgäste behandelt.",
  op_q2:"Der Cachopo war viel zu gut. Absolut empfehlenswert. Ausgezeichnete Betreuung und guter Service.",
