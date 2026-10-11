@@ -45,14 +45,18 @@ p{margin:0 0 18px}
 
 /* cabecera */
 .top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:76px}
 .marca{text-decoration:none;display:flex;flex-direction:column;line-height:1}
-.marca b{font-family:var(--ff-d);font-weight:400;font-size:22px;letter-spacing:.2em;text-transform:uppercase}
+.marca b{font-family:var(--ff-d);font-weight:400;font-size:22px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
 .marca small{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--gris);margin-top:5px}
-.nav{display:flex;gap:30px}
-.nav a{font-family:var(--ff-d);font-size:13px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--tinta-2);padding:6px 0;border-bottom:1px solid transparent}
+.nav{display:flex;gap:20px}
+.nav a{font-family:var(--ff-d);font-size:12px;letter-spacing:.2em;white-space:nowrap;text-transform:uppercase;text-decoration:none;color:var(--tinta-2);padding:6px 0;border-bottom:1px solid transparent}
 .nav a:hover{color:var(--tinta);border-color:var(--tinta)}
 .top .btn{padding:10px 20px 8px;font-size:13px}
+.lang{display:flex;gap:2px;margin-left:auto}
+.lang button{font-family:var(--ff-d);font-size:11px;letter-spacing:.18em;background:none;border:0;padding:6px 6px 4px;cursor:pointer;color:var(--gris);border-bottom:1px solid transparent}
+.lang button[aria-pressed="true"]{color:var(--tinta);border-color:var(--tinta)}
+.lang button:hover{color:var(--tinta)}
 
 /* portada */
 .hero{padding:72px 0 88px}
@@ -169,6 +173,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
   .top .wrap{height:auto;flex-wrap:wrap;padding-top:14px;padding-bottom:12px;gap:12px}
   .nav{order:3;width:100%;overflow-x:auto;gap:20px;padding-bottom:2px;-webkit-overflow-scrolling:touch}
   .nav a{white-space:nowrap;font-size:12px}
+  .lang{order:2;margin-left:0;flex-wrap:wrap}
   .eyebrow{letter-spacing:.22em;font-size:11px}
   .menu-card{padding:28px 22px}
   .menu-dia li{grid-template-columns:1fr;gap:2px}
@@ -184,23 +189,24 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
   <div class="wrap">
     <a class="marca" href="#" aria-label="Sal y Pimienta Metropolitano, inicio"><b>Sal y Pimienta</b><small>Metropolitano · Madrid</small></a>
     <nav class="nav" aria-label="Secciones">
-      <a href="#hoy">Hoy</a><a href="#familia">En familia</a><a href="#carta">Carta</a><a href="#celebraciones">Celebraciones</a><a href="#opiniones">Opiniones</a><a href="#instagram">Instagram</a><a href="#donde">Dónde</a>
+      <a href="#hoy" data-i18n="nav_hoy">Hoy</a><a href="#familia" data-i18n="nav_familia">En familia</a><a href="#carta" data-i18n="nav_carta">Carta</a><a href="#celebraciones" data-i18n="nav_celeb">Celebraciones</a><a href="#opiniones" data-i18n="nav_opin">Opiniones</a><a href="#instagram" data-i18n="nav_ig">Instagram</a><a href="#donde" data-i18n="nav_donde">Dónde</a>
     </nav>
-    <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">Reserva</a>
+    <div class="lang" id="lang" aria-label="Idioma"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="ca">CA</button><button type="button" data-lang="en">EN</button><button type="button" data-lang="fr">FR</button><button type="button" data-lang="it">IT</button><button type="button" data-lang="pt">PT</button><button type="button" data-lang="de">DE</button></div>
+    <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener" data-i18n="btn_reserva">Reserva</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Restaurante · San Blas-Canillejas · Madrid</p>
-      <h1>Cocina casera para toda la familia, a cinco minutos del metro Las Musas</h1>
+      <p class="eyebrow" data-i18n="hero_eyebrow">Restaurante · San Blas-Canillejas · Madrid</p>
+      <h1 data-i18n="hero_h1">Cocina casera para toda la familia, a cinco minutos del metro Las Musas</h1>
       <div class="regla" style="margin-bottom:28px"></div>
-      <p>En <b>Sal y Pimienta</b> cocinamos como en casa: menú del día entre semana, raciones para compartir, bocadillos de los de verdad y postres caseros. Un sitio de barrio donde venir con los niños, con los abuelos y sin prisa.</p>
-      <p>Terraza cubierta, local accesible y una mesa larga para cuando sois muchos. Reserva por WhatsApp y te guardamos sitio.</p>
+      <p data-i18n="hero_p1">En <b>Sal y Pimienta</b> cocinamos como en casa: menú del día entre semana, raciones para compartir, bocadillos de los de verdad y postres caseros. Un sitio de barrio donde venir con los niños, con los abuelos y sin prisa.</p>
+      <p data-i18n="hero_p2">Terraza cubierta, local accesible y una mesa larga para cuando sois muchos. Reserva por WhatsApp y te guardamos sitio.</p>
       <div class="cta">
-        <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">Reserva</a>
-        <a class="link" href="#carta">Ver la carta</a>
+        <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener" data-i18n="btn_reserva">Reserva</a>
+        <a class="link" href="#carta" data-i18n="hero_carta">Ver la carta</a>
       </div>
     </div>
     <figure class="video">
@@ -208,7 +214,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
         <source src="video/comida.mp4" type="video/mp4">
         <img src="video/comida_poster.jpg" alt="Hamburguesa casera de Sal y Pimienta">
       </video>
-      <figcaption>Nuestra cocina</figcaption>
+      <figcaption data-i18n="video_cap">Nuestra cocina</figcaption>
     </figure>
   </div>
 </section>
@@ -216,20 +222,20 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
 <section class="crema" id="hoy">
   <div class="wrap">
     <div class="intro">
-      <p class="eyebrow">Menú del día</p>
-      <h2>Hoy en la pizarra</h2>
+      <p class="eyebrow" data-i18n="hoy_eyebrow">Menú del día</p>
+      <h2 data-i18n="hoy_h2">Hoy en la pizarra</h2>
       <div class="regla"></div>
     </div>
     <div class="pizarra">
       <div class="menu-card">
-        <p class="eyebrow" style="margin-bottom:0">Menú del día <span id="dia-semana"></span></p>
+        <p class="eyebrow" style="margin-bottom:0"><span data-i18n="hoy_card_eyebrow">Menú del día</span> <span id="dia-semana"></span></p>
         <div class="precio" id="precio-dia">12,90 €</div>
-        <div class="incluye">Primero, segundo, pan, bebida y postre o café</div>
+        <div class="incluye" data-i18n="hoy_incluye">Primero, segundo, pan, bebida y postre o café</div>
         <ul class="menu-dia" id="menu-dia"></ul>
-        <p class="nota">De lunes a viernes al mediodía. El menú cambia cada día; si no has podido verlo, pregunta por WhatsApp y te lo mandamos.</p>
+        <p class="nota" data-i18n="hoy_nota">De lunes a viernes al mediodía. El menú cambia cada día; si no has podido verlo, pregunta por WhatsApp y te lo mandamos.</p>
       </div>
       <div>
-        <h3 style="margin-bottom:18px">Horario</h3>
+        <h3 style="margin-bottom:18px" data-i18n="horario_h3">Horario</h3>
         <ul class="horas" id="horas"></ul>
         <div class="estado" id="estado"><i></i><span>Comprobando…</span></div>
         <p class="aviso" id="aviso"></p>
@@ -242,17 +248,17 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
   <div class="wrap dos">
     <figure><img src="img/terraza_dia.jpg" alt="Terraza cubierta de Sal y Pimienta decorada para un cumpleaños, de día" loading="lazy"></figure>
     <div class="txt">
-      <p class="eyebrow">En familia</p>
-      <h2>Para venir con los niños, con los abuelos y sin prisa</h2>
+      <p class="eyebrow" data-i18n="fam_eyebrow">En familia</p>
+      <h2 data-i18n="fam_h2">Para venir con los niños, con los abuelos y sin prisa</h2>
       <div class="regla" style="margin-bottom:28px"></div>
-      <p>Somos un restaurante de barrio de los de toda la vida: comida casera, raciones generosas y trato cercano. Los domingos y las comidas en familia son lo nuestro.</p>
+      <p data-i18n="fam_p">Somos un restaurante de barrio de los de toda la vida: comida casera, raciones generosas y trato cercano. Los domingos y las comidas en familia son lo nuestro.</p>
       <ul class="lista-limpia">
-        <li>Platos que gustan a los pequeños: nuggets caseros, croquetas, platos combinados y sándwiches</li>
-        <li>Raciones para compartir en el centro de la mesa</li>
-        <li>Terraza cubierta y local accesible en silla de ruedas</li>
-        <li>Menú del día entre semana y carta completa todos los días</li>
+        <li data-i18n="fam_li1">Platos que gustan a los pequeños: nuggets caseros, croquetas, platos combinados y sándwiches</li>
+        <li data-i18n="fam_li2">Raciones para compartir en el centro de la mesa</li>
+        <li data-i18n="fam_li3">Terraza cubierta y local accesible en silla de ruedas</li>
+        <li data-i18n="fam_li4">Menú del día entre semana y carta completa todos los días</li>
       </ul>
-      <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20para%20comer%20en%20familia" target="_blank" rel="noopener">Reserva mesa</a>
+      <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20para%20comer%20en%20familia" target="_blank" rel="noopener" data-i18n="fam_btn">Reserva mesa</a>
     </div>
   </div>
 </section>
@@ -260,10 +266,10 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
 <section class="crema" id="carta">
   <div class="wrap">
     <div class="intro">
-      <p class="eyebrow">La carta</p>
-      <h2>Cocina casera, de siempre</h2>
+      <p class="eyebrow" data-i18n="carta_eyebrow">La carta</p>
+      <h2 data-i18n="carta_h2">Cocina casera, de siempre</h2>
       <div class="regla"></div>
-      <p>Raciones para compartir, bocadillos de los de verdad, cachopo y chuletón para los días grandes, y postres de casa. Los precios son los de la carta del local.</p>
+      <p data-i18n="carta_p">Raciones para compartir, bocadillos de los de verdad, cachopo y chuletón para los días grandes, y postres de casa. Los precios son los de la carta del local.</p>
     </div>
     <div class="tira">
       <img src="img/ig_hamburguesa_2.jpg" alt="Hamburguesa casera con queso de cabra y cebolla caramelizada" loading="lazy">
@@ -275,19 +281,19 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
     </div>
     <div class="tabs" role="tablist" aria-label="Secciones de la carta" id="tabs"></div>
     <div class="carta-grid" id="carta-grid"></div>
-    <p class="alerg">Si tienes alguna alergia o intolerancia, díselo a quien te atienda: la carta física lleva los iconos de alérgenos de cada plato y en cocina te lo confirman.</p>
+    <p class="alerg" data-i18n="carta_alerg">Si tienes alguna alergia o intolerancia, díselo a quien te atienda: la carta física lleva los iconos de alérgenos de cada plato y en cocina te lo confirman.</p>
   </div>
 </section>
 
 <section id="celebraciones">
   <div class="wrap dos inv">
     <div class="txt">
-      <p class="eyebrow">Celebraciones</p>
-      <h2>Cumpleaños, comidas en familia y reuniones</h2>
+      <p class="eyebrow" data-i18n="cel_eyebrow">Celebraciones</p>
+      <h2 data-i18n="cel_h2">Cumpleaños, comidas en familia y reuniones</h2>
       <div class="regla" style="margin-bottom:28px"></div>
-      <p>Montamos mesa larga para hasta dieciséis personas, con menús cerrados para que nadie se pelee con la cuenta. Si llegáis tarde o por turnos, no pasa nada: estamos acostumbrados.</p>
-      <p>Cuéntanos cuántos sois y qué día, y te mandamos las opciones por WhatsApp.</p>
-      <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20celebraci%C3%B3n%20en%20grupo" target="_blank" rel="noopener">Pedir menú para grupos</a>
+      <p data-i18n="cel_p1">Montamos mesa larga para hasta dieciséis personas, con menús cerrados para que nadie se pelee con la cuenta. Si llegáis tarde o por turnos, no pasa nada: estamos acostumbrados.</p>
+      <p data-i18n="cel_p2">Cuéntanos cuántos sois y qué día, y te mandamos las opciones por WhatsApp.</p>
+      <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20celebraci%C3%B3n%20en%20grupo" target="_blank" rel="noopener" data-i18n="cel_btn">Pedir menú para grupos</a>
     </div>
     <figure><img src="img/ig_gambones_2.jpg" alt="Gambones a la plancha para compartir" loading="lazy"></figure>
   </div>
@@ -296,27 +302,27 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
 <section class="crema" id="opiniones">
   <div class="wrap">
     <div class="intro">
-      <p class="eyebrow">Opiniones</p>
-      <h2>Lo que dice la gente</h2>
+      <p class="eyebrow" data-i18n="op_eyebrow">Opiniones</p>
+      <h2 data-i18n="op_h2">Lo que dice la gente</h2>
       <div class="regla"></div>
-      <div class="nota-g"><b>4,5</b><div><div class="estrellas" aria-label="4,5 de 5 estrellas">★★★★★</div><div style="font-size:14px;color:var(--gris)">350 reseñas en Google</div></div></div>
+      <div class="nota-g"><b>4,5</b><div><div class="estrellas" aria-label="4,5 de 5 estrellas">★★★★★</div><div style="font-size:14px;color:var(--gris)" data-i18n="op_n">350 reseñas en Google</div></div></div>
     </div>
     <div class="resenas">
-      <div class="resena"><q>Hemos estado 16 personas celebrando tres cumpleaños y no hemos podido salir más satisfechos. Primer día que hemos ido y el trato ha sido como si fuéramos clientes desde siempre.</q><span class="quien">Javier, en Google</span></div>
-      <div class="resena"><q>El cachopo estaba demasiado bueno. Recomendadísimo. Excelente atención y buen servicio.</q><span class="quien">Tamara, en Google</span></div>
-      <div class="resena"><q>Muy buena comida a precios muy asequibles. El servicio del camarero Roberto es excelente.</q><span class="quien">Carlos, en Google</span></div>
+      <div class="resena"><q data-i18n="op_q1">Hemos estado 16 personas celebrando tres cumpleaños y no hemos podido salir más satisfechos. Primer día que hemos ido y el trato ha sido como si fuéramos clientes desde siempre.</q><span class="quien" data-i18n="op_w1">Javier, en Google</span></div>
+      <div class="resena"><q data-i18n="op_q2">El cachopo estaba demasiado bueno. Recomendadísimo. Excelente atención y buen servicio.</q><span class="quien" data-i18n="op_w2">Tamara, en Google</span></div>
+      <div class="resena"><q data-i18n="op_q3">Muy buena comida a precios muy asequibles. El servicio del camarero Roberto es excelente.</q><span class="quien" data-i18n="op_w3">Carlos, en Google</span></div>
     </div>
-    <p style="margin-top:40px"><a class="btn" href="https://g.page/r/CZbwO-Q7u0hQEBE/review" target="_blank" rel="noopener">Déjanos tu reseña</a></p>
+    <p style="margin-top:40px"><a class="btn" href="https://g.page/r/CZbwO-Q7u0hQEBE/review" target="_blank" rel="noopener" data-i18n="op_btn">Déjanos tu reseña</a></p>
   </div>
 </section>
 
 <section class="crema" id="instagram">
   <div class="wrap">
     <div class="intro">
-      <p class="eyebrow">Instagram</p>
-      <h2>De nuestra cocina</h2>
+      <p class="eyebrow" data-i18n="ig_eyebrow">Instagram</p>
+      <h2 data-i18n="ig_h2">De nuestra cocina</h2>
       <div class="regla"></div>
-      <p>Lo que sale cada día de la cocina, en <a href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">@barsalypimienta</a>.</p>
+      <p><span data-i18n="ig_p">Lo que sale cada día de la cocina, en</span> <a href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">@barsalypimienta</a>.</p>
     </div>
     <div class="galeria">
       <img src="img/ig_chuleton.jpg" alt="Chuletón con patatas y pimientos" loading="lazy">
@@ -328,28 +334,28 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <img src="img/ig_bravas.jpg" alt="Patatas bravas con salsa de la casa" loading="lazy">
       <img src="img/ig_cafe_churros.jpg" alt="Café con leche y churros" loading="lazy">
     </div>
-    <p style="margin-top:36px"><a class="btn" href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">Síguenos en Instagram</a></p>
+    <p style="margin-top:36px"><a class="btn" href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener" data-i18n="ig_btn">Síguenos en Instagram</a></p>
   </div>
 </section>
 
 <section id="donde">
   <div class="wrap">
     <div class="intro">
-      <p class="eyebrow">Dónde estamos</p>
-      <h2>Calle de La Ilíada, 19</h2>
+      <p class="eyebrow" data-i18n="donde_eyebrow">Dónde estamos</p>
+      <h2 data-i18n="donde_h2">Calle de La Ilíada, 19</h2>
       <div class="regla"></div>
-      <p>Entre la plaza de Grecia y el metro de Las Musas, en San Blas-Canillejas.</p>
+      <p data-i18n="donde_p">Entre la plaza de Grecia y el metro de Las Musas, en San Blas-Canillejas.</p>
     </div>
     <div class="donde">
       <dl>
-        <div class="dato"><dt>Dirección</dt><dd>Calle de La Ilíada, 19 · 28022 Madrid (San Blas-Canillejas)</dd></div>
-        <div class="dato"><dt>Metro</dt><dd>Las Musas (L7)</dd></div>
-        <div class="dato"><dt>Teléfono</dt><dd><a href="tel:+34910660207">910 66 02 07</a></dd></div>
-        <div class="dato"><dt>WhatsApp</dt><dd><a href="https://wa.me/34910660207" target="_blank" rel="noopener">Escríbenos para reservar</a></dd></div>
-        <div class="dato"><dt>Instagram</dt><dd><a href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">@barsalypimienta</a></dd></div>
-        <div class="dato"><dt>Acceso</dt><dd>Local accesible en silla de ruedas. Terraza cubierta.</dd></div>
+        <div class="dato"><dt data-i18n="dt_dir">Dirección</dt><dd>Calle de La Ilíada, 19 · 28022 Madrid (San Blas-Canillejas)</dd></div>
+        <div class="dato"><dt data-i18n="dt_metro">Metro</dt><dd>Las Musas (L7)</dd></div>
+        <div class="dato"><dt data-i18n="dt_tel">Teléfono</dt><dd><a href="tel:+34910660207">910 66 02 07</a></dd></div>
+        <div class="dato"><dt data-i18n="dt_wa">WhatsApp</dt><dd><a href="https://wa.me/34910660207" target="_blank" rel="noopener" data-i18n="dd_wa">Escríbenos para reservar</a></dd></div>
+        <div class="dato"><dt data-i18n="dt_ig">Instagram</dt><dd><a href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">@barsalypimienta</a></dd></div>
+        <div class="dato"><dt data-i18n="dt_acc">Acceso</dt><dd data-i18n="dd_acc">Local accesible en silla de ruedas. Terraza cubierta.</dd></div>
       </dl>
-      <div><iframe title="Mapa de Sal y Pimienta Metropolitano" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=place_id:ChIJ8Vw6OUYvQg0RlvA75Du7SFA&output=embed&hl=es"></iframe><p style="margin:16px 0 0"><a class="link" href="https://www.google.com/maps/dir/?api=1&destination=Sal+y+Pimienta+Metropolitano+Bar,+C.+de+La+Il%C3%ADada+19,+28022+Madrid&destination_place_id=ChIJ8Vw6OUYvQg0RlvA75Du7SFA" target="_blank" rel="noopener">Cómo llegar</a></p></div>
+      <div><iframe title="Mapa de Sal y Pimienta Metropolitano" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=place_id:ChIJ8Vw6OUYvQg0RlvA75Du7SFA&output=embed&hl=es"></iframe><p style="margin:16px 0 0"><a class="link" href="https://www.google.com/maps/dir/?api=1&destination=Sal+y+Pimienta+Metropolitano+Bar,+C.+de+La+Il%C3%ADada+19,+28022+Madrid&destination_place_id=ChIJ8Vw6OUYvQg0RlvA75Du7SFA" target="_blank" rel="noopener" data-i18n="donde_como">Cómo llegar</a></p></div>
     </div>
   </div>
 </section>
@@ -363,24 +369,24 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <p>T. <a href="tel:+34910660207">910 66 02 07</a></p>
     </div>
     <div>
-      <h3>Horario</h3>
+      <h3 data-i18n="f_horario">Horario</h3>
       <ul class="horas-pie" id="horas-pie"></ul>
     </div>
     <div>
-      <h3>Reservas</h3>
+      <h3 data-i18n="f_reservas">Reservas</h3>
       <p><a href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">WhatsApp</a></p>
-      <p><a href="tel:+34910660207">Llamar</a></p>
-      <p>Grupos de hasta 16 personas</p>
+      <p><a href="tel:+34910660207" data-i18n="f_llamar">Llamar</a></p>
+      <p data-i18n="f_grupos">Grupos de hasta 16 personas</p>
     </div>
     <div>
-      <h3>Redes sociales</h3>
+      <h3 data-i18n="f_redes">Redes sociales</h3>
       <p><a href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">Instagram</a></p>
-      <p><a href="https://g.page/r/CZbwO-Q7u0hQEBE/review" target="_blank" rel="noopener">Reseñas en Google</a></p>
+      <p><a href="https://g.page/r/CZbwO-Q7u0hQEBE/review" target="_blank" rel="noopener" data-i18n="f_resenas">Reseñas en Google</a></p>
     </div>
   </div>
   <div class="legal">
     <div class="wrap">
-      <nav aria-label="Legal"><a href="#" aria-disabled="true">Aviso legal</a><a href="#" aria-disabled="true">Privacidad</a><a href="#" aria-disabled="true">Cookies</a></nav>
+      <nav aria-label="Legal"><a href="#" aria-disabled="true" data-i18n="l_aviso">Aviso legal</a><a href="#" aria-disabled="true" data-i18n="l_priv">Privacidad</a><a href="#" aria-disabled="true" data-i18n="l_cookies">Cookies</a></nav>
       <div>© <span id="anio"></span> Sal y Pimienta Metropolitano</div>
     </div>
   </div>
@@ -411,47 +417,321 @@ const CARTA = [{"n": "Nuestras ensaladas", "i": [["Ensalada César con pollo cru
 
 /* ======================================================================= */
 
+/* ===== IDIOMAS ===========================================================
+   Textos fijos de la web en varios idiomas. El español es el que está escrito en el HTML.
+   Los nombres de los platos y el menú del día se quedan en español. */
+const I18N = {
+ca: {
+ nav_hoy:"Avui", nav_familia:"En família", nav_carta:"Carta", nav_celeb:"Celebracions", nav_opin:"Opinions", nav_ig:"Instagram", nav_donde:"On som",
+ btn_reserva:"Reserva",
+ hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
+ hero_h1:"Cuina casolana per a tota la família, a cinc minuts del metro Las Musas",
+ hero_p1:"A <b>Sal y Pimienta</b> cuinem com a casa: menú del dia entre setmana, racions per compartir, entrepans dels de debò i postres casolanes. Un lloc de barri on venir amb els nens, amb els avis i sense presses.",
+ hero_p2:"Terrassa coberta, local accessible i una taula llarga per quan sou molts. Reserva per WhatsApp i et guardem lloc.",
+ hero_carta:"Veure la carta", video_cap:"La nostra cuina",
+ hoy_eyebrow:"Menú del dia", hoy_h2:"Avui a la pissarra", hoy_card_eyebrow:"Menú del dia",
+ hoy_incluye:"Primer, segon, pa, beguda i postres o cafè",
+ hoy_nota:"De dilluns a divendres al migdia. El menú canvia cada dia; si no l'has pogut veure, pregunta per WhatsApp i te l'enviem.",
+ horario_h3:"Horari",
+ fam_eyebrow:"En família", fam_h2:"Per venir amb els nens, amb els avis i sense presses",
+ fam_p:"Som un restaurant de barri de tota la vida: menjar casolà, racions generoses i tracte proper. Els diumenges i els dinars en família són el nostre fort.",
+ fam_li1:"Plats que agraden als petits: nuggets casolans, croquetes, plats combinats i sandvitxos",
+ fam_li2:"Racions per compartir al centre de la taula", fam_li3:"Terrassa coberta i local accessible en cadira de rodes",
+ fam_li4:"Menú del dia entre setmana i carta completa cada dia", fam_btn:"Reserva taula",
+ carta_eyebrow:"La carta", carta_h2:"Cuina casolana, de sempre",
+ carta_p:"Racions per compartir, entrepans dels de debò, cachopo i txuletó per als dies grans, i postres de casa. Els preus són els de la carta del local.",
+ carta_alerg:"Si tens alguna al·lèrgia o intolerància, digues-ho a qui t'atengui: la carta física porta les icones d'al·lèrgens de cada plat i a cuina t'ho confirmen.",
+ cel_eyebrow:"Celebracions", cel_h2:"Aniversaris, dinars en família i reunions",
+ cel_p1:"Muntem taula llarga per a fins a setze persones, amb menús tancats perquè ningú es baralli amb el compte. Si arribeu tard o per torns, no passa res: hi estem acostumats.",
+ cel_p2:"Digues-nos quants sou i quin dia, i t'enviem les opcions per WhatsApp.", cel_btn:"Demanar menú per a grups",
+ op_eyebrow:"Opinions", op_h2:"El que diu la gent", op_n:"350 ressenyes a Google", op_btn:"Deixa'ns la teva ressenya",
+ op_q1:"Hem estat 16 persones celebrant tres aniversaris i no hem pogut sortir més satisfets. Primer dia que hi anàvem i el tracte ha estat com si fóssim clients de tota la vida.",
+ op_q2:"El cachopo estava massa bo. Recomanadíssim. Excel·lent atenció i bon servei.",
+ op_q3:"Molt bon menjar a preus molt assequibles. El servei del cambrer Roberto és excel·lent.",
+ op_w1:"Javier, a Google", op_w2:"Tamara, a Google", op_w3:"Carlos, a Google",
+ ig_eyebrow:"Instagram", ig_h2:"De la nostra cuina", ig_p:"El que surt cada dia de la cuina, a", ig_btn:"Segueix-nos a Instagram",
+ donde_eyebrow:"On som", donde_h2:"Carrer de La Ilíada, 19", donde_p:"Entre la plaça de Grecia i el metro de Las Musas, a San Blas-Canillejas.",
+ dt_dir:"Adreça", dt_metro:"Metro", dt_tel:"Telèfon", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Accés",
+ dd_wa:"Escriu-nos per reservar", dd_acc:"Local accessible en cadira de rodes. Terrassa coberta.", donde_como:"Com arribar-hi",
+ f_horario:"Horari", f_reservas:"Reserves", f_llamar:"Trucar", f_grupos:"Grups de fins a 16 persones", f_redes:"Xarxes socials", f_resenas:"Ressenyes a Google",
+ l_aviso:"Avís legal", l_priv:"Privacitat", l_cookies:"Galetes",
+ _primero:"Primer", _segundo:"Segon", _postre:"Postres", _toda:"Tota la carta", _cerrado:"Tancat",
+ _abierto:"Obert ara · tanquem a les {h}", _abrimos:"Tancat · obrim a les {h}", _cerradoahora:"Tancat ara",
+ _dias:["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"]
+},
+en: {
+ nav_hoy:"Today", nav_familia:"Family", nav_carta:"Menu", nav_celeb:"Celebrations", nav_opin:"Reviews", nav_ig:"Instagram", nav_donde:"Find us",
+ btn_reserva:"Book",
+ hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
+ hero_h1:"Home cooking for the whole family, five minutes from Las Musas metro",
+ hero_p1:"At <b>Sal y Pimienta</b> we cook like at home: a weekday set lunch, sharing plates, proper sandwiches and homemade desserts. A neighbourhood spot to come with the kids, the grandparents, and no hurry.",
+ hero_p2:"Covered terrace, step-free access and a long table for big groups. Book on WhatsApp and we'll keep you a spot.",
+ hero_carta:"See the menu", video_cap:"Our kitchen",
+ hoy_eyebrow:"Set lunch", hoy_h2:"Today's board", hoy_card_eyebrow:"Set lunch",
+ hoy_incluye:"Starter, main, bread, drink and dessert or coffee",
+ hoy_nota:"Monday to Friday at lunchtime. The menu changes every day; if you missed it, ask on WhatsApp and we'll send it over.",
+ horario_h3:"Opening hours",
+ fam_eyebrow:"Family", fam_h2:"Come with the kids, the grandparents, and no hurry",
+ fam_p:"We're an old-school neighbourhood restaurant: homemade food, generous portions and friendly service. Sundays and family lunches are our thing.",
+ fam_li1:"Dishes kids love: homemade nuggets, croquettes, combo plates and sandwiches",
+ fam_li2:"Sharing plates for the middle of the table", fam_li3:"Covered terrace and wheelchair-accessible premises",
+ fam_li4:"Weekday set lunch and full menu every day", fam_btn:"Book a table",
+ carta_eyebrow:"The menu", carta_h2:"Home cooking, the way it's always been",
+ carta_p:"Sharing plates, proper sandwiches, cachopo and T-bone steak for the big days, and homemade desserts. Prices are those of the menu in the restaurant.",
+ carta_alerg:"If you have any allergy or intolerance, tell your server: the printed menu shows the allergen icons for every dish and the kitchen will confirm.",
+ cel_eyebrow:"Celebrations", cel_h2:"Birthdays, family lunches and get-togethers",
+ cel_p1:"We set up a long table for up to sixteen people, with fixed menus so nobody fights over the bill. If you arrive late or in shifts, no problem: we're used to it.",
+ cel_p2:"Tell us how many you are and which day, and we'll send you the options on WhatsApp.", cel_btn:"Ask for a group menu",
+ op_eyebrow:"Reviews", op_h2:"What people say", op_n:"350 reviews on Google", op_btn:"Leave us a review",
+ op_q1:"We were 16 people celebrating three birthdays and couldn't have left happier. First time there and they treated us like lifelong regulars.",
+ op_q2:"The cachopo was way too good. Highly recommended. Excellent attention and good service.",
+ op_q3:"Very good food at very affordable prices. Roberto's service is excellent.",
+ op_w1:"Javier, on Google", op_w2:"Tamara, on Google", op_w3:"Carlos, on Google",
+ ig_eyebrow:"Instagram", ig_h2:"From our kitchen", ig_p:"What comes out of the kitchen every day, on", ig_btn:"Follow us on Instagram",
+ donde_eyebrow:"Find us", donde_h2:"Calle de La Ilíada, 19", donde_p:"Between Plaza de Grecia and Las Musas metro, in San Blas-Canillejas.",
+ dt_dir:"Address", dt_metro:"Metro", dt_tel:"Phone", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Access",
+ dd_wa:"Message us to book", dd_acc:"Wheelchair accessible. Covered terrace.", donde_como:"Directions",
+ f_horario:"Opening hours", f_reservas:"Bookings", f_llamar:"Call", f_grupos:"Groups of up to 16", f_redes:"Social media", f_resenas:"Reviews on Google",
+ l_aviso:"Legal notice", l_priv:"Privacy", l_cookies:"Cookies",
+ _primero:"Starter", _segundo:"Main", _postre:"Dessert", _toda:"Full menu", _cerrado:"Closed",
+ _abierto:"Open now · we close at {h}", _abrimos:"Closed · we open at {h}", _cerradoahora:"Closed now",
+ _dias:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+},
+fr: {
+ nav_hoy:"Aujourd'hui", nav_familia:"En famille", nav_carta:"Carte", nav_celeb:"Fêtes", nav_opin:"Avis", nav_ig:"Instagram", nav_donde:"Où",
+ btn_reserva:"Réserver",
+ hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
+ hero_h1:"Cuisine maison pour toute la famille, à cinq minutes du métro Las Musas",
+ hero_p1:"Chez <b>Sal y Pimienta</b>, on cuisine comme à la maison : menu du jour en semaine, assiettes à partager, vrais sandwichs et desserts maison. Un restaurant de quartier où venir avec les enfants, les grands-parents, et sans se presser.",
+ hero_p2:"Terrasse couverte, accès de plain-pied et une grande table quand vous êtes nombreux. Réservez sur WhatsApp, on vous garde une place.",
+ hero_carta:"Voir la carte", video_cap:"Notre cuisine",
+ hoy_eyebrow:"Menu du jour", hoy_h2:"Aujourd'hui à l'ardoise", hoy_card_eyebrow:"Menu du jour",
+ hoy_incluye:"Entrée, plat, pain, boisson et dessert ou café",
+ hoy_nota:"Du lundi au vendredi, le midi. Le menu change chaque jour ; si vous l'avez manqué, demandez-le sur WhatsApp.",
+ horario_h3:"Horaires",
+ fam_eyebrow:"En famille", fam_h2:"Pour venir avec les enfants, les grands-parents, et sans se presser",
+ fam_p:"Un restaurant de quartier à l'ancienne : cuisine maison, portions généreuses et accueil chaleureux. Les dimanches et les repas en famille, c'est notre spécialité.",
+ fam_li1:"Des plats que les petits adorent : nuggets maison, croquettes, assiettes composées et sandwichs",
+ fam_li2:"Des assiettes à partager au milieu de la table", fam_li3:"Terrasse couverte et salle accessible en fauteuil roulant",
+ fam_li4:"Menu du jour en semaine et carte complète tous les jours", fam_btn:"Réserver une table",
+ carta_eyebrow:"La carte", carta_h2:"Cuisine maison, comme toujours",
+ carta_p:"Assiettes à partager, vrais sandwichs, cachopo et côte de bœuf pour les grandes occasions, et desserts maison. Les prix sont ceux de la carte du restaurant.",
+ carta_alerg:"En cas d'allergie ou d'intolérance, dites-le à votre serveur : la carte papier indique les allergènes de chaque plat et la cuisine vous le confirme.",
+ cel_eyebrow:"Fêtes", cel_h2:"Anniversaires, repas de famille et réunions",
+ cel_p1:"Nous dressons une grande table jusqu'à seize personnes, avec des menus fixes pour que personne ne se dispute l'addition. Si vous arrivez en retard ou par vagues, aucun souci : on a l'habitude.",
+ cel_p2:"Dites-nous combien vous êtes et quel jour, et on vous envoie les options sur WhatsApp.", cel_btn:"Demander un menu groupe",
+ op_eyebrow:"Avis", op_h2:"Ce qu'en disent les gens", op_n:"350 avis sur Google", op_btn:"Laissez-nous un avis",
+ op_q1:"Nous étions 16 à fêter trois anniversaires et nous n'aurions pas pu repartir plus satisfaits. Première visite et on nous a traités comme des habitués de toujours.",
+ op_q2:"Le cachopo était bien trop bon. À recommander absolument. Excellent accueil et bon service.",
+ op_q3:"Très bonne cuisine à des prix très abordables. Le service de Roberto est excellent.",
+ op_w1:"Javier, sur Google", op_w2:"Tamara, sur Google", op_w3:"Carlos, sur Google",
+ ig_eyebrow:"Instagram", ig_h2:"De notre cuisine", ig_p:"Ce qui sort de la cuisine chaque jour, sur", ig_btn:"Suivez-nous sur Instagram",
+ donde_eyebrow:"Où nous trouver", donde_h2:"Calle de La Ilíada, 19", donde_p:"Entre la Plaza de Grecia et le métro Las Musas, à San Blas-Canillejas.",
+ dt_dir:"Adresse", dt_metro:"Métro", dt_tel:"Téléphone", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Accès",
+ dd_wa:"Écrivez-nous pour réserver", dd_acc:"Accessible en fauteuil roulant. Terrasse couverte.", donde_como:"Itinéraire",
+ f_horario:"Horaires", f_reservas:"Réservations", f_llamar:"Appeler", f_grupos:"Groupes jusqu'à 16 personnes", f_redes:"Réseaux sociaux", f_resenas:"Avis sur Google",
+ l_aviso:"Mentions légales", l_priv:"Confidentialité", l_cookies:"Cookies",
+ _primero:"Entrée", _segundo:"Plat", _postre:"Dessert", _toda:"Toute la carte", _cerrado:"Fermé",
+ _abierto:"Ouvert · fermeture à {h}", _abrimos:"Fermé · ouverture à {h}", _cerradoahora:"Fermé actuellement",
+ _dias:["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"]
+},
+it: {
+ nav_hoy:"Oggi", nav_familia:"In famiglia", nav_carta:"Menù", nav_celeb:"Feste", nav_opin:"Recensioni", nav_ig:"Instagram", nav_donde:"Dove siamo",
+ btn_reserva:"Prenota",
+ hero_eyebrow:"Ristorante · San Blas-Canillejas · Madrid",
+ hero_h1:"Cucina casalinga per tutta la famiglia, a cinque minuti dalla metro Las Musas",
+ hero_p1:"Da <b>Sal y Pimienta</b> cuciniamo come a casa: menù del giorno nei giorni feriali, porzioni da condividere, panini veri e dolci fatti in casa. Un posto di quartiere dove venire con i bambini, con i nonni e senza fretta.",
+ hero_p2:"Terrazza coperta, locale accessibile e un tavolo lungo per quando siete in tanti. Prenota su WhatsApp e ti teniamo il posto.",
+ hero_carta:"Vedi il menù", video_cap:"La nostra cucina",
+ hoy_eyebrow:"Menù del giorno", hoy_h2:"Oggi alla lavagna", hoy_card_eyebrow:"Menù del giorno",
+ hoy_incluye:"Primo, secondo, pane, bevanda e dolce o caffè",
+ hoy_nota:"Dal lunedì al venerdì a pranzo. Il menù cambia ogni giorno; se non l'hai visto, chiedilo su WhatsApp e te lo mandiamo.",
+ horario_h3:"Orari",
+ fam_eyebrow:"In famiglia", fam_h2:"Per venire con i bambini, con i nonni e senza fretta",
+ fam_p:"Siamo un ristorante di quartiere di quelli di una volta: cucina casalinga, porzioni generose e accoglienza calorosa. Le domeniche e i pranzi in famiglia sono il nostro forte.",
+ fam_li1:"Piatti che piacciono ai piccoli: nuggets fatti in casa, crocchette, piatti combinati e sandwich",
+ fam_li2:"Porzioni da condividere al centro del tavolo", fam_li3:"Terrazza coperta e locale accessibile in sedia a rotelle",
+ fam_li4:"Menù del giorno nei feriali e menù completo tutti i giorni", fam_btn:"Prenota un tavolo",
+ carta_eyebrow:"Il menù", carta_h2:"Cucina casalinga, di sempre",
+ carta_p:"Porzioni da condividere, panini veri, cachopo e bistecca per le grandi occasioni, e dolci di casa. I prezzi sono quelli del menù del locale.",
+ carta_alerg:"Se hai allergie o intolleranze, dillo a chi ti serve: il menù cartaceo riporta le icone degli allergeni di ogni piatto e la cucina te lo conferma.",
+ cel_eyebrow:"Feste", cel_h2:"Compleanni, pranzi in famiglia e riunioni",
+ cel_p1:"Prepariamo un tavolo lungo fino a sedici persone, con menù fissi perché nessuno litighi per il conto. Se arrivate in ritardo o a turni, nessun problema: ci siamo abituati.",
+ cel_p2:"Dicci quanti siete e che giorno, e ti mandiamo le opzioni su WhatsApp.", cel_btn:"Chiedi il menù per gruppi",
+ op_eyebrow:"Recensioni", op_h2:"Cosa dice la gente", op_n:"350 recensioni su Google", op_btn:"Lasciaci una recensione",
+ op_q1:"Eravamo in 16 a festeggiare tre compleanni e non potevamo uscire più soddisfatti. Prima volta lì e ci hanno trattato come clienti di sempre.",
+ op_q2:"Il cachopo era troppo buono. Consigliatissimo. Ottima attenzione e buon servizio.",
+ op_q3:"Ottimo cibo a prezzi molto accessibili. Il servizio di Roberto è eccellente.",
+ op_w1:"Javier, su Google", op_w2:"Tamara, su Google", op_w3:"Carlos, su Google",
+ ig_eyebrow:"Instagram", ig_h2:"Dalla nostra cucina", ig_p:"Quello che esce ogni giorno dalla cucina, su", ig_btn:"Seguici su Instagram",
+ donde_eyebrow:"Dove siamo", donde_h2:"Calle de La Ilíada, 19", donde_p:"Tra Plaza de Grecia e la metro Las Musas, a San Blas-Canillejas.",
+ dt_dir:"Indirizzo", dt_metro:"Metro", dt_tel:"Telefono", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Accesso",
+ dd_wa:"Scrivici per prenotare", dd_acc:"Accessibile in sedia a rotelle. Terrazza coperta.", donde_como:"Come arrivare",
+ f_horario:"Orari", f_reservas:"Prenotazioni", f_llamar:"Chiama", f_grupos:"Gruppi fino a 16 persone", f_redes:"Social", f_resenas:"Recensioni su Google",
+ l_aviso:"Note legali", l_priv:"Privacy", l_cookies:"Cookie",
+ _primero:"Primo", _segundo:"Secondo", _postre:"Dolce", _toda:"Tutto il menù", _cerrado:"Chiuso",
+ _abierto:"Aperto ora · chiudiamo alle {h}", _abrimos:"Chiuso · apriamo alle {h}", _cerradoahora:"Chiuso ora",
+ _dias:["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"]
+},
+pt: {
+ nav_hoy:"Hoje", nav_familia:"Em família", nav_carta:"Carta", nav_celeb:"Celebrações", nav_opin:"Opiniões", nav_ig:"Instagram", nav_donde:"Onde",
+ btn_reserva:"Reservar",
+ hero_eyebrow:"Restaurante · San Blas-Canillejas · Madrid",
+ hero_h1:"Comida caseira para toda a família, a cinco minutos do metro Las Musas",
+ hero_p1:"No <b>Sal y Pimienta</b> cozinhamos como em casa: menu do dia durante a semana, doses para partilhar, sandes a sério e sobremesas caseiras. Um sítio de bairro para vir com as crianças, com os avós e sem pressa.",
+ hero_p2:"Esplanada coberta, local acessível e uma mesa comprida para quando são muitos. Reserve por WhatsApp e guardamos-lhe lugar.",
+ hero_carta:"Ver a carta", video_cap:"A nossa cozinha",
+ hoy_eyebrow:"Menu do dia", hoy_h2:"Hoje no quadro", hoy_card_eyebrow:"Menu do dia",
+ hoy_incluye:"Entrada, prato, pão, bebida e sobremesa ou café",
+ hoy_nota:"De segunda a sexta ao almoço. O menu muda todos os dias; se não o viu, pergunte por WhatsApp e enviamos.",
+ horario_h3:"Horário",
+ fam_eyebrow:"Em família", fam_h2:"Para vir com as crianças, com os avós e sem pressa",
+ fam_p:"Somos um restaurante de bairro dos de sempre: comida caseira, doses generosas e atendimento próximo. Os domingos e os almoços em família são a nossa especialidade.",
+ fam_li1:"Pratos de que os mais pequenos gostam: nuggets caseiros, croquetes, pratos combinados e sandes",
+ fam_li2:"Doses para partilhar no meio da mesa", fam_li3:"Esplanada coberta e local acessível a cadeiras de rodas",
+ fam_li4:"Menu do dia durante a semana e carta completa todos os dias", fam_btn:"Reservar mesa",
+ carta_eyebrow:"A carta", carta_h2:"Comida caseira, de sempre",
+ carta_p:"Doses para partilhar, sandes a sério, cachopo e bife da vazia para os dias grandes, e sobremesas de casa. Os preços são os da carta do restaurante.",
+ carta_alerg:"Se tem alguma alergia ou intolerância, diga a quem o atende: a carta em papel tem os ícones dos alergénios de cada prato e a cozinha confirma.",
+ cel_eyebrow:"Celebrações", cel_h2:"Aniversários, almoços em família e encontros",
+ cel_p1:"Montamos uma mesa comprida até dezasseis pessoas, com menus fechados para ninguém discutir a conta. Se chegarem atrasados ou por turnos, não há problema: estamos habituados.",
+ cel_p2:"Diga-nos quantos são e que dia, e enviamos as opções por WhatsApp.", cel_btn:"Pedir menu para grupos",
+ op_eyebrow:"Opiniões", op_h2:"O que dizem as pessoas", op_n:"350 avaliações no Google", op_btn:"Deixe a sua avaliação",
+ op_q1:"Fomos 16 pessoas a celebrar três aniversários e não podíamos ter saído mais satisfeitos. Primeira vez lá e trataram-nos como clientes de sempre.",
+ op_q2:"O cachopo estava bom demais. Recomendadíssimo. Excelente atenção e bom serviço.",
+ op_q3:"Comida muito boa a preços muito acessíveis. O serviço do Roberto é excelente.",
+ op_w1:"Javier, no Google", op_w2:"Tamara, no Google", op_w3:"Carlos, no Google",
+ ig_eyebrow:"Instagram", ig_h2:"Da nossa cozinha", ig_p:"O que sai todos os dias da cozinha, em", ig_btn:"Siga-nos no Instagram",
+ donde_eyebrow:"Onde estamos", donde_h2:"Calle de La Ilíada, 19", donde_p:"Entre a Plaza de Grecia e o metro Las Musas, em San Blas-Canillejas.",
+ dt_dir:"Morada", dt_metro:"Metro", dt_tel:"Telefone", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Acesso",
+ dd_wa:"Escreva-nos para reservar", dd_acc:"Acessível a cadeiras de rodas. Esplanada coberta.", donde_como:"Como chegar",
+ f_horario:"Horário", f_reservas:"Reservas", f_llamar:"Ligar", f_grupos:"Grupos até 16 pessoas", f_redes:"Redes sociais", f_resenas:"Avaliações no Google",
+ l_aviso:"Aviso legal", l_priv:"Privacidade", l_cookies:"Cookies",
+ _primero:"Entrada", _segundo:"Prato", _postre:"Sobremesa", _toda:"Toda a carta", _cerrado:"Fechado",
+ _abierto:"Aberto agora · fechamos às {h}", _abrimos:"Fechado · abrimos às {h}", _cerradoahora:"Fechado agora",
+ _dias:["domingo","segunda","terça","quarta","quinta","sexta","sábado"]
+},
+de: {
+ nav_hoy:"Heute", nav_familia:"Familie", nav_carta:"Karte", nav_celeb:"Feiern", nav_opin:"Bewertungen", nav_ig:"Instagram", nav_donde:"Anfahrt",
+ btn_reserva:"Reservieren",
+ hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
+ hero_h1:"Hausmannskost für die ganze Familie, fünf Minuten von der Metro Las Musas",
+ hero_p1:"Im <b>Sal y Pimienta</b> kochen wir wie zu Hause: Tagesmenü unter der Woche, Portionen zum Teilen, echte Bocadillos und hausgemachte Desserts. Ein Viertel-Lokal, in das man mit Kindern und Großeltern kommt, ganz ohne Eile.",
+ hero_p2:"Überdachte Terrasse, barrierefreier Zugang und ein langer Tisch für große Runden. Reservieren Sie per WhatsApp, wir halten Ihnen einen Platz frei.",
+ hero_carta:"Zur Karte", video_cap:"Unsere Küche",
+ hoy_eyebrow:"Tagesmenü", hoy_h2:"Heute auf der Tafel", hoy_card_eyebrow:"Tagesmenü",
+ hoy_incluye:"Vorspeise, Hauptgang, Brot, Getränk und Dessert oder Kaffee",
+ hoy_nota:"Montag bis Freitag mittags. Das Menü wechselt täglich; fragen Sie einfach per WhatsApp, wir schicken es Ihnen.",
+ horario_h3:"Öffnungszeiten",
+ fam_eyebrow:"Familie", fam_h2:"Mit Kindern, mit Großeltern und ganz ohne Eile",
+ fam_p:"Wir sind ein Viertel-Restaurant alter Schule: hausgemachtes Essen, großzügige Portionen und herzlicher Service. Sonntage und Familienessen sind unsere Stärke.",
+ fam_li1:"Gerichte, die Kinder lieben: hausgemachte Nuggets, Kroketten, Tellergerichte und Sandwiches",
+ fam_li2:"Portionen zum Teilen in der Tischmitte", fam_li3:"Überdachte Terrasse und rollstuhlgerechter Zugang",
+ fam_li4:"Tagesmenü unter der Woche und volle Karte an allen Tagen", fam_btn:"Tisch reservieren",
+ carta_eyebrow:"Die Karte", carta_h2:"Hausmannskost wie früher",
+ carta_p:"Portionen zum Teilen, echte Bocadillos, Cachopo und Chuletón für die großen Tage, dazu Desserts aus eigener Küche. Es gelten die Preise der Karte im Lokal.",
+ carta_alerg:"Bei Allergien oder Unverträglichkeiten sagen Sie es dem Service: Die gedruckte Karte zeigt die Allergen-Symbole jedes Gerichts, die Küche bestätigt es Ihnen.",
+ cel_eyebrow:"Feiern", cel_h2:"Geburtstage, Familienessen und Treffen",
+ cel_p1:"Wir decken eine lange Tafel für bis zu sechzehn Personen, mit festen Menüs, damit sich niemand um die Rechnung streitet. Wer zu spät oder in Etappen kommt: kein Problem, das kennen wir.",
+ cel_p2:"Sagen Sie uns, wie viele Sie sind und an welchem Tag, und wir schicken Ihnen die Optionen per WhatsApp.", cel_btn:"Gruppenmenü anfragen",
+ op_eyebrow:"Bewertungen", op_h2:"Was die Leute sagen", op_n:"350 Bewertungen auf Google", op_btn:"Bewerten Sie uns",
+ op_q1:"Wir waren 16 Personen und haben drei Geburtstage gefeiert – zufriedener hätten wir nicht gehen können. Erster Besuch, und wir wurden wie Stammgäste behandelt.",
+ op_q2:"Der Cachopo war viel zu gut. Absolut empfehlenswert. Ausgezeichnete Betreuung und guter Service.",
+ op_q3:"Sehr gutes Essen zu sehr fairen Preisen. Der Service von Roberto ist ausgezeichnet.",
+ op_w1:"Javier, auf Google", op_w2:"Tamara, auf Google", op_w3:"Carlos, auf Google",
+ ig_eyebrow:"Instagram", ig_h2:"Aus unserer Küche", ig_p:"Was jeden Tag aus der Küche kommt, auf", ig_btn:"Folgen Sie uns auf Instagram",
+ donde_eyebrow:"Anfahrt", donde_h2:"Calle de La Ilíada, 19", donde_p:"Zwischen der Plaza de Grecia und der Metro Las Musas, in San Blas-Canillejas.",
+ dt_dir:"Adresse", dt_metro:"Metro", dt_tel:"Telefon", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Zugang",
+ dd_wa:"Schreiben Sie uns zum Reservieren", dd_acc:"Rollstuhlgerecht. Überdachte Terrasse.", donde_como:"Route",
+ f_horario:"Öffnungszeiten", f_reservas:"Reservierungen", f_llamar:"Anrufen", f_grupos:"Gruppen bis 16 Personen", f_redes:"Soziale Medien", f_resenas:"Bewertungen auf Google",
+ l_aviso:"Impressum", l_priv:"Datenschutz", l_cookies:"Cookies",
+ _primero:"Vorspeise", _segundo:"Hauptgang", _postre:"Dessert", _toda:"Ganze Karte", _cerrado:"Geschlossen",
+ _abierto:"Jetzt geöffnet · bis {h}", _abrimos:"Geschlossen · ab {h}", _cerradoahora:"Derzeit geschlossen",
+ _dias:["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"]
+}
+};
+/* Nombres de las secciones de la carta (los platos se quedan en español) */
+const I18N_SECCIONES = {
+ "Nuestras ensaladas": {ca:"Les nostres amanides", en:"Salads", fr:"Nos salades", it:"Le nostre insalate", pt:"As nossas saladas", de:"Unsere Salate"},
+ "Entrantes y picoteo": {ca:"Entrants i per picar", en:"Starters & sharing", fr:"Entrées et à partager", it:"Antipasti e stuzzichini", pt:"Entradas e petiscos", de:"Vorspeisen & Tapas"},
+ "Amantes del pan": {ca:"Amants del pa", en:"Sandwiches & pintxos", fr:"Sandwichs et pintxos", it:"Panini e pintxos", pt:"Sandes e pintxos", de:"Brot & Pintxos"},
+ "Nuestras especialidades": {ca:"Les nostres especialitats", en:"Our specialities", fr:"Nos spécialités", it:"Le nostre specialità", pt:"As nossas especialidades", de:"Unsere Spezialitäten"},
+ "Bocadillos y montados": {ca:"Entrepans i montados", en:"Bocadillos & montados", fr:"Bocadillos et montados", it:"Bocadillos e montados", pt:"Bocadillos e montados", de:"Bocadillos & Montados"},
+ "Platos combinados": {ca:"Plats combinats", en:"Combo plates", fr:"Assiettes composées", it:"Piatti combinati", pt:"Pratos combinados", de:"Tellergerichte"},
+ "Burgers caseras": {ca:"Burgers casolanes", en:"Homemade burgers", fr:"Burgers maison", it:"Burger fatti in casa", pt:"Hambúrgueres caseiros", de:"Hausgemachte Burger"},
+ "Bebidas y bodega": {ca:"Begudes i celler", en:"Drinks & wine", fr:"Boissons et cave", it:"Bevande e cantina", pt:"Bebidas e garrafeira", de:"Getränke & Weine"}
+};
+
+const LANGS = ["es","ca","en","fr","it","pt","de"];
+const ES_DIAS = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+const ES_RT = {_primero:"Primero", _segundo:"Segundo", _postre:"Postre", _toda:"Toda la carta", _cerrado:"Cerrado",
+               _abierto:"Abierto ahora · cerramos a las {h}", _abrimos:"Cerrado · abrimos a las {h}", _cerradoahora:"Cerrado ahora", _dias:ES_DIAS};
+let LANG = "es";
+const ES_DEFAULTS = {};
+document.querySelectorAll("[data-i18n]").forEach(el => { const k = el.dataset.i18n; if (!(k in ES_DEFAULTS)) ES_DEFAULTS[k] = el.innerHTML; });
+const t = k => (LANG === "es" ? (ES_RT[k] ?? ES_DEFAULTS[k]) : ((I18N[LANG] || {})[k] ?? ES_RT[k] ?? ES_DEFAULTS[k]));
+const tSec = n => (LANG === "es" ? n : ((I18N_SECCIONES[n] || {})[LANG] || n));
+
 const eur = v => v.toFixed(2).replace('.',',') + ' €';
-const DIAS = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
 const hoy = new Date(); const d = hoy.getDay();
+const cap = x => x[0].toUpperCase() + x.slice(1);
+const fmtH = h => h ? `${h[0]}:00 – ${h[1]===24?'00':h[1]}:00` : t("_cerrado");
+let filtroCarta = null;
 
-document.getElementById('dia-semana').textContent = (d>=1&&d<=5) ? '· ' + DIAS[d] : '';
-document.getElementById('precio-dia').textContent = MENU_DIA.precio;
-const md = document.getElementById('menu-dia');
-MENU_DIA.primeros.forEach(x => md.insertAdjacentHTML('beforeend', `<li><span>Primero</span>${x}</li>`));
-MENU_DIA.segundos.forEach(x => md.insertAdjacentHTML('beforeend', `<li><span>Segundo</span>${x}</li>`));
-md.insertAdjacentHTML('beforeend', `<li><span>Postre</span>${MENU_DIA.postre}</li>`);
-
-const fmtH = h => h ? `${h[0]}:00 – ${h[1]===24?'00':h[1]}:00` : 'Cerrado';
-const hl = document.getElementById('horas'), hp = document.getElementById('horas-pie');
-[1,2,3,4,5,6,0].forEach(k => {
-  const nombre = DIAS[k][0].toUpperCase()+DIAS[k].slice(1);
-  hl.insertAdjacentHTML('beforeend', `<li class="${k===d?'hoy':''}"><span>${nombre}</span><span>${fmtH(HORARIO[k])}</span></li>`);
-  hp.insertAdjacentHTML('beforeend', `<li><span>${nombre}</span><span>${fmtH(HORARIO[k])}</span></li>`);
-});
-(function estado(){
+function pintarMenu(){
+  const dias = t("_dias");
+  document.getElementById('dia-semana').textContent = (d>=1&&d<=5) ? '· ' + dias[d] : '';
+  document.getElementById('precio-dia').textContent = MENU_DIA.precio;
+  const md = document.getElementById('menu-dia'); md.innerHTML = '';
+  MENU_DIA.primeros.forEach(x => md.insertAdjacentHTML('beforeend', `<li><span>${t("_primero")}</span>${x}</li>`));
+  MENU_DIA.segundos.forEach(x => md.insertAdjacentHTML('beforeend', `<li><span>${t("_segundo")}</span>${x}</li>`));
+  md.insertAdjacentHTML('beforeend', `<li><span>${t("_postre")}</span>${MENU_DIA.postre}</li>`);
+}
+function pintarHorario(){
+  const dias = t("_dias");
+  const hl = document.getElementById('horas'), hp = document.getElementById('horas-pie'); hl.innerHTML = ''; hp.innerHTML = '';
+  [1,2,3,4,5,6,0].forEach(k => {
+    hl.insertAdjacentHTML('beforeend', `<li class="${k===d?'hoy':''}"><span>${cap(dias[k])}</span><span>${fmtH(HORARIO[k])}</span></li>`);
+    hp.insertAdjacentHTML('beforeend', `<li><span>${cap(dias[k])}</span><span>${fmtH(HORARIO[k])}</span></li>`);
+  });
   const el = document.getElementById('estado'); const h = HORARIO[d]; const ahora = hoy.getHours() + hoy.getMinutes()/60;
-  if (h && ahora >= h[0] && ahora < h[1]) { el.querySelector('span').textContent = `Abierto ahora · cerramos a las ${h[1]===24?'00':h[1]}:00`; }
-  else { el.classList.add('cerrado'); el.querySelector('span').textContent = h && ahora < h[0] ? `Cerrado · abrimos a las ${h[0]}:00` : 'Cerrado ahora'; }
-})();
-document.getElementById('aviso').textContent = AVISO;
-document.getElementById('anio').textContent = hoy.getFullYear();
-
-/* carta */
+  el.classList.remove('cerrado');
+  if (h && ahora >= h[0] && ahora < h[1]) { el.querySelector('span').textContent = t("_abierto").replace("{h}", `${h[1]===24?'00':h[1]}:00`); }
+  else { el.classList.add('cerrado'); el.querySelector('span').textContent = h && ahora < h[0] ? t("_abrimos").replace("{h}", `${h[0]}:00`) : t("_cerradoahora"); }
+}
 const tabs = document.getElementById('tabs'), grid = document.getElementById('carta-grid');
 function pintar(filtro){
-  grid.innerHTML = '';
+  filtroCarta = filtro; grid.innerHTML = '';
   CARTA.filter((s,i)=> filtro==null || filtro===i).forEach(s => {
     const items = s.i.map(([n,p]) => p==null ? `<div class="plato"><span class="n" style="max-width:100%">${n}</span></div>` : `<div class="plato"><span class="n">${n}</span><span class="l"></span><span class="p">${Array.isArray(p) ? eur(p[0]) + ' <small>/ ' + eur(p[1]) + '</small>' : eur(p)}</span></div>`).join('');
-    grid.insertAdjacentHTML('beforeend', `<div class="seccion"><h3>${s.n}</h3>${s.nota?`<p class="nota-s">${s.nota}</p>`:''}${items}</div>`);
+    grid.insertAdjacentHTML('beforeend', `<div class="seccion"><h3>${tSec(s.n)}</h3>${s.nota?`<p class="nota-s">${s.nota}</p>`:''}${items}</div>`);
   });
 }
-[['Toda la carta',null], ...CARTA.map((s,i)=>[s.n,i])].forEach(([t,i],k) => {
-  const b = document.createElement('button'); b.type='button'; b.setAttribute('role','tab'); b.textContent = t; b.setAttribute('aria-selected', k===0);
-  b.onclick = () => { tabs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected','false')); b.setAttribute('aria-selected','true'); pintar(i); };
-  tabs.appendChild(b);
-});
-pintar(null);
+function pintarTabs(){
+  tabs.innerHTML = '';
+  [[t("_toda"),null], ...CARTA.map((s,i)=>[tSec(s.n),i])].forEach(([txt,i]) => {
+    const b = document.createElement('button'); b.type='button'; b.setAttribute('role','tab'); b.textContent = txt; b.setAttribute('aria-selected', i===filtroCarta);
+    b.onclick = () => { tabs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected','false')); b.setAttribute('aria-selected','true'); pintar(i); };
+    tabs.appendChild(b);
+  });
+}
+function setLang(code, guardar=true){
+  if (!LANGS.includes(code)) code = "es";
+  LANG = code; document.documentElement.lang = code;
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+  document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === code));
+  pintarMenu(); pintarHorario(); pintarTabs(); pintar(filtroCarta);
+  if (guardar) { try { localStorage.setItem("lang", code); } catch(e){} }
+}
+document.querySelectorAll("#lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+document.getElementById('aviso').textContent = AVISO;
+document.getElementById('anio').textContent = hoy.getFullYear();
+(function(){
+  let code = new URLSearchParams(location.search).get("lang");
+  if (!code) { try { code = localStorage.getItem("lang"); } catch(e){} }
+  if (!code) { const nav = (navigator.language || "es").slice(0,2).toLowerCase(); code = LANGS.includes(nav) ? nav : "es"; }
+  setLang(code, false);
+})();
 </script>
 </body>
 </html>
