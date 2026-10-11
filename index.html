@@ -100,6 +100,13 @@ section{padding:88px 0}
 .aviso{margin-top:22px;font-size:16px;color:var(--tinta-2);border-left:2px solid var(--tinta);padding-left:14px}
 .aviso:empty{display:none}
 
+/* medio menú y día de partido */
+.medio{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1.5px solid var(--tinta);margin-top:18px;padding-top:16px}
+.medio-nota{margin:0;font-size:16px;color:var(--tinta-2)}
+.medio-precio{font-family:var(--ff-d);font-size:38px;line-height:1;white-space:nowrap}
+.partido{background:var(--tinta);color:#fff;padding:14px 18px;margin:0 0 32px;font-size:16px;letter-spacing:.02em}
+.partido b{margin-right:6px}
+
 /* carta */
 .tira{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:0 0 56px}
 .tira img{aspect-ratio:1;object-fit:cover}
@@ -221,6 +228,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
 
 <section class="crema" id="hoy">
   <div class="wrap">
+    <div class="partido" id="aviso-partido" hidden><b>⚽</b> <span data-i18n="partido_aviso">Hoy hay partido en el Metropolitano: carta reducida para que todo salga rápido. Abajo tienes los platos de hoy.</span></div>
     <div class="intro">
       <p class="eyebrow" data-i18n="hoy_eyebrow">Menú del día</p>
       <h2 data-i18n="hoy_h2">Hoy en la pizarra</h2>
@@ -232,6 +240,10 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
         <div class="precio" id="precio-dia">12,90 €</div>
         <div class="incluye" data-i18n="hoy_incluye">Primero, segundo, pan, bebida y postre o café</div>
         <ul class="menu-dia" id="menu-dia"></ul>
+        <div class="medio" id="medio-menu" hidden>
+          <div><p class="eyebrow" style="margin:0 0 4px"><span data-i18n="medio_h">Medio menú</span></p><p class="medio-nota" id="medio-nota"></p></div>
+          <div class="medio-precio" id="medio-precio"></div>
+        </div>
         <p class="nota" data-i18n="hoy_nota">De lunes a viernes al mediodía. El menú cambia cada día; si no has podido verlo, pregunta por WhatsApp y te lo mandamos.</p>
       </div>
       <div>
@@ -279,6 +291,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <img src="img/ig_almejas.jpg" alt="Almejas a la marinera en cazuela de barro" loading="lazy">
       <img src="img/ig_gambones.jpg" alt="Gambones a la plancha" loading="lazy">
     </div>
+    <div class="partido" id="aviso-partido-carta" hidden><b>⚽</b> <span data-i18n="partido_carta">Día de partido: hoy solo servimos estos platos.</span></div>
     <div class="tabs" role="tablist" aria-label="Secciones de la carta" id="tabs"></div>
     <div class="carta-grid" id="carta-grid"></div>
     <p class="alerg" data-i18n="carta_alerg">Si tienes alguna alergia o intolerancia, díselo a quien te atienda: la carta física lleva los iconos de alérgenos de cada plato y en cocina te lo confirman.</p>
@@ -406,6 +419,13 @@ const MENU_DIA = {
   segundos: ["Chuleta de Cordero lechal", "Lubina a la plancha"],
   postre: "Postre casero (Mousse de chocolate, Flan, Pudin) o café y te invitamos al chupito de la casa"
 };
+const MEDIO_MENU = {
+  precio: "",
+  nota: "Un plato a elegir (primero o segundo), pan, bebida y postre o café"
+};
+const DIA_PARTIDO = {
+  activo: false
+};
 
 const HORARIO = { // 0 = domingo … 6 = sábado. null = cerrado. Formato [abre, cierra] en horas (24 = medianoche)
   0: [9, 18], 1: null, 2: [8, 23], 3: [8, 23], 4: [8, 23], 5: [8, 24], 6: [9, 24]
@@ -414,6 +434,15 @@ const AVISO = "";   // texto corto bajo el horario (festivos, cierre por vacacio
 
 /* carta: copia de carta/carta.json */
 const CARTA = [{"n": "Nuestras ensaladas", "i": [["Ensalada César con pollo crujiente", 12.0], ["Ensalada de rulo de cabra con nueces y balsámica", 12.0], ["Ensalada mixta", 8.5], ["Ensaladilla rusa casera", 8.5]]}, {"n": "Entrantes y picoteo", "i": [["Croquetas de jamón o de cocido", 11.9], ["Lágrimas de pollo", 12.9], ["Tabla de ibéricos", 22.0], ["Tabla de quesos", 19.5], ["Alitas de pollo", 11.9], ["Cazón en adobo (bienmesabe)", 12.0], ["Calamares a la andaluza", 13.9], ["Gambones bomba crujientes", 10.0], ["Zamburiñas a la plancha con ajo y perejil", 18.0], ["Huevos rotos con chorizo o jamón", 12.0], ["Huevos rotos salvajes (jamón, chorizo y bacon)", 14.9], ["Oreja a la plancha", 13.9], ["Patatas bravas o mixtas, con nuestra receta", 8.5], ["Salchipapas", 8.5], ["Tequeños venezolanos", 11.0], ["Torreznos crujientes con patatas revolconas", 14.9]]}, {"n": "Amantes del pan", "i": [["Sándwich mixto", 3.5], ["Sándwich mixto con huevo", 4.5], ["Sándwich vegetal (atún, huevo cocido, espárragos)", 5.9], ["Pintxo de solomillo con cebolla caramelizada", 8.0], ["Pintxo de salmón ahumado con queso crema", 8.0], ["Pintxo de tortilla de patata", 3.3]]}, {"n": "Nuestras especialidades", "i": [["Almejas a la marinera", 17.0], ["Cachopo casero asturiano con patatas", 24.9], ["Chuletón gallego (500 g) con pimientos y patatas", 32.9], ["Entrecot de ternera gallega (350 g) con pimientos y patatas", 24.0], ["Gambones a la plancha", 23.0], ["Albóndigas caseras", 12.0], ["Caracoles en salsa de la casa", 13.5], ["Magro con tomate", 12.9], ["Costillas de cerdo baby en salsa barbacoa con patatas", 18.9], ["Sepia a la plancha con ensalada", 15.9]]}, {"n": "Bocadillos y montados", "i": [["Bocadillo de calamares", 6.8], ["Bocadillo de milanesa de pollo", 6.8], ["Atún con pimiento", [5.8, 3.9]], ["Bacon y queso", [5.8, 3.9]], ["Chorizo frito", [5.8, 3.9]], ["Jamón serrano y tomate", [5.8, 3.9]], ["Panceta", [5.8, 3.9]], ["Queso semicurado", [5.8, 3.9]], ["Tortilla de patata", [5.8, 3.9]]], "nota": "Precio de bocadillo / montado. Extra de queso, tomate, pimiento o huevo: 1 €."}, {"n": "Platos combinados", "i": [["Bacon", 9.0], ["Filete de pollo", 12.0], ["Filete de ternera", 12.0], ["Lomo", 10.5]], "nota": "Todos con huevo y patatas fritas o ensalada."}, {"n": "Burgers caseras", "i": [["Hamburguesa original con queso", 10.0], ["Hamburguesa de pollo crispy y bacon", 11.0], ["Hamburguesa de rulo de cabra y cebolla caramelizada", 12.9], ["Hamburguesa especial: ternera, bacon, queso y huevo", 12.9]], "nota": "Todas con patatas."}, {"n": "Bebidas y bodega", "i": [["Café, infusión, Cola Cao, chocolate; café irlandés, bombón, carajillo", null], ["Agua mineral y con gas, refrescos, Red Bull, zumo natural de naranja, zumos de melocotón, mosto y piña", null], ["Botellín y tercio Mahou, Heineken, Radler limón; tercio Tostada 0,0, Estrella, sin filtrar, Alhambra 1925; doble y jarra; tinto de verano, calimocho", null], ["Combinados nacionales, premium de importación y gran selección gourmet; licores digestivos", null], ["Vino de la casa Batuta; Rioja Faustino; Ribera Delecto Reserva; Legaris Roble; blanco Rueda Verdejo; blanco Legaris", null]], "nota": "Sin precios en la carta original; preguntar en barra."}];
+/* carta de los días de partido: solo estos platos (nombres exactos de CARTA). Bebidas siempre. */
+const CARTA_PARTIDO = ["Ensalada César con pollo crujiente","Ensalada de rulo de cabra con nueces y balsámica","Ensalada mixta","Ensaladilla rusa casera",
+  "Lágrimas de pollo","Alitas de pollo","Calamares a la andaluza","Huevos rotos con chorizo o jamón","Huevos rotos salvajes (jamón, chorizo y bacon)","Oreja a la plancha",
+  "Patatas bravas o mixtas, con nuestra receta","Salchipapas","Tequeños venezolanos","Torreznos crujientes con patatas revolconas",
+  "Pintxo de salmón ahumado con queso crema","Pintxo de tortilla de patata",
+  "Albóndigas caseras","Caracoles en salsa de la casa","Magro con tomate","Sepia a la plancha con ensalada",
+  "Bocadillo de calamares","Atún con pimiento","Bacon y queso","Chorizo frito","Jamón serrano y tomate","Panceta","Queso semicurado","Tortilla de patata",
+  "Bacon","Filete de pollo","Filete de ternera","Lomo",
+  "Hamburguesa original con queso","Hamburguesa de pollo crispy y bacon"];
 
 /* ======================================================================= */
 
@@ -422,6 +451,7 @@ const CARTA = [{"n": "Nuestras ensaladas", "i": [["Ensalada César con pollo cru
    Los nombres de los platos y el menú del día se quedan en español. */
 const I18N = {
 ca: {
+ medio_h:"Mig menú", partido_aviso:"Avui hi ha partit al Metropolitano: carta reduïda perquè tot surti ràpid. A sota tens els plats d'avui.", partido_carta:"Dia de partit: avui només servim aquests plats.",
  nav_hoy:"Avui", nav_familia:"En família", nav_carta:"Carta", nav_celeb:"Celebracions", nav_opin:"Opinions", nav_ig:"Instagram", nav_donde:"On som",
  btn_reserva:"Reserva",
  hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
@@ -460,6 +490,7 @@ ca: {
  _dias:["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"]
 },
 en: {
+ medio_h:"Half menu", partido_aviso:"Match day at the Metropolitano: reduced menu so everything comes out fast. Today's dishes are below.", partido_carta:"Match day: today we only serve these dishes.",
  nav_hoy:"Today", nav_familia:"Family", nav_carta:"Menu", nav_celeb:"Celebrations", nav_opin:"Reviews", nav_ig:"Instagram", nav_donde:"Find us",
  btn_reserva:"Book",
  hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
@@ -498,6 +529,7 @@ en: {
  _dias:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 },
 fr: {
+ medio_h:"Demi-menu", partido_aviso:"Jour de match au Metropolitano : carte réduite pour que tout sorte vite. Les plats du jour sont ci-dessous.", partido_carta:"Jour de match : aujourd'hui nous ne servons que ces plats.",
  nav_hoy:"Aujourd'hui", nav_familia:"En famille", nav_carta:"Carte", nav_celeb:"Fêtes", nav_opin:"Avis", nav_ig:"Instagram", nav_donde:"Où",
  btn_reserva:"Réserver",
  hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
@@ -536,6 +568,7 @@ fr: {
  _dias:["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"]
 },
 it: {
+ medio_h:"Mezzo menù", partido_aviso:"Oggi c'è partita al Metropolitano: menù ridotto perché tutto esca veloce. Qui sotto i piatti di oggi.", partido_carta:"Giorno di partita: oggi serviamo solo questi piatti.",
  nav_hoy:"Oggi", nav_familia:"In famiglia", nav_carta:"Menù", nav_celeb:"Feste", nav_opin:"Recensioni", nav_ig:"Instagram", nav_donde:"Dove siamo",
  btn_reserva:"Prenota",
  hero_eyebrow:"Ristorante · San Blas-Canillejas · Madrid",
@@ -574,6 +607,7 @@ it: {
  _dias:["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"]
 },
 pt: {
+ medio_h:"Meio menu", partido_aviso:"Hoje há jogo no Metropolitano: carta reduzida para que tudo saia rápido. Em baixo tem os pratos de hoje.", partido_carta:"Dia de jogo: hoje só servimos estes pratos.",
  nav_hoy:"Hoje", nav_familia:"Em família", nav_carta:"Carta", nav_celeb:"Celebrações", nav_opin:"Opiniões", nav_ig:"Instagram", nav_donde:"Onde",
  btn_reserva:"Reservar",
  hero_eyebrow:"Restaurante · San Blas-Canillejas · Madrid",
@@ -612,6 +646,7 @@ pt: {
  _dias:["domingo","segunda","terça","quarta","quinta","sexta","sábado"]
 },
 de: {
+ medio_h:"Halbes Menü", partido_aviso:"Heute Spieltag im Metropolitano: reduzierte Karte, damit alles schnell rauskommt. Unten die Gerichte von heute.", partido_carta:"Spieltag: heute servieren wir nur diese Gerichte.",
  nav_hoy:"Heute", nav_familia:"Familie", nav_carta:"Karte", nav_celeb:"Feiern", nav_opin:"Bewertungen", nav_ig:"Instagram", nav_donde:"Anfahrt",
  btn_reserva:"Reservieren",
  hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
@@ -686,6 +721,11 @@ function pintarMenu(){
   MENU_DIA.primeros.forEach(x => md.insertAdjacentHTML('beforeend', `<li><span>${t("_primero")}</span>${x}</li>`));
   MENU_DIA.segundos.forEach(x => md.insertAdjacentHTML('beforeend', `<li><span>${t("_segundo")}</span>${x}</li>`));
   md.insertAdjacentHTML('beforeend', `<li><span>${t("_postre")}</span>${MENU_DIA.postre}</li>`);
+  const mm = document.getElementById('medio-menu');
+  if (MEDIO_MENU.precio) { mm.hidden = false; document.getElementById('medio-precio').textContent = MEDIO_MENU.precio; document.getElementById('medio-nota').textContent = MEDIO_MENU.nota || ''; }
+  else mm.hidden = true;
+  document.getElementById('aviso-partido').hidden = !DIA_PARTIDO.activo;
+  document.getElementById('aviso-partido-carta').hidden = !DIA_PARTIDO.activo;
 }
 function pintarHorario(){
   const dias = t("_dias");
@@ -703,7 +743,9 @@ const tabs = document.getElementById('tabs'), grid = document.getElementById('ca
 function pintar(filtro){
   filtroCarta = filtro; grid.innerHTML = '';
   CARTA.filter((s,i)=> filtro==null || filtro===i).forEach(s => {
-    const items = s.i.map(([n,p]) => p==null ? `<div class="plato"><span class="n" style="max-width:100%">${n}</span></div>` : `<div class="plato"><span class="n">${n}</span><span class="l"></span><span class="p">${Array.isArray(p) ? eur(p[0]) + ' <small>/ ' + eur(p[1]) + '</small>' : eur(p)}</span></div>`).join('');
+    const platos = DIA_PARTIDO.activo && s.n !== "Bebidas y bodega" ? s.i.filter(([n]) => CARTA_PARTIDO.includes(n)) : s.i;
+    if (!platos.length) return;
+    const items = platos.map(([n,p]) => p==null ? `<div class="plato"><span class="n" style="max-width:100%">${n}</span></div>` : `<div class="plato"><span class="n">${n}</span><span class="l"></span><span class="p">${Array.isArray(p) ? eur(p[0]) + ' <small>/ ' + eur(p[1]) + '</small>' : eur(p)}</span></div>`).join('');
     grid.insertAdjacentHTML('beforeend', `<div class="seccion"><h3>${tSec(s.n)}</h3>${s.nota?`<p class="nota-s">${s.nota}</p>`:''}${items}</div>`);
   });
 }
