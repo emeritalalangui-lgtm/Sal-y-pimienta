@@ -78,6 +78,8 @@ section{padding:88px 0}
 .dos figure{margin:0}
 .dos figure img{aspect-ratio:4/5;object-fit:cover}
 .dos .txt p{color:var(--tinta-2)}
+.video.evento{aspect-ratio:478/680;width:100%;max-width:478px;margin:0 auto}
+.video.evento video{image-rendering:auto}
 .lista-limpia{list-style:none;padding:0;margin:0 0 24px}
 .lista-limpia li{padding:10px 0;border-bottom:1px solid var(--linea)}
 .lista-limpia li::before{content:"—";margin-right:12px;color:var(--gris)}
@@ -258,7 +260,13 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
 
 <section id="familia">
   <div class="wrap dos">
-    <figure><img src="img/terraza_dia.jpg" alt="Terraza cubierta de Sal y Pimienta decorada para un cumpleaños, de día" loading="lazy"></figure>
+    <figure class="video evento">
+      <video autoplay muted loop playsinline preload="metadata" poster="video/familia_poster.jpg" aria-label="Terraza de Sal y Pimienta preparada para una celebración familiar">
+        <source src="video/familia.mp4" type="video/mp4">
+        <img src="video/familia_poster.jpg" alt="Terraza cubierta de Sal y Pimienta decorada para un cumpleaños, de día">
+      </video>
+      <figcaption data-i18n="evento_cap">Celebraciones en la terraza</figcaption>
+    </figure>
     <div class="txt">
       <p class="eyebrow" data-i18n="fam_eyebrow">En familia</p>
       <h2 data-i18n="fam_h2">Para venir con los niños, con los abuelos y sin prisa</h2>
@@ -308,7 +316,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <p data-i18n="cel_p2">Cuéntanos cuántos sois y qué día, y te mandamos las opciones por WhatsApp.</p>
       <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20celebraci%C3%B3n%20en%20grupo" target="_blank" rel="noopener" data-i18n="cel_btn">Pedir menú para grupos</a>
     </div>
-    <figure><img src="img/ig_gambones_2.jpg" alt="Gambones a la plancha para compartir" loading="lazy"></figure>
+    <figure><img src="img/wa_pinchos_evento.jpg" style="aspect-ratio:1" alt="Bandejas de pinchos de tomate cherry y mozzarella preparadas para una celebración" loading="lazy"></figure>
   </div>
 </section>
 
@@ -346,6 +354,10 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <img src="img/ig_tequenos.jpg" alt="Tequeños venezolanos" loading="lazy">
       <img src="img/ig_bravas.jpg" alt="Patatas bravas con salsa de la casa" loading="lazy">
       <img src="img/ig_cafe_churros.jpg" alt="Café con leche y churros" loading="lazy">
+      <img src="img/wa_zamburinas.jpg" alt="Zamburiñas a la plancha en su concha" loading="lazy">
+      <img src="img/wa_croquetas.jpg" alt="Croquetas caseras con pipeta de salsa" loading="lazy">
+      <img src="img/wa_cazon.jpg" alt="Cazón en adobo con ensalada y limón" loading="lazy">
+      <img src="img/wa_boquerones.jpg" alt="Boquerones fritos con limón" loading="lazy">
     </div>
     <p style="margin-top:36px"><a class="btn" href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener" data-i18n="ig_btn">Síguenos en Instagram</a></p>
   </div>
@@ -458,7 +470,7 @@ ca: {
  hero_h1:"Cuina casolana per a tota la família, a cinc minuts del metro Las Musas",
  hero_p1:"A <b>Sal y Pimienta</b> cuinem com a casa: menú del dia entre setmana, racions per compartir, entrepans dels de debò i postres casolanes. Un lloc de barri on venir amb els nens, amb els avis i sense presses.",
  hero_p2:"Terrassa coberta, local accessible i una taula llarga per quan sou molts. Reserva per WhatsApp i et guardem lloc.",
- hero_carta:"Veure la carta", video_cap:"La nostra cuina",
+ hero_carta:"Veure la carta", video_cap:"La nostra cuina", evento_cap:"Celebracions a la terrassa",
  hoy_eyebrow:"Menú del dia", hoy_h2:"Avui a la pissarra", hoy_card_eyebrow:"Menú del dia",
  hoy_incluye:"Primer, segon, pa, beguda i postres o cafè",
  hoy_nota:"De dilluns a divendres al migdia. El menú canvia cada dia; si no l'has pogut veure, pregunta per WhatsApp i te l'enviem.",
@@ -497,7 +509,7 @@ en: {
  hero_h1:"Home cooking for the whole family, five minutes from Las Musas metro",
  hero_p1:"At <b>Sal y Pimienta</b> we cook like at home: a weekday set lunch, sharing plates, proper sandwiches and homemade desserts. A neighbourhood spot to come with the kids, the grandparents, and no hurry.",
  hero_p2:"Covered terrace, step-free access and a long table for big groups. Book on WhatsApp and we'll keep you a spot.",
- hero_carta:"See the menu", video_cap:"Our kitchen",
+ hero_carta:"See the menu", video_cap:"Our kitchen", evento_cap:"Celebrations on the terrace",
  hoy_eyebrow:"Set lunch", hoy_h2:"Today's board", hoy_card_eyebrow:"Set lunch",
  hoy_incluye:"Starter, main, bread, drink and dessert or coffee",
  hoy_nota:"Monday to Friday at lunchtime. The menu changes every day; if you missed it, ask on WhatsApp and we'll send it over.",
@@ -536,7 +548,7 @@ fr: {
  hero_h1:"Cuisine maison pour toute la famille, à cinq minutes du métro Las Musas",
  hero_p1:"Chez <b>Sal y Pimienta</b>, on cuisine comme à la maison : menu du jour en semaine, assiettes à partager, vrais sandwichs et desserts maison. Un restaurant de quartier où venir avec les enfants, les grands-parents, et sans se presser.",
  hero_p2:"Terrasse couverte, accès de plain-pied et une grande table quand vous êtes nombreux. Réservez sur WhatsApp, on vous garde une place.",
- hero_carta:"Voir la carte", video_cap:"Notre cuisine",
+ hero_carta:"Voir la carte", video_cap:"Notre cuisine", evento_cap:"Fêtes sur la terrasse",
  hoy_eyebrow:"Menu du jour", hoy_h2:"Aujourd'hui à l'ardoise", hoy_card_eyebrow:"Menu du jour",
  hoy_incluye:"Entrée, plat, pain, boisson et dessert ou café",
  hoy_nota:"Du lundi au vendredi, le midi. Le menu change chaque jour ; si vous l'avez manqué, demandez-le sur WhatsApp.",
@@ -575,7 +587,7 @@ it: {
  hero_h1:"Cucina casalinga per tutta la famiglia, a cinque minuti dalla metro Las Musas",
  hero_p1:"Da <b>Sal y Pimienta</b> cuciniamo come a casa: menù del giorno nei giorni feriali, porzioni da condividere, panini veri e dolci fatti in casa. Un posto di quartiere dove venire con i bambini, con i nonni e senza fretta.",
  hero_p2:"Terrazza coperta, locale accessibile e un tavolo lungo per quando siete in tanti. Prenota su WhatsApp e ti teniamo il posto.",
- hero_carta:"Vedi il menù", video_cap:"La nostra cucina",
+ hero_carta:"Vedi il menù", video_cap:"La nostra cucina", evento_cap:"Feste in terrazza",
  hoy_eyebrow:"Menù del giorno", hoy_h2:"Oggi alla lavagna", hoy_card_eyebrow:"Menù del giorno",
  hoy_incluye:"Primo, secondo, pane, bevanda e dolce o caffè",
  hoy_nota:"Dal lunedì al venerdì a pranzo. Il menù cambia ogni giorno; se non l'hai visto, chiedilo su WhatsApp e te lo mandiamo.",
@@ -614,7 +626,7 @@ pt: {
  hero_h1:"Comida caseira para toda a família, a cinco minutos do metro Las Musas",
  hero_p1:"No <b>Sal y Pimienta</b> cozinhamos como em casa: menu do dia durante a semana, doses para partilhar, sandes a sério e sobremesas caseiras. Um sítio de bairro para vir com as crianças, com os avós e sem pressa.",
  hero_p2:"Esplanada coberta, local acessível e uma mesa comprida para quando são muitos. Reserve por WhatsApp e guardamos-lhe lugar.",
- hero_carta:"Ver a carta", video_cap:"A nossa cozinha",
+ hero_carta:"Ver a carta", video_cap:"A nossa cozinha", evento_cap:"Celebrações na esplanada",
  hoy_eyebrow:"Menu do dia", hoy_h2:"Hoje no quadro", hoy_card_eyebrow:"Menu do dia",
  hoy_incluye:"Entrada, prato, pão, bebida e sobremesa ou café",
  hoy_nota:"De segunda a sexta ao almoço. O menu muda todos os dias; se não o viu, pergunte por WhatsApp e enviamos.",
@@ -653,7 +665,7 @@ de: {
  hero_h1:"Hausmannskost für die ganze Familie, fünf Minuten von der Metro Las Musas",
  hero_p1:"Im <b>Sal y Pimienta</b> kochen wir wie zu Hause: Tagesmenü unter der Woche, Portionen zum Teilen, echte Bocadillos und hausgemachte Desserts. Ein Viertel-Lokal, in das man mit Kindern und Großeltern kommt, ganz ohne Eile.",
  hero_p2:"Überdachte Terrasse, barrierefreier Zugang und ein langer Tisch für große Runden. Reservieren Sie per WhatsApp, wir halten Ihnen einen Platz frei.",
- hero_carta:"Zur Karte", video_cap:"Unsere Küche",
+ hero_carta:"Zur Karte", video_cap:"Unsere Küche", evento_cap:"Feiern auf der Terrasse",
  hoy_eyebrow:"Tagesmenü", hoy_h2:"Heute auf der Tafel", hoy_card_eyebrow:"Tagesmenü",
  hoy_incluye:"Vorspeise, Hauptgang, Brot, Getränk und Dessert oder Kaffee",
  hoy_nota:"Montag bis Freitag mittags. Das Menü wechselt täglich; fragen Sie einfach per WhatsApp, wir schicken es Ihnen.",
