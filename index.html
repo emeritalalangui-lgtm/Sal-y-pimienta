@@ -7,7 +7,7 @@
 <meta name="description" content="Restaurante familiar en San Blas-Canillejas, Madrid. Cocina casera, menú del día entre semana, raciones para compartir y terraza cubierta, a cinco minutos del metro Las Musas. Calle de La Ilíada 19.">
 <meta property="og:title" content="Sal y Pimienta Metropolitano · Restaurante familiar">
 <meta property="og:description" content="Cocina casera para toda la familia en San Blas-Canillejas. Menú del día, raciones y terraza cubierta.">
-<meta property="og:image" content="img/pro_croquetas.jpg">
+<meta property="og:image" content="img/ig_hamburguesa_2.jpg">
 <meta property="og:type" content="restaurant">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%231c1c1c'/%3E%3Ctext x='24' y='31' font-family='Georgia,serif' font-size='22' fill='%23fff' text-anchor='middle'%3ES%26P%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,6 +121,10 @@ section{padding:88px 0}
 .resena q{quotes:"“" "”";font-size:18px;color:var(--tinta-2);display:block;margin-bottom:14px}
 .resena .quien{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris)}
 
+/* galería instagram */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.galeria img{aspect-ratio:1;object-fit:cover}
+
 /* dónde */
 .donde{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
 .donde dl{margin:0}
@@ -152,6 +156,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
   .hero .wrap,.dos,.pizarra,.donde{grid-template-columns:1fr;gap:40px}
   .dos.inv figure{order:-1}
   .tira{grid-template-columns:repeat(3,1fr)}
+  .galeria{grid-template-columns:repeat(2,1fr)}
   .carta-grid{grid-template-columns:1fr}
   .resenas{grid-template-columns:1fr}
   footer .cols{grid-template-columns:1fr 1fr}
@@ -179,7 +184,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
   <div class="wrap">
     <a class="marca" href="#" aria-label="Sal y Pimienta Metropolitano, inicio"><b>Sal y Pimienta</b><small>Metropolitano · Madrid</small></a>
     <nav class="nav" aria-label="Secciones">
-      <a href="#hoy">Hoy</a><a href="#familia">En familia</a><a href="#carta">Carta</a><a href="#celebraciones">Celebraciones</a><a href="#opiniones">Opiniones</a><a href="#donde">Dónde</a>
+      <a href="#hoy">Hoy</a><a href="#familia">En familia</a><a href="#carta">Carta</a><a href="#celebraciones">Celebraciones</a><a href="#opiniones">Opiniones</a><a href="#instagram">Instagram</a><a href="#donde">Dónde</a>
     </nav>
     <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">Reserva</a>
   </div>
@@ -201,7 +206,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
     <figure class="video">
       <video autoplay muted loop playsinline preload="metadata" poster="video/comida_poster.jpg" aria-label="Platos de la carta de Sal y Pimienta">
         <source src="video/comida.mp4" type="video/mp4">
-        <img src="video/comida_poster.jpg" alt="Croquetas caseras de Sal y Pimienta">
+        <img src="video/comida_poster.jpg" alt="Hamburguesa casera de Sal y Pimienta">
       </video>
       <figcaption>Nuestra cocina</figcaption>
     </figure>
@@ -261,12 +266,12 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <p>Raciones para compartir, bocadillos de los de verdad, cachopo y chuletón para los días grandes, y postres de casa. Los precios son los de la carta del local.</p>
     </div>
     <div class="tira">
-      <img src="img/pro_croquetas.jpg" alt="Croquetas de jamón caseras" loading="lazy">
-      <img src="img/pro_calamares.jpg" alt="Calamares a la romana con limón" loading="lazy">
-      <img src="img/pro_nuggets.jpg" alt="Nuggets de pollo caseros con salsa" loading="lazy">
-      <img src="img/pro_ensalada_cesar.jpg" alt="Ensalada César con pollo crujiente" loading="lazy">
-      <img src="img/pro_tosta_iberico.jpg" alt="Tosta de ibérico con patatas paja" loading="lazy">
-      <img src="img/pro_tarta_queso.jpg" alt="Tarta de queso con arándanos y frambuesas" loading="lazy">
+      <img src="img/ig_hamburguesa_2.jpg" alt="Hamburguesa casera con queso de cabra y cebolla caramelizada" loading="lazy">
+      <img src="img/ig_calamares.jpg" alt="Calamares a la andaluza con limón" loading="lazy">
+      <img src="img/ig_lagrimas.jpg" alt="Lágrimas de pollo con salsa" loading="lazy">
+      <img src="img/ig_ensalada_cesar.jpg" alt="Ensalada César con pollo crujiente" loading="lazy">
+      <img src="img/ig_almejas.jpg" alt="Almejas a la marinera en cazuela de barro" loading="lazy">
+      <img src="img/ig_gambones.jpg" alt="Gambones a la plancha" loading="lazy">
     </div>
     <div class="tabs" role="tablist" aria-label="Secciones de la carta" id="tabs"></div>
     <div class="carta-grid" id="carta-grid"></div>
@@ -284,7 +289,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <p>Cuéntanos cuántos sois y qué día, y te mandamos las opciones por WhatsApp.</p>
       <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20celebraci%C3%B3n%20en%20grupo" target="_blank" rel="noopener">Pedir menú para grupos</a>
     </div>
-    <figure><img src="img/pro_tarta_queso.jpg" alt="Tarta de queso casera con frutos rojos" loading="lazy"></figure>
+    <figure><img src="img/ig_gambones_2.jpg" alt="Gambones a la plancha para compartir" loading="lazy"></figure>
   </div>
 </section>
 
@@ -302,6 +307,28 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <div class="resena"><q>Muy buena comida a precios muy asequibles. El servicio del camarero Roberto es excelente.</q><span class="quien">Carlos, en Google</span></div>
     </div>
     <p style="margin-top:40px"><a class="btn" href="https://g.page/r/CZbwO-Q7u0hQEBE/review" target="_blank" rel="noopener">Déjanos tu reseña</a></p>
+  </div>
+</section>
+
+<section class="crema" id="instagram">
+  <div class="wrap">
+    <div class="intro">
+      <p class="eyebrow">Instagram</p>
+      <h2>De nuestra cocina</h2>
+      <div class="regla"></div>
+      <p>Lo que sale cada día de la cocina, en <a href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">@barsalypimienta</a>.</p>
+    </div>
+    <div class="galeria">
+      <img src="img/ig_chuleton.jpg" alt="Chuletón con patatas y pimientos" loading="lazy">
+      <img src="img/ig_tosta_aguacate.jpg" alt="Tosta de aguacate y gambas" loading="lazy">
+      <img src="img/ig_albondigas.jpg" alt="Albóndigas caseras en salsa" loading="lazy">
+      <img src="img/ig_torreznos.jpg" alt="Torreznos crujientes" loading="lazy">
+      <img src="img/ig_huevos_jamon.jpg" alt="Huevos rotos con jamón" loading="lazy">
+      <img src="img/ig_tequenos.jpg" alt="Tequeños venezolanos" loading="lazy">
+      <img src="img/ig_bravas.jpg" alt="Patatas bravas con salsa de la casa" loading="lazy">
+      <img src="img/ig_cafe_churros.jpg" alt="Café con leche y churros" loading="lazy">
+    </div>
+    <p style="margin-top:36px"><a class="btn" href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">Síguenos en Instagram</a></p>
   </div>
 </section>
 
