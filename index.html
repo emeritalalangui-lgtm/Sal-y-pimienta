@@ -114,6 +114,11 @@ section{padding:88px 0}
 .navidad p{margin:0 0 14px}
 .nav-nota{font-size:15px;color:var(--gris);font-style:italic}
 .navidad .btn{margin-top:6px}
+.nav-menu{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 24px;margin:6px 0 22px;padding-top:18px;border-top:1px solid rgba(0,0,0,.15)}
+.nav-menu h4{margin:0 0 8px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris);font-weight:400}
+.nav-menu ul{list-style:none;margin:0;padding:0}
+.nav-menu li{font-size:16px;line-height:1.45;margin:0 0 6px;color:var(--tinta)}
+@media(max-width:700px){.nav-menu{grid-template-columns:1fr}}
 
 /* carta */
 .tira{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:0 0 56px}
@@ -318,14 +323,18 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <p class="eyebrow" data-i18n="cel_eyebrow">Celebraciones</p>
       <h2 data-i18n="cel_h2">Cumpleaños, comidas en familia y reuniones</h2>
       <div class="regla" style="margin-bottom:28px"></div>
-      <p data-i18n="cel_p1">Montamos mesa larga para hasta dieciséis personas, con menús cerrados para que nadie se pelee con la cuenta. Si llegáis tarde o por turnos, no pasa nada: estamos acostumbrados.</p>
+      <p data-i18n="cel_p1">Montamos mesa larga para grupos, con menús cerrados para que nadie se pelee con la cuenta. Si llegáis tarde o por turnos, no pasa nada: estamos acostumbrados.</p>
       <p data-i18n="cel_p2">Cuéntanos cuántos sois y qué día, y te mandamos las opciones por WhatsApp.</p>
       <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20celebraci%C3%B3n%20en%20grupo" target="_blank" rel="noopener" data-i18n="cel_btn">Pedir menú para grupos</a>
       <div class="navidad" id="navidad">
         <p class="eyebrow" data-i18n="nav_eyebrow">Navidad · empresas</p>
         <h3 data-i18n="nav_h3">Comidas y cenas de empresa</h3>
         <p data-i18n="nav_p">Menú cerrado de Navidad para grupos de empresa: <b>20 € por persona</b>, mínimo 4 personas. Reserva con antelación; las fechas de diciembre vuelan.</p>
-        <p class="nav-nota" data-i18n="nav_nota">El menú de este año lo publicamos aquí en cuanto esté listo.</p>
+        <div class="nav-menu">
+          <div><h4 data-i18n="nav_m1">Entrante a elegir</h4><ul><li data-i18n="nav_e1">Navajas a la plancha</li><li data-i18n="nav_e2">Cóctel de langostinos</li><li data-i18n="nav_e3">Croquetas de pulled pork a baja cocción</li></ul></div>
+          <div><h4 data-i18n="nav_m2">Principal a elegir</h4><ul><li data-i18n="nav_p1">Entrecot madurado con patatas y pimientos</li><li data-i18n="nav_p2">Cochinillo al horno</li><li data-i18n="nav_p3">Merluza a la vizcaína</li></ul></div>
+          <div><h4 data-i18n="nav_m3">Para terminar</h4><ul><li data-i18n="nav_d1">Postres de la casa y café</li><li data-i18n="nav_d2">Incluye bebida y pan</li></ul></div>
+        </div>
         <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20una%20comida%20de%20empresa%20de%20Navidad%20(men%C3%BA%20cerrado%2C%2020%20%E2%82%AC)" target="_blank" rel="noopener" data-i18n="nav_btn">Reservar cena de empresa</a>
       </div>
     </div>
@@ -414,7 +423,7 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
       <h3 data-i18n="f_reservas">Reservas</h3>
       <p><a href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">WhatsApp</a></p>
       <p><a href="tel:+34910660207" data-i18n="f_llamar">Llamar</a></p>
-      <p data-i18n="f_grupos">Grupos de hasta 16 personas</p>
+      <p data-i18n="f_grupos">Grupos y celebraciones</p>
     </div>
     <div>
       <h3 data-i18n="f_redes">Redes sociales</h3>
@@ -497,8 +506,8 @@ ca: {
  carta_p:"Racions per compartir, entrepans dels de debò, cachopo i txuletó per als dies grans, i postres de casa. Els preus són els de la carta del local.",
  carta_alerg:"Si tens alguna al·lèrgia o intolerància, digues-ho a qui t'atengui: la carta física porta les icones d'al·lèrgens de cada plat i a cuina t'ho confirmen.",
  cel_eyebrow:"Celebracions", cel_h2:"Aniversaris, dinars en família i reunions",
- cel_p1:"Muntem taula llarga per a fins a setze persones, amb menús tancats perquè ningú es baralli amb el compte. Si arribeu tard o per torns, no passa res: hi estem acostumats.",
- cel_p2:"Digues-nos quants sou i quin dia, i t'enviem les opcions per WhatsApp.", cel_btn:"Demanar menú per a grups", nav_eyebrow:"Nadal · empreses", nav_h3:"Dinars i sopars d'empresa", nav_p:"Menú tancat de Nadal per a grups d'empresa: <b>20 € per persona</b>, mínim 4 persones. Reserva amb antelació; les dates de desembre volen.", nav_nota:"El menú d'enguany el publicarem aquí quan estigui llest.", nav_btn:"Reservar sopar d'empresa",
+ cel_p1:"Muntem taula llarga per a grups, amb menús tancats perquè ningú es baralli amb el compte. Si arribeu tard o per torns, no passa res: hi estem acostumats.",
+ cel_p2:"Digues-nos quants sou i quin dia, i t'enviem les opcions per WhatsApp.", cel_btn:"Demanar menú per a grups", nav_eyebrow:"Nadal · empreses", nav_h3:"Dinars i sopars d'empresa", nav_p:"Menú tancat de Nadal per a grups d'empresa: <b>20 € per persona</b>, mínim 4 persones. Reserva amb antelació; les dates de desembre volen.", nav_m1:"Entrant a triar", nav_e1:"Navalles a la planxa", nav_e2:"Còctel de llagostins", nav_e3:"Croquetes de pulled pork a baixa cocció", nav_m2:"Principal a triar", nav_p1:"Entrecot madurat amb patates i pebrots", nav_p2:"Garrí al forn", nav_p3:"Lluç a la biscaïna", nav_m3:"Per acabar", nav_d1:"Postres de la casa i cafè", nav_d2:"Inclou beguda i pa", nav_btn:"Reservar sopar d'empresa",
  op_eyebrow:"Opinions", op_h2:"El que diu la gent", op_n:"350 ressenyes a Google", op_btn:"Deixa'ns la teva ressenya",
  op_q1:"Hem estat 16 persones celebrant tres aniversaris i no hem pogut sortir més satisfets. Primer dia que hi anàvem i el tracte ha estat com si fóssim clients de tota la vida.",
  op_q2:"El cachopo estava massa bo. Recomanadíssim. Excel·lent atenció i bon servei.",
@@ -508,7 +517,7 @@ ca: {
  donde_eyebrow:"On som", donde_h2:"Carrer de La Ilíada, 19", donde_p:"Entre la plaça de Grecia i el metro de Las Musas, a San Blas-Canillejas.",
  dt_dir:"Adreça", dt_metro:"Metro", dt_tel:"Telèfon", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Accés",
  dd_wa:"Escriu-nos per reservar", dd_acc:"Local accessible en cadira de rodes. Terrassa coberta.", donde_como:"Com arribar-hi",
- f_horario:"Horari", f_reservas:"Reserves", f_llamar:"Trucar", f_grupos:"Grups de fins a 16 persones", f_redes:"Xarxes socials", f_resenas:"Ressenyes a Google",
+ f_horario:"Horari", f_reservas:"Reserves", f_llamar:"Trucar", f_grupos:"Grups i celebracions", f_redes:"Xarxes socials", f_resenas:"Ressenyes a Google",
  l_aviso:"Avís legal", l_priv:"Privacitat", l_cookies:"Galetes",
  _primero:"Primer", _segundo:"Segon", _postre:"Postres", _toda:"Tota la carta", _cerrado:"Tancat",
  _abierto:"Obert ara · tanquem a les {h}", _abrimos:"Tancat · obrim a les {h}", _cerradoahora:"Tancat ara",
@@ -536,8 +545,8 @@ en: {
  carta_p:"Sharing plates, proper sandwiches, cachopo and T-bone steak for the big days, and homemade desserts. Prices are those of the menu in the restaurant.",
  carta_alerg:"If you have any allergy or intolerance, tell your server: the printed menu shows the allergen icons for every dish and the kitchen will confirm.",
  cel_eyebrow:"Celebrations", cel_h2:"Birthdays, family lunches and get-togethers",
- cel_p1:"We set up a long table for up to sixteen people, with fixed menus so nobody fights over the bill. If you arrive late or in shifts, no problem: we're used to it.",
- cel_p2:"Tell us how many you are and which day, and we'll send you the options on WhatsApp.", cel_btn:"Ask for a group menu", nav_eyebrow:"Christmas · companies", nav_h3:"Office Christmas lunches and dinners", nav_p:"Set Christmas menu for company groups: <b>€20 per person</b>, minimum 4 people. Book early; December dates go fast.", nav_nota:"This year's menu will be published here as soon as it's ready.", nav_btn:"Book a company dinner",
+ cel_p1:"We set up a long table for groups, with fixed menus so nobody fights over the bill. If you arrive late or in shifts, no problem: we're used to it.",
+ cel_p2:"Tell us how many you are and which day, and we'll send you the options on WhatsApp.", cel_btn:"Ask for a group menu", nav_eyebrow:"Christmas · companies", nav_h3:"Office Christmas lunches and dinners", nav_p:"Set Christmas menu for company groups: <b>€20 per person</b>, minimum 4 people. Book early; December dates go fast.", nav_m1:"Starter (choose one)", nav_e1:"Grilled razor clams", nav_e2:"Prawn cocktail", nav_e3:"Slow-cooked pulled pork croquettes", nav_m2:"Main (choose one)", nav_p1:"Aged entrecôte with potatoes and peppers", nav_p2:"Roast suckling pig", nav_p3:"Hake Biscay style", nav_m3:"To finish", nav_d1:"Homemade desserts and coffee", nav_d2:"Drink and bread included", nav_btn:"Book a company dinner",
  op_eyebrow:"Reviews", op_h2:"What people say", op_n:"350 reviews on Google", op_btn:"Leave us a review",
  op_q1:"We were 16 people celebrating three birthdays and couldn't have left happier. First time there and they treated us like lifelong regulars.",
  op_q2:"The cachopo was way too good. Highly recommended. Excellent attention and good service.",
@@ -547,7 +556,7 @@ en: {
  donde_eyebrow:"Find us", donde_h2:"Calle de La Ilíada, 19", donde_p:"Between Plaza de Grecia and Las Musas metro, in San Blas-Canillejas.",
  dt_dir:"Address", dt_metro:"Metro", dt_tel:"Phone", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Access",
  dd_wa:"Message us to book", dd_acc:"Wheelchair accessible. Covered terrace.", donde_como:"Directions",
- f_horario:"Opening hours", f_reservas:"Bookings", f_llamar:"Call", f_grupos:"Groups of up to 16", f_redes:"Social media", f_resenas:"Reviews on Google",
+ f_horario:"Opening hours", f_reservas:"Bookings", f_llamar:"Call", f_grupos:"Groups and celebrations", f_redes:"Social media", f_resenas:"Reviews on Google",
  l_aviso:"Legal notice", l_priv:"Privacy", l_cookies:"Cookies",
  _primero:"Starter", _segundo:"Main", _postre:"Dessert", _toda:"Full menu", _cerrado:"Closed",
  _abierto:"Open now · we close at {h}", _abrimos:"Closed · we open at {h}", _cerradoahora:"Closed now",
@@ -575,8 +584,8 @@ fr: {
  carta_p:"Assiettes à partager, vrais sandwichs, cachopo et côte de bœuf pour les grandes occasions, et desserts maison. Les prix sont ceux de la carte du restaurant.",
  carta_alerg:"En cas d'allergie ou d'intolérance, dites-le à votre serveur : la carte papier indique les allergènes de chaque plat et la cuisine vous le confirme.",
  cel_eyebrow:"Fêtes", cel_h2:"Anniversaires, repas de famille et réunions",
- cel_p1:"Nous dressons une grande table jusqu'à seize personnes, avec des menus fixes pour que personne ne se dispute l'addition. Si vous arrivez en retard ou par vagues, aucun souci : on a l'habitude.",
- cel_p2:"Dites-nous combien vous êtes et quel jour, et on vous envoie les options sur WhatsApp.", cel_btn:"Demander un menu groupe", nav_eyebrow:"Noël · entreprises", nav_h3:"Déjeuners et dîners d'entreprise", nav_p:"Menu de Noël fixe pour les groupes d'entreprise : <b>20 € par personne</b>, minimum 4 personnes. Réservez tôt, les dates de décembre partent vite.", nav_nota:"Le menu de cette année sera publié ici dès qu'il sera prêt.", nav_btn:"Réserver un dîner d'entreprise",
+ cel_p1:"Nous dressons une grande table pour les groupes, avec des menus fixes pour que personne ne se dispute l'addition. Si vous arrivez en retard ou par vagues, aucun souci : on a l'habitude.",
+ cel_p2:"Dites-nous combien vous êtes et quel jour, et on vous envoie les options sur WhatsApp.", cel_btn:"Demander un menu groupe", nav_eyebrow:"Noël · entreprises", nav_h3:"Déjeuners et dîners d'entreprise", nav_p:"Menu de Noël fixe pour les groupes d'entreprise : <b>20 € par personne</b>, minimum 4 personnes. Réservez tôt, les dates de décembre partent vite.", nav_m1:"Entrée au choix", nav_e1:"Couteaux à la plancha", nav_e2:"Cocktail de crevettes", nav_e3:"Croquettes de pulled pork cuit à basse température", nav_m2:"Plat au choix", nav_p1:"Entrecôte maturée, pommes de terre et poivrons", nav_p2:"Cochon de lait rôti", nav_p3:"Merlu à la biscayenne", nav_m3:"Pour finir", nav_d1:"Desserts maison et café", nav_d2:"Boisson et pain inclus", nav_btn:"Réserver un dîner d'entreprise",
  op_eyebrow:"Avis", op_h2:"Ce qu'en disent les gens", op_n:"350 avis sur Google", op_btn:"Laissez-nous un avis",
  op_q1:"Nous étions 16 à fêter trois anniversaires et nous n'aurions pas pu repartir plus satisfaits. Première visite et on nous a traités comme des habitués de toujours.",
  op_q2:"Le cachopo était bien trop bon. À recommander absolument. Excellent accueil et bon service.",
@@ -586,7 +595,7 @@ fr: {
  donde_eyebrow:"Où nous trouver", donde_h2:"Calle de La Ilíada, 19", donde_p:"Entre la Plaza de Grecia et le métro Las Musas, à San Blas-Canillejas.",
  dt_dir:"Adresse", dt_metro:"Métro", dt_tel:"Téléphone", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Accès",
  dd_wa:"Écrivez-nous pour réserver", dd_acc:"Accessible en fauteuil roulant. Terrasse couverte.", donde_como:"Itinéraire",
- f_horario:"Horaires", f_reservas:"Réservations", f_llamar:"Appeler", f_grupos:"Groupes jusqu'à 16 personnes", f_redes:"Réseaux sociaux", f_resenas:"Avis sur Google",
+ f_horario:"Horaires", f_reservas:"Réservations", f_llamar:"Appeler", f_grupos:"Groupes et fêtes", f_redes:"Réseaux sociaux", f_resenas:"Avis sur Google",
  l_aviso:"Mentions légales", l_priv:"Confidentialité", l_cookies:"Cookies",
  _primero:"Entrée", _segundo:"Plat", _postre:"Dessert", _toda:"Toute la carte", _cerrado:"Fermé",
  _abierto:"Ouvert · fermeture à {h}", _abrimos:"Fermé · ouverture à {h}", _cerradoahora:"Fermé actuellement",
@@ -614,8 +623,8 @@ it: {
  carta_p:"Porzioni da condividere, panini veri, cachopo e bistecca per le grandi occasioni, e dolci di casa. I prezzi sono quelli del menù del locale.",
  carta_alerg:"Se hai allergie o intolleranze, dillo a chi ti serve: il menù cartaceo riporta le icone degli allergeni di ogni piatto e la cucina te lo conferma.",
  cel_eyebrow:"Feste", cel_h2:"Compleanni, pranzi in famiglia e riunioni",
- cel_p1:"Prepariamo un tavolo lungo fino a sedici persone, con menù fissi perché nessuno litighi per il conto. Se arrivate in ritardo o a turni, nessun problema: ci siamo abituati.",
- cel_p2:"Dicci quanti siete e che giorno, e ti mandiamo le opzioni su WhatsApp.", cel_btn:"Chiedi il menù per gruppi", nav_eyebrow:"Natale · aziende", nav_h3:"Pranzi e cene aziendali", nav_p:"Menù fisso di Natale per gruppi aziendali: <b>20 € a persona</b>, minimo 4 persone. Prenota per tempo: le date di dicembre finiscono presto.", nav_nota:"Il menù di quest'anno lo pubblichiamo qui appena pronto.", nav_btn:"Prenota una cena aziendale",
+ cel_p1:"Prepariamo un tavolo lungo per i gruppi, con menù fissi perché nessuno litighi per il conto. Se arrivate in ritardo o a turni, nessun problema: ci siamo abituati.",
+ cel_p2:"Dicci quanti siete e che giorno, e ti mandiamo le opzioni su WhatsApp.", cel_btn:"Chiedi il menù per gruppi", nav_eyebrow:"Natale · aziende", nav_h3:"Pranzi e cene aziendali", nav_p:"Menù fisso di Natale per gruppi aziendali: <b>20 € a persona</b>, minimo 4 persone. Prenota per tempo: le date di dicembre finiscono presto.", nav_m1:"Antipasto a scelta", nav_e1:"Cannolicchi alla piastra", nav_e2:"Cocktail di gamberi", nav_e3:"Crocchette di pulled pork a bassa temperatura", nav_m2:"Secondo a scelta", nav_p1:"Entrecôte frollata con patate e peperoni", nav_p2:"Maialino al forno", nav_p3:"Nasello alla biscaglina", nav_m3:"Per finire", nav_d1:"Dolci della casa e caffè", nav_d2:"Bevanda e pane inclusi", nav_btn:"Prenota una cena aziendale",
  op_eyebrow:"Recensioni", op_h2:"Cosa dice la gente", op_n:"350 recensioni su Google", op_btn:"Lasciaci una recensione",
  op_q1:"Eravamo in 16 a festeggiare tre compleanni e non potevamo uscire più soddisfatti. Prima volta lì e ci hanno trattato come clienti di sempre.",
  op_q2:"Il cachopo era troppo buono. Consigliatissimo. Ottima attenzione e buon servizio.",
@@ -625,7 +634,7 @@ it: {
  donde_eyebrow:"Dove siamo", donde_h2:"Calle de La Ilíada, 19", donde_p:"Tra Plaza de Grecia e la metro Las Musas, a San Blas-Canillejas.",
  dt_dir:"Indirizzo", dt_metro:"Metro", dt_tel:"Telefono", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Accesso",
  dd_wa:"Scrivici per prenotare", dd_acc:"Accessibile in sedia a rotelle. Terrazza coperta.", donde_como:"Come arrivare",
- f_horario:"Orari", f_reservas:"Prenotazioni", f_llamar:"Chiama", f_grupos:"Gruppi fino a 16 persone", f_redes:"Social", f_resenas:"Recensioni su Google",
+ f_horario:"Orari", f_reservas:"Prenotazioni", f_llamar:"Chiama", f_grupos:"Gruppi e feste", f_redes:"Social", f_resenas:"Recensioni su Google",
  l_aviso:"Note legali", l_priv:"Privacy", l_cookies:"Cookie",
  _primero:"Primo", _segundo:"Secondo", _postre:"Dolce", _toda:"Tutto il menù", _cerrado:"Chiuso",
  _abierto:"Aperto ora · chiudiamo alle {h}", _abrimos:"Chiuso · apriamo alle {h}", _cerradoahora:"Chiuso ora",
@@ -653,8 +662,8 @@ pt: {
  carta_p:"Doses para partilhar, sandes a sério, cachopo e bife da vazia para os dias grandes, e sobremesas de casa. Os preços são os da carta do restaurante.",
  carta_alerg:"Se tem alguma alergia ou intolerância, diga a quem o atende: a carta em papel tem os ícones dos alergénios de cada prato e a cozinha confirma.",
  cel_eyebrow:"Celebrações", cel_h2:"Aniversários, almoços em família e encontros",
- cel_p1:"Montamos uma mesa comprida até dezasseis pessoas, com menus fechados para ninguém discutir a conta. Se chegarem atrasados ou por turnos, não há problema: estamos habituados.",
- cel_p2:"Diga-nos quantos são e que dia, e enviamos as opções por WhatsApp.", cel_btn:"Pedir menu para grupos", nav_eyebrow:"Natal · empresas", nav_h3:"Almoços e jantares de empresa", nav_p:"Menu fechado de Natal para grupos de empresa: <b>20 € por pessoa</b>, mínimo 4 pessoas. Reserve com antecedência; as datas de dezembro esgotam depressa.", nav_nota:"O menu deste ano será publicado aqui assim que estiver pronto.", nav_btn:"Reservar jantar de empresa",
+ cel_p1:"Montamos uma mesa comprida para grupos, com menus fechados para ninguém discutir a conta. Se chegarem atrasados ou por turnos, não há problema: estamos habituados.",
+ cel_p2:"Diga-nos quantos são e que dia, e enviamos as opções por WhatsApp.", cel_btn:"Pedir menu para grupos", nav_eyebrow:"Natal · empresas", nav_h3:"Almoços e jantares de empresa", nav_p:"Menu fechado de Natal para grupos de empresa: <b>20 € por pessoa</b>, mínimo 4 pessoas. Reserve com antecedência; as datas de dezembro esgotam depressa.", nav_m1:"Entrada à escolha", nav_e1:"Navalhas grelhadas", nav_e2:"Cocktail de camarão", nav_e3:"Croquetes de pulled pork a baixa temperatura", nav_m2:"Prato principal à escolha", nav_p1:"Entrecôte maturado com batatas e pimentos", nav_p2:"Leitão assado", nav_p3:"Pescada à biscainha", nav_m3:"Para terminar", nav_d1:"Sobremesas da casa e café", nav_d2:"Inclui bebida e pão", nav_btn:"Reservar jantar de empresa",
  op_eyebrow:"Opiniões", op_h2:"O que dizem as pessoas", op_n:"350 avaliações no Google", op_btn:"Deixe a sua avaliação",
  op_q1:"Fomos 16 pessoas a celebrar três aniversários e não podíamos ter saído mais satisfeitos. Primeira vez lá e trataram-nos como clientes de sempre.",
  op_q2:"O cachopo estava bom demais. Recomendadíssimo. Excelente atenção e bom serviço.",
@@ -664,7 +673,7 @@ pt: {
  donde_eyebrow:"Onde estamos", donde_h2:"Calle de La Ilíada, 19", donde_p:"Entre a Plaza de Grecia e o metro Las Musas, em San Blas-Canillejas.",
  dt_dir:"Morada", dt_metro:"Metro", dt_tel:"Telefone", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Acesso",
  dd_wa:"Escreva-nos para reservar", dd_acc:"Acessível a cadeiras de rodas. Esplanada coberta.", donde_como:"Como chegar",
- f_horario:"Horário", f_reservas:"Reservas", f_llamar:"Ligar", f_grupos:"Grupos até 16 pessoas", f_redes:"Redes sociais", f_resenas:"Avaliações no Google",
+ f_horario:"Horário", f_reservas:"Reservas", f_llamar:"Ligar", f_grupos:"Grupos e celebrações", f_redes:"Redes sociais", f_resenas:"Avaliações no Google",
  l_aviso:"Aviso legal", l_priv:"Privacidade", l_cookies:"Cookies",
  _primero:"Entrada", _segundo:"Prato", _postre:"Sobremesa", _toda:"Toda a carta", _cerrado:"Fechado",
  _abierto:"Aberto agora · fechamos às {h}", _abrimos:"Fechado · abrimos às {h}", _cerradoahora:"Fechado agora",
@@ -692,8 +701,8 @@ de: {
  carta_p:"Portionen zum Teilen, echte Bocadillos, Cachopo und Chuletón für die großen Tage, dazu Desserts aus eigener Küche. Es gelten die Preise der Karte im Lokal.",
  carta_alerg:"Bei Allergien oder Unverträglichkeiten sagen Sie es dem Service: Die gedruckte Karte zeigt die Allergen-Symbole jedes Gerichts, die Küche bestätigt es Ihnen.",
  cel_eyebrow:"Feiern", cel_h2:"Geburtstage, Familienessen und Treffen",
- cel_p1:"Wir decken eine lange Tafel für bis zu sechzehn Personen, mit festen Menüs, damit sich niemand um die Rechnung streitet. Wer zu spät oder in Etappen kommt: kein Problem, das kennen wir.",
- cel_p2:"Sagen Sie uns, wie viele Sie sind und an welchem Tag, und wir schicken Ihnen die Optionen per WhatsApp.", cel_btn:"Gruppenmenü anfragen", nav_eyebrow:"Weihnachten · Firmen", nav_h3:"Weihnachtsessen für Firmen", nav_p:"Festes Weihnachtsmenü für Firmengruppen: <b>20 € pro Person</b>, mindestens 4 Personen. Früh reservieren, die Dezember-Termine sind schnell weg.", nav_nota:"Das diesjährige Menü veröffentlichen wir hier, sobald es feststeht.", nav_btn:"Firmenessen reservieren",
+ cel_p1:"Wir decken eine lange Tafel für Gruppen, mit festen Menüs, damit sich niemand um die Rechnung streitet. Wer zu spät oder in Etappen kommt: kein Problem, das kennen wir.",
+ cel_p2:"Sagen Sie uns, wie viele Sie sind und an welchem Tag, und wir schicken Ihnen die Optionen per WhatsApp.", cel_btn:"Gruppenmenü anfragen", nav_eyebrow:"Weihnachten · Firmen", nav_h3:"Weihnachtsessen für Firmen", nav_p:"Festes Weihnachtsmenü für Firmengruppen: <b>20 € pro Person</b>, mindestens 4 Personen. Früh reservieren, die Dezember-Termine sind schnell weg.", nav_m1:"Vorspeise nach Wahl", nav_e1:"Gegrillte Schwertmuscheln", nav_e2:"Garnelencocktail", nav_e3:"Pulled-Pork-Kroketten, langsam gegart", nav_m2:"Hauptgang nach Wahl", nav_p1:"Gereiftes Entrecôte mit Kartoffeln und Paprika", nav_p2:"Spanferkel aus dem Ofen", nav_p3:"Seehecht auf baskische Art", nav_m3:"Zum Abschluss", nav_d1:"Hausgemachte Desserts und Kaffee", nav_d2:"Getränk und Brot inklusive", nav_btn:"Firmenessen reservieren",
  op_eyebrow:"Bewertungen", op_h2:"Was die Leute sagen", op_n:"350 Bewertungen auf Google", op_btn:"Bewerten Sie uns",
  op_q1:"Wir waren 16 Personen und haben drei Geburtstage gefeiert – zufriedener hätten wir nicht gehen können. Erster Besuch, und wir wurden wie Stammgäste behandelt.",
  op_q2:"Der Cachopo war viel zu gut. Absolut empfehlenswert. Ausgezeichnete Betreuung und guter Service.",
@@ -703,7 +712,7 @@ de: {
  donde_eyebrow:"Anfahrt", donde_h2:"Calle de La Ilíada, 19", donde_p:"Zwischen der Plaza de Grecia und der Metro Las Musas, in San Blas-Canillejas.",
  dt_dir:"Adresse", dt_metro:"Metro", dt_tel:"Telefon", dt_wa:"WhatsApp", dt_ig:"Instagram", dt_acc:"Zugang",
  dd_wa:"Schreiben Sie uns zum Reservieren", dd_acc:"Rollstuhlgerecht. Überdachte Terrasse.", donde_como:"Route",
- f_horario:"Öffnungszeiten", f_reservas:"Reservierungen", f_llamar:"Anrufen", f_grupos:"Gruppen bis 16 Personen", f_redes:"Soziale Medien", f_resenas:"Bewertungen auf Google",
+ f_horario:"Öffnungszeiten", f_reservas:"Reservierungen", f_llamar:"Anrufen", f_grupos:"Gruppen und Feiern", f_redes:"Soziale Medien", f_resenas:"Bewertungen auf Google",
  l_aviso:"Impressum", l_priv:"Datenschutz", l_cookies:"Cookies",
  _primero:"Vorspeise", _segundo:"Hauptgang", _postre:"Dessert", _toda:"Ganze Karte", _cerrado:"Geschlossen",
  _abierto:"Jetzt geöffnet · bis {h}", _abrimos:"Geschlossen · ab {h}", _cerradoahora:"Derzeit geschlossen",
