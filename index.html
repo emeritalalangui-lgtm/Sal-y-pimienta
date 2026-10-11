@@ -1,169 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sal y Pimienta Metropolitano</title>
-<meta name="description" content="Bar de barrio en San Blas-Canillejas, a 5 minutos del Metropolitano. Menú del día, tapas, raciones, terraza y grupos. Calle de La Ilíada 19, Madrid.">
-<meta property="og:title" content="Sal y Pimienta Metropolitano">
-<meta property="og:description" content="Bar de barrio a 5 minutos del Metropolitano. Menú del día, tapas, terraza y grupos.">
-<meta property="og:image" content="img/hero_fachada.jpg">
-<meta name="theme-color" content="#1C1917">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<title>Sal y Pimienta Metropolitano · Restaurante familiar en San Blas-Canillejas, Madrid</title>
+<meta name="description" content="Restaurante familiar en San Blas-Canillejas, Madrid. Cocina casera, menú del día entre semana, raciones para compartir y terraza cubierta, a cinco minutos del metro Las Musas. Calle de La Ilíada 19.">
+<meta property="og:title" content="Sal y Pimienta Metropolitano · Restaurante familiar">
+<meta property="og:description" content="Cocina casera para toda la familia en San Blas-Canillejas. Menú del día, raciones y terraza cubierta.">
+<meta property="og:image" content="img/pro_croquetas.jpg">
+<meta property="og:type" content="restaurant">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%231c1c1c'/%3E%3Ctext x='24' y='31' font-family='Georgia,serif' font-size='22' fill='%23fff' text-anchor='middle'%3ES%26P%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Abhaya+Libre:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --papel:#F3EBDD; --papel-2:#EADFCB; --tinta:#1C1917; --tinta-2:#4A4441; --rojo:#C8102E; --rojo-2:#A50D26; --tiza:#F7F1E4; --cerveza:#D9A441;
-  --ff-d:"Caveat", "Segoe Script", cursive; --ff-b:"Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --max:1120px; --gut:clamp(16px, 4vw, 40px);
+  --blanco:#ffffff; --crema:#f7f4ee; --tinta:#1c1c1c; --tinta-2:#4a4a4a; --gris:#7a7a7a; --linea:#e3ded5; --oscuro:#222222; --negro:#111111;
+  --verde:#2e7d4f; --rojo:#b8232f;
+  --ff-d:"Forum","Times New Roman",Georgia,serif; --ff-b:"Abhaya Libre",Georgia,"Times New Roman",serif;
+  --wrap:1180px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--ff-b);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--blanco);color:var(--tinta);font-family:var(--ff-b);font-size:19px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
 a{color:inherit}
-h1,h2,h3{font-family:var(--ff-d);font-weight:700;line-height:1;margin:0}
-h2{font-size:clamp(40px,6vw,64px);letter-spacing:-.01em}
-h3{font-size:clamp(28px,3.4vw,36px)}
-p{margin:0 0 1em;max-width:62ch}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
-:focus-visible{outline:3px solid var(--cerveza);outline-offset:3px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--tinta);color:var(--tiza);padding:8px 12px}
-.skip:focus{left:8px;z-index:99}
+h1,h2,h3{font-family:var(--ff-d);font-weight:400;line-height:1.1;margin:0;letter-spacing:.04em}
+h1{font-size:clamp(30px,3.6vw,46px);text-transform:uppercase;letter-spacing:.12em;line-height:1.25}
+h2{font-size:clamp(26px,2.8vw,36px);text-transform:uppercase;letter-spacing:.14em;line-height:1.25}
+h3{font-size:22px;text-transform:uppercase;letter-spacing:.14em}
+p{margin:0 0 18px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gris);margin:0 0 18px}
+.skip{position:absolute;left:-999px;top:0;background:var(--tinta);color:#fff;padding:8px 12px}
+.skip:focus{left:12px;z-index:100}
 
 /* botones */
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .12s ease,background .12s ease}
-.btn:active{transform:translateY(1px)}
-.btn-rojo{background:var(--rojo);color:#fff}
-.btn-rojo:hover{background:var(--rojo-2)}
-.btn-linea{background:transparent;color:var(--tiza);border-color:rgba(247,241,228,.6)}
-.btn-linea:hover{border-color:var(--tiza)}
-.btn-tinta{background:var(--tinta);color:var(--tiza)}
-.btn-tinta:hover{background:#000}
-.btn-papel{background:var(--tiza);color:var(--tinta)}
-.btn svg{width:20px;height:20px;flex:none}
+.btn{display:inline-block;font-family:var(--ff-d);font-size:15px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;padding:14px 30px 12px;border:1.5px solid var(--tinta);color:var(--tinta);background:transparent;transition:background .2s,color .2s}
+.btn:hover{background:var(--tinta);color:#fff}
+.btn-solido{background:var(--tinta);color:#fff}
+.btn-solido:hover{background:#000}
+.btn-claro{border-color:#fff;color:#fff}
+.btn-claro:hover{background:#fff;color:var(--tinta)}
+.link{font-family:var(--ff-d);font-size:14px;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--tinta);padding-bottom:3px}
 
 /* cabecera */
-.top{position:sticky;top:0;z-index:50;background:rgba(28,25,23,.92);backdrop-filter:blur(8px);color:var(--tiza);border-bottom:1px solid rgba(247,241,228,.12)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
-.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
-.marca svg{width:30px;height:30px}
-.marca b{font-family:var(--ff-d);font-weight:700;font-size:26px;line-height:1}
-.marca small{display:block;font-family:var(--ff-b);font-weight:600;font-size:9.5px;letter-spacing:.32em;color:var(--rojo);margin-top:-2px;text-transform:uppercase}
-.nav{display:flex;gap:22px;font-size:15px;font-weight:500}
-.nav a{text-decoration:none;opacity:.85}
-.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
-.top .btn{padding:9px 16px;font-size:15px}
-@media (max-width:760px){.nav{display:none}}
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.marca{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marca b{font-family:var(--ff-d);font-weight:400;font-size:22px;letter-spacing:.2em;text-transform:uppercase}
+.marca small{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--gris);margin-top:5px}
+.nav{display:flex;gap:30px}
+.nav a{font-family:var(--ff-d);font-size:13px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--tinta-2);padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{color:var(--tinta);border-color:var(--tinta)}
+.top .btn{padding:10px 20px 8px;font-size:13px}
 
 /* portada */
-.hero{position:relative;min-height:88svh;display:grid;align-items:end;color:var(--tiza);isolation:isolate;overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:-2}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(28,25,23,.25) 0%,rgba(28,25,23,.15) 35%,rgba(28,25,23,.86) 78%,var(--tinta) 100%)}
-.hero .wrap{padding-top:120px;padding-bottom:56px;width:100%}
-.hero h1{font-size:clamp(64px,11vw,136px);letter-spacing:-.015em;text-shadow:0 2px 24px rgba(0,0,0,.35)}
-.hero .sub{font-family:var(--ff-b);font-size:clamp(15px,1.4vw,19px);font-weight:500;color:var(--tiza);opacity:.9;margin:4px 0 18px}
-.hero .lead{font-size:clamp(19px,2.2vw,24px);max-width:30ch;line-height:1.3;margin-bottom:26px}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero{padding:72px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.hero h1 b{font-weight:400}
+.hero p{font-size:20px;color:var(--tinta-2)}
+.hero .cta{display:flex;align-items:center;gap:28px;margin-top:32px;flex-wrap:wrap}
+.video{position:relative;aspect-ratio:4/5;background:var(--crema);overflow:hidden}
+.video video,.video img{width:100%;height:100%;object-fit:cover}
+.video figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.45))}
 
-/* pizarra */
-.pizarra{background:var(--tinta);color:var(--tiza);padding:56px 0 64px;position:relative}
-.pizarra::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(ellipse at 20% 10%,rgba(255,255,255,.05),transparent 40%),
-  radial-gradient(ellipse at 80% 90%,rgba(255,255,255,.04),transparent 45%);pointer-events:none}
-.pizarra h2{color:var(--tiza)}
-.pizarra .cols{display:grid;grid-template-columns:1.1fr .9fr;gap:40px clamp(32px,6vw,80px);margin-top:28px}
-@media (max-width:820px){.pizarra .cols{grid-template-columns:1fr}}
-.tiza-h{font-family:var(--ff-d);font-size:34px;font-weight:600;color:var(--cerveza);margin:0 0 10px}
-.menu-dia{list-style:none;padding:0;margin:0 0 18px;font-size:19px}
-.menu-dia li{padding:7px 0;border-bottom:1px dashed rgba(247,241,228,.22)}
-.menu-dia li span{color:rgba(247,241,228,.6);font-size:15px;margin-right:10px}
-.precio-dia{display:flex;align-items:baseline;gap:14px;margin:14px 0 6px}
-.precio-dia b{font-family:var(--ff-d);font-size:clamp(56px,8vw,72px);line-height:1;color:var(--tiza);white-space:nowrap}
-.precio-dia small{font-size:15px;color:rgba(247,241,228,.7);max-width:24ch;line-height:1.3}
-.horas{list-style:none;padding:0;margin:0;font-size:17px}
-.horas li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(247,241,228,.22)}
-.horas li.hoy{color:var(--cerveza);font-weight:600}
-.estado{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-weight:600}
-.estado i{width:10px;height:10px;border-radius:50%;background:#4CAF50;display:inline-block}
+/* secciones */
+section{padding:88px 0}
+.crema{background:var(--crema)}
+.intro{max-width:720px;margin-bottom:48px}
+.intro p{color:var(--tinta-2);margin-top:18px}
+.regla{width:56px;height:1.5px;background:var(--tinta);margin:22px 0 0}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.dos figure{margin:0}
+.dos figure img{aspect-ratio:4/5;object-fit:cover}
+.dos .txt p{color:var(--tinta-2)}
+.lista-limpia{list-style:none;padding:0;margin:0 0 24px}
+.lista-limpia li{padding:10px 0;border-bottom:1px solid var(--linea)}
+.lista-limpia li::before{content:"—";margin-right:12px;color:var(--gris)}
+
+/* pizarra: menú del día + horario */
+.pizarra{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:start}
+.menu-card{background:#fff;border:1px solid var(--linea);padding:40px 44px}
+.menu-card .precio{font-family:var(--ff-d);font-size:clamp(52px,6vw,74px);line-height:1;margin:6px 0 4px}
+.menu-card .incluye{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gris);margin-bottom:28px}
+.menu-dia{list-style:none;margin:0;padding:0}
+.menu-dia li{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--linea);font-size:19px}
+.menu-dia li span{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gris);padding-top:7px}
+.nota{font-size:16px;color:var(--gris);margin:22px 0 0}
+.horas{list-style:none;padding:0;margin:0 0 24px}
+.horas li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--linea);font-size:17px}
+.horas li.hoy{font-weight:600}
+.estado{display:flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.estado i{width:9px;height:9px;border-radius:50%;background:var(--verde)}
 .estado.cerrado i{background:var(--rojo)}
-.nota{font-size:15px;color:rgba(247,241,228,.65);margin-top:18px}
-
-/* secciones papel */
-section.papel{padding:72px 0}
-.intro{display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:end;margin-bottom:26px}
-.intro p{color:var(--tinta-2);margin:0;max-width:52ch}
-@media (max-width:640px){.intro{grid-template-columns:1fr}}
+.aviso{margin-top:22px;font-size:16px;color:var(--tinta-2);border-left:2px solid var(--tinta);padding-left:14px}
+.aviso:empty{display:none}
 
 /* carta */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 28px;position:sticky;top:60px;z-index:5;background:var(--papel);padding:10px 0}
-.tabs button{font:inherit;font-weight:500;font-size:15px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--tinta);background:transparent;color:var(--tinta);cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--tinta);color:var(--tiza)}
-.carta-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px clamp(32px,6vw,72px)}
-@media (max-width:760px){.carta-grid{grid-template-columns:1fr}}
-.seccion{margin-bottom:34px;break-inside:avoid}
-.seccion h3{margin-bottom:6px}
-.seccion .nota-s{font-size:14px;color:var(--tinta-2);margin:0 0 10px}
-.plato{display:flex;align-items:baseline;gap:8px;padding:9px 0;font-size:17px}
-.plato .n{flex:none;max-width:70%}
-.plato .l{flex:1;border-bottom:2px dotted rgba(28,25,23,.35);transform:translateY(-5px)}
-.plato .p{flex:none;font-weight:600;font-variant-numeric:tabular-nums}
-.plato .p small{font-weight:400;color:var(--tinta-2)}
-.alerg{font-size:14px;color:var(--tinta-2);margin-top:20px;max-width:70ch}
-
-/* bandas con foto */
-.banda{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
-.banda > figure{margin:0;position:relative;min-height:320px}
-.banda img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.banda .txt{padding:clamp(40px,6vw,88px) var(--gut);display:flex;flex-direction:column;justify-content:center;gap:14px}
-.banda .txt p{color:var(--tinta-2)}
-.banda.inv > figure{order:2}
-.banda.tinta{background:var(--tinta);color:var(--tiza)}
-.banda.tinta h2{color:var(--tiza)}
-.banda.tinta .txt p{color:rgba(247,241,228,.78)}
-.en{font-style:italic;border-left:3px solid var(--rojo);padding-left:14px;max-width:48ch}
-@media (max-width:820px){.banda{grid-template-columns:1fr}.banda.inv > figure{order:0}.banda > figure{aspect-ratio:4/3;min-height:0}}
+.tira{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:0 0 56px}
+.tira img{aspect-ratio:1;object-fit:cover}
+.tabs{display:flex;flex-wrap:wrap;gap:6px 22px;margin:0 0 36px;border-bottom:1px solid var(--linea);padding-bottom:16px}
+.tabs button{font-family:var(--ff-d);font-size:13px;letter-spacing:.22em;text-transform:uppercase;background:none;border:0;padding:8px 0;cursor:pointer;color:var(--gris);border-bottom:1px solid transparent}
+.tabs button[aria-selected="true"]{color:var(--tinta);border-color:var(--tinta)}
+.carta-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 72px}
+.seccion h3{margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--tinta)}
+.nota-s{font-size:15px;color:var(--gris);margin:-6px 0 12px}
+.plato{display:flex;align-items:baseline;gap:10px;padding:7px 0;font-size:18px}
+.plato .n{flex:0 1 auto}
+.plato .l{flex:1;border-bottom:1px dotted #c9c3b8;min-width:24px;transform:translateY(-5px)}
+.plato .p{white-space:nowrap;font-family:var(--ff-d);font-size:18px}
+.plato .p small{font-size:14px;color:var(--gris)}
+.alerg{font-size:15px;color:var(--gris);margin-top:40px;max-width:760px}
 
 /* reseñas */
-.resenas{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
-@media (max-width:820px){.resenas{grid-template-columns:1fr}}
-.resena{border-top:2px solid var(--tinta);padding-top:16px}
-.resena q{font-size:19px;line-height:1.4;quotes:"“" "”"}
-.resena q::before{content:open-quote;font-family:var(--ff-d);font-size:40px;line-height:0;vertical-align:-14px;color:var(--rojo);margin-right:4px}
-.resena .quien{display:block;margin-top:12px;font-size:14px;color:var(--tinta-2)}
-.nota-g{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.nota-g b{font-family:var(--ff-d);font-size:56px;line-height:1}
-.estrellas{color:var(--cerveza);letter-spacing:2px;font-size:20px}
-
-/* galería */
-.galeria{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:10px}
-.galeria figure{margin:0;overflow:hidden;position:relative}
-.galeria img{width:100%;height:100%;object-fit:cover}
-.galeria figure:nth-child(1){grid-column:span 2;grid-row:span 2}
-.galeria figure:nth-child(6){grid-column:span 2}
-.galeria figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;font-size:13px;color:var(--tiza);background:linear-gradient(transparent,rgba(28,25,23,.75))}
-@media (max-width:760px){.galeria{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}}
+.nota-g{display:flex;align-items:center;gap:18px;margin-top:22px}
+.nota-g b{font-family:var(--ff-d);font-weight:400;font-size:56px;line-height:1}
+.estrellas{letter-spacing:.1em;font-size:18px}
+.resenas{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.resena{border-top:1px solid var(--tinta);padding-top:22px}
+.resena q{quotes:"“" "”";font-size:18px;color:var(--tinta-2);display:block;margin-bottom:14px}
+.resena .quien{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris)}
 
 /* dónde */
-.donde{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:start}
-@media (max-width:820px){.donde{grid-template-columns:1fr}}
-.donde iframe{width:100%;aspect-ratio:4/3;border:0;filter:saturate(.85) contrast(1.02)}
-.dato{display:grid;grid-template-columns:110px 1fr;gap:6px 16px;padding:12px 0;border-bottom:1px dashed rgba(28,25,23,.3)}
-.dato dt{color:var(--tinta-2);font-size:15px}
-.dato dd{margin:0}
+.donde{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.donde dl{margin:0}
+.dato{padding:14px 0;border-bottom:1px solid var(--linea)}
+.dato dt{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gris);margin-bottom:4px}
+.dato dd{margin:0;font-size:18px}
+.dato a{text-decoration:none;border-bottom:1px solid var(--linea)}
+.donde iframe{width:100%;aspect-ratio:4/3;border:0;filter:grayscale(.35)}
 
 /* pie */
-footer{background:var(--tinta);color:rgba(247,241,228,.8);padding:40px 0 calc(28px + env(safe-area-inset-bottom));font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
-footer a{text-decoration:none;opacity:.8}footer a:hover{opacity:1;text-decoration:underline}
-footer nav{display:flex;gap:18px;flex-wrap:wrap}
+footer{background:var(--oscuro);color:#e9e5dd;font-size:16px}
+footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding:64px 0 56px}
+footer h3{font-size:12px;letter-spacing:.34em;color:#fff;margin-bottom:18px}
+footer p{margin:0 0 6px;color:#cfc9bf}
+footer a{color:#fff;text-decoration:none;border-bottom:1px solid #555}
+footer .horas-pie{list-style:none;padding:0;margin:0}
+footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#cfc9bf;padding:3px 0}
+.legal{background:var(--negro);font-size:13px;color:#9a948b}
+.legal .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 28px;padding-top:18px;padding-bottom:18px}
+.legal nav{display:flex;gap:22px;flex-wrap:wrap}
+.legal a{color:#cfc9bf;text-decoration:none}
 
-/* barra móvil */
-.movil{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:8px;padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom));background:rgba(28,25,23,.95);backdrop-filter:blur(8px);border-top:1px solid rgba(247,241,228,.14)}
-.movil .btn{flex:1;justify-content:center;padding:12px 10px;font-size:15px}
-@media (max-width:760px){.movil{display:flex}footer{padding-bottom:110px}}
+/* whatsapp flotante */
+.wa{position:fixed;left:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.22);transition:transform .2s}
+.wa:hover{transform:scale(1.06)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+@media (max-width:980px){
+  .hero .wrap,.dos,.pizarra,.donde{grid-template-columns:1fr;gap:40px}
+  .dos.inv figure{order:-1}
+  .tira{grid-template-columns:repeat(3,1fr)}
+  .carta-grid{grid-template-columns:1fr}
+  .resenas{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+  .video{max-width:420px;margin:0 auto}
+}
+@media (max-width:720px){
+  body{font-size:18px}
+  section{padding:64px 0}
+  .hero{padding:44px 0 60px}
+  .top .wrap{height:auto;flex-wrap:wrap;padding-top:14px;padding-bottom:12px;gap:12px}
+  .nav{order:3;width:100%;overflow-x:auto;gap:20px;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+  .nav a{white-space:nowrap;font-size:12px}
+  .eyebrow{letter-spacing:.22em;font-size:11px}
+  .menu-card{padding:28px 22px}
+  .menu-dia li{grid-template-columns:1fr;gap:2px}
+  footer .cols{grid-template-columns:1fr;gap:28px}
+  .wa{left:auto;right:18px;bottom:18px}
+}
 </style>
 </head>
 <body>
@@ -171,58 +177,96 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 
 <header class="top">
   <div class="wrap">
-    <a class="marca" href="#" aria-label="Sal y Pimienta Metropolitano, inicio">
-      <svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#F7F1E4" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path transform="rotate(-12 18 24)" d="M12 12l2.5 22h11l2.5-22zM14 12V8h10v4"/></g><g fill="#C8102E" stroke="#C8102E" stroke-width="2.4" stroke-linejoin="round"><path transform="rotate(14 32 26)" d="M26 14l2.5 22h11l2.5-22zM28 14v-4h10v4"/></g></svg>
-      <span><b>Sal y Pimienta</b><small>Metropolitano</small></span>
-    </a>
+    <a class="marca" href="#" aria-label="Sal y Pimienta Metropolitano, inicio"><b>Sal y Pimienta</b><small>Metropolitano · Madrid</small></a>
     <nav class="nav" aria-label="Secciones">
-      <a href="#hoy">Hoy</a><a href="#carta">Carta</a><a href="#partido">Día de partido</a><a href="#grupos">Grupos</a><a href="#donde">Dónde</a>
+      <a href="#hoy">Hoy</a><a href="#familia">En familia</a><a href="#carta">Carta</a><a href="#celebraciones">Celebraciones</a><a href="#opiniones">Opiniones</a><a href="#donde">Dónde</a>
     </nav>
-    <a class="btn btn-rojo" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">Reservar</a>
+    <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">Reserva</a>
   </div>
 </header>
 
 <section class="hero">
-  <img src="img/hero_fachada.jpg" alt="Fachada de Sal y Pimienta Metropolitano de noche, con la bandera del Atleti en la ventana" fetchpriority="high">
   <div class="wrap">
-    <h1>Sal y Pimienta</h1>
-    <div class="sub">Metropolitano — calle de La Ilíada 19, San Blas-Canillejas</div>
-    <p class="lead">Bar de barrio a cinco minutos andando del estadio. Menú del día entre semana, tapas y raciones de siempre, terraza y mesa larga para los grupos.</p>
-    <div class="cta">
-      <a class="btn btn-rojo" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5 5 0 0 0 3.1.6 2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
-        Reservar por WhatsApp</a>
-      <a class="btn btn-linea" href="#carta">Ver la carta</a>
-      <a class="btn btn-linea" href="https://www.google.com/maps/dir/?api=1&destination=Sal+y+Pimienta+Metropolitano+Bar,+C.+de+La+Il%C3%ADada+19,+28022+Madrid&destination_place_id=ChIJ8Vw6OUYvQg0RlvA75Du7SFA" target="_blank" rel="noopener">Cómo llegar</a>
+    <div>
+      <p class="eyebrow">Restaurante · San Blas-Canillejas · Madrid</p>
+      <h1>Cocina casera para toda la familia, a cinco minutos del metro Las Musas</h1>
+      <div class="regla" style="margin-bottom:28px"></div>
+      <p>En <b>Sal y Pimienta</b> cocinamos como en casa: menú del día entre semana, raciones para compartir, bocadillos de los de verdad y postres caseros. Un sitio de barrio donde venir con los niños, con los abuelos y sin prisa.</p>
+      <p>Terraza cubierta, local accesible y una mesa larga para cuando sois muchos. Reserva por WhatsApp y te guardamos sitio.</p>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">Reserva</a>
+        <a class="link" href="#carta">Ver la carta</a>
+      </div>
     </div>
+    <figure class="video">
+      <video autoplay muted loop playsinline preload="metadata" poster="video/comida_poster.jpg" aria-label="Platos de la carta de Sal y Pimienta">
+        <source src="video/comida.mp4" type="video/mp4">
+        <img src="video/comida_poster.jpg" alt="Croquetas caseras de Sal y Pimienta">
+      </video>
+      <figcaption>Nuestra cocina</figcaption>
+    </figure>
   </div>
 </section>
 
-<section class="pizarra" id="hoy">
-  <div class="wrap">
-    <h2>Hoy en la pizarra</h2>
-    <div class="cols">
-      <div>
-        <p class="tiza-h">Menú del día <span id="dia-semana"></span></p>
-        <ul class="menu-dia" id="menu-dia"></ul>
-        <div class="precio-dia"><b id="precio-dia">12,90 €</b><small>Primero, segundo, pan, bebida y postre o café. De lunes a viernes al mediodía.</small></div>
-        <p class="nota">El menú cambia cada día; si no has podido verlo, pregunta por WhatsApp y te lo mandamos.</p>
-      </div>
-      <div>
-        <p class="tiza-h">Horario</p>
-        <ul class="horas" id="horas"></ul>
-        <div class="estado" id="estado"><i></i><span>Comprobando…</span></div>
-        <p class="nota" id="proximo-partido"></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="papel" id="carta">
+<section class="crema" id="hoy">
   <div class="wrap">
     <div class="intro">
-      <h2>La carta</h2>
-      <p>Cocina de barrio sin trampa: raciones para compartir, bocadillos de los de verdad, cachopo y chuletón para los días grandes. Los precios son los de la carta del local.</p>
+      <p class="eyebrow">Menú del día</p>
+      <h2>Hoy en la pizarra</h2>
+      <div class="regla"></div>
+    </div>
+    <div class="pizarra">
+      <div class="menu-card">
+        <p class="eyebrow" style="margin-bottom:0">Menú del día <span id="dia-semana"></span></p>
+        <div class="precio" id="precio-dia">12,90 €</div>
+        <div class="incluye">Primero, segundo, pan, bebida y postre o café</div>
+        <ul class="menu-dia" id="menu-dia"></ul>
+        <p class="nota">De lunes a viernes al mediodía. El menú cambia cada día; si no has podido verlo, pregunta por WhatsApp y te lo mandamos.</p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:18px">Horario</h3>
+        <ul class="horas" id="horas"></ul>
+        <div class="estado" id="estado"><i></i><span>Comprobando…</span></div>
+        <p class="aviso" id="aviso"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="familia">
+  <div class="wrap dos">
+    <figure><img src="img/terraza_dia.jpg" alt="Terraza cubierta de Sal y Pimienta decorada para un cumpleaños, de día" loading="lazy"></figure>
+    <div class="txt">
+      <p class="eyebrow">En familia</p>
+      <h2>Para venir con los niños, con los abuelos y sin prisa</h2>
+      <div class="regla" style="margin-bottom:28px"></div>
+      <p>Somos un restaurante de barrio de los de toda la vida: comida casera, raciones generosas y trato cercano. Los domingos y las comidas en familia son lo nuestro.</p>
+      <ul class="lista-limpia">
+        <li>Platos que gustan a los pequeños: nuggets caseros, croquetas, platos combinados y sándwiches</li>
+        <li>Raciones para compartir en el centro de la mesa</li>
+        <li>Terraza cubierta y local accesible en silla de ruedas</li>
+        <li>Menú del día entre semana y carta completa todos los días</li>
+      </ul>
+      <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20para%20comer%20en%20familia" target="_blank" rel="noopener">Reserva mesa</a>
+    </div>
+  </div>
+</section>
+
+<section class="crema" id="carta">
+  <div class="wrap">
+    <div class="intro">
+      <p class="eyebrow">La carta</p>
+      <h2>Cocina casera, de siempre</h2>
+      <div class="regla"></div>
+      <p>Raciones para compartir, bocadillos de los de verdad, cachopo y chuletón para los días grandes, y postres de casa. Los precios son los de la carta del local.</p>
+    </div>
+    <div class="tira">
+      <img src="img/pro_croquetas.jpg" alt="Croquetas de jamón caseras" loading="lazy">
+      <img src="img/pro_calamares.jpg" alt="Calamares a la romana con limón" loading="lazy">
+      <img src="img/pro_nuggets.jpg" alt="Nuggets de pollo caseros con salsa" loading="lazy">
+      <img src="img/pro_ensalada_cesar.jpg" alt="Ensalada César con pollo crujiente" loading="lazy">
+      <img src="img/pro_tosta_iberico.jpg" alt="Tosta de ibérico con patatas paja" loading="lazy">
+      <img src="img/pro_tarta_queso.jpg" alt="Tarta de queso con arándanos y frambuesas" loading="lazy">
     </div>
     <div class="tabs" role="tablist" aria-label="Secciones de la carta" id="tabs"></div>
     <div class="carta-grid" id="carta-grid"></div>
@@ -230,103 +274,114 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
   </div>
 </section>
 
-<section class="banda tinta" id="partido">
-  <figure><img src="img/champions.jpg" alt="Terraza de Sal y Pimienta llena de gente una noche de Champions" loading="lazy"></figure>
-  <div class="txt">
-    <h2>Día de partido</h2>
-    <p>Estamos a cinco minutos andando del Metropolitano, por la calle de La Ilíada. Los días de partido y de concierto abrimos antes, ponemos el fútbol en la tele y la terraza se llena de bufandas. Si venís en grupo, escribidnos y os guardamos mesa para la previa.</p>
-    <p>Pedimos a los de siempre un poco de paciencia esos días: la barra va a tope, pero las cañas salen frías y los bocadillos de calamares no paran.</p>
-    <p class="en">Coming for the match or a concert? We're a five-minute walk from the stadium. Cold beer, tapas and a terrace to watch the pre-game. Message us on WhatsApp to book a table.</p>
-    <div class="cta"><a class="btn btn-papel" href="https://wa.me/34910660207?text=Hola%2C%20somos%20un%20grupo%20y%20queremos%20mesa%20para%20el%20d%C3%ADa%20del%20partido" target="_blank" rel="noopener">Mesa para la previa</a></div>
+<section id="celebraciones">
+  <div class="wrap dos inv">
+    <div class="txt">
+      <p class="eyebrow">Celebraciones</p>
+      <h2>Cumpleaños, comidas en familia y reuniones</h2>
+      <div class="regla" style="margin-bottom:28px"></div>
+      <p>Montamos mesa larga para hasta dieciséis personas, con menús cerrados para que nadie se pelee con la cuenta. Si llegáis tarde o por turnos, no pasa nada: estamos acostumbrados.</p>
+      <p>Cuéntanos cuántos sois y qué día, y te mandamos las opciones por WhatsApp.</p>
+      <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20celebraci%C3%B3n%20en%20grupo" target="_blank" rel="noopener">Pedir menú para grupos</a>
+    </div>
+    <figure><img src="img/pro_tarta_queso.jpg" alt="Tarta de queso casera con frutos rojos" loading="lazy"></figure>
   </div>
 </section>
 
-<section class="banda inv" id="grupos">
-  <figure><img src="img/grupo.jpg" alt="Grupo de amigos comiendo en una mesa larga dentro del bar" loading="lazy"></figure>
-  <div class="txt">
-    <h2>Grupos y cenas de empresa</h2>
-    <p>Cumpleaños, comidas de trabajo, cenas de Navidad. Montamos mesa larga para hasta dieciséis personas, con menús cerrados para que nadie se pelee con la cuenta, y si llegáis tarde o por turnos no pasa nada.</p>
-    <p>Cuéntanos cuántos sois y qué día, y te mandamos las opciones por WhatsApp.</p>
-    <div class="cta"><a class="btn btn-tinta" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20una%20comida%20de%20grupo" target="_blank" rel="noopener">Pedir menú para grupos</a></div>
-  </div>
-</section>
-
-<section class="papel" id="opiniones">
+<section class="crema" id="opiniones">
   <div class="wrap">
     <div class="intro">
+      <p class="eyebrow">Opiniones</p>
       <h2>Lo que dice la gente</h2>
-      <div class="nota-g"><b>4,5</b><div><div class="estrellas" aria-label="4,5 de 5 estrellas">★★★★★</div><div style="font-size:14px;color:var(--tinta-2)">350 reseñas en Google</div></div></div>
+      <div class="regla"></div>
+      <div class="nota-g"><b>4,5</b><div><div class="estrellas" aria-label="4,5 de 5 estrellas">★★★★★</div><div style="font-size:14px;color:var(--gris)">350 reseñas en Google</div></div></div>
     </div>
     <div class="resenas">
-      <div class="resena"><q>Teníamos una reserva por trabajo un grupo de 16 personas. Llegamos tarde, por turnos, con prisa… y ellos solo respondieron con una sonrisa y amabilidad.</q><span class="quien">Miriam, en Google</span></div>
+      <div class="resena"><q>Hemos estado 16 personas celebrando tres cumpleaños y no hemos podido salir más satisfechos. Primer día que hemos ido y el trato ha sido como si fuéramos clientes desde siempre.</q><span class="quien">Javier, en Google</span></div>
+      <div class="resena"><q>El cachopo estaba demasiado bueno. Recomendadísimo. Excelente atención y buen servicio.</q><span class="quien">Tamara, en Google</span></div>
       <div class="resena"><q>Muy buena comida a precios muy asequibles. El servicio del camarero Roberto es excelente.</q><span class="quien">Carlos, en Google</span></div>
-      <div class="resena"><q>Víctor y Jose, los mejores camareros de la zona del Metropolitano. Atención de 10, comida muy buena y una terraza muy buena a dos pasos del estadio.</q><span class="quien">Lalo, en Google</span></div>
     </div>
-    <p style="margin-top:28px"><a class="btn btn-tinta" href="https://g.page/r/CZbwO-Q7u0hQEBE/review" target="_blank" rel="noopener">Déjanos tu reseña</a></p>
+    <p style="margin-top:40px"><a class="btn" href="https://g.page/r/CZbwO-Q7u0hQEBE/review" target="_blank" rel="noopener">Déjanos tu reseña</a></p>
   </div>
 </section>
 
-<section class="papel" id="galeria" style="padding-top:0">
+<section id="donde">
   <div class="wrap">
-    <div class="galeria">
-      <figure><img loading="eager" src="img/terraza_noche.jpg" alt="Terraza del bar de noche con gente de pie charlando"><figcaption>La terraza, una noche cualquiera</figcaption></figure>
-      <figure><img loading="eager" src="img/pro_croquetas.jpg" alt="Croquetas de jamón caseras en cesta"></figure>
-      <figure><img loading="eager" src="img/pro_calamares.jpg" alt="Calamares a la romana con limón"></figure>
-      <figure><img loading="eager" src="img/barra.jpg" alt="Barra del bar con una caña y el rótulo Todo comienza con un sueño"></figure>
-      <figure><img src="img/pro_lagrimas.jpg" alt="Lágrimas de pollo con salsa" loading="lazy"></figure>
-      <figure><img src="img/interior.jpg" alt="Clientes comiendo en el interior del bar" loading="lazy"></figure>
-      <figure><img src="img/pro_tosta_iberico.jpg" alt="Tosta de ibérico con patatas paja" loading="lazy"></figure>
-      <figure><img src="img/pro_hamburguesa.jpg" alt="Hamburguesa Sal y Pimienta con huevo y patatas" loading="lazy"></figure>
+    <div class="intro">
+      <p class="eyebrow">Dónde estamos</p>
+      <h2>Calle de La Ilíada, 19</h2>
+      <div class="regla"></div>
+      <p>Entre la plaza de Grecia y el metro de Las Musas, en San Blas-Canillejas.</p>
     </div>
-  </div>
-</section>
-
-<section class="papel" id="donde">
-  <div class="wrap">
-    <div class="intro"><h2>Dónde estamos</h2><p>Entre la plaza de Grecia y el metro de Las Musas. Si vienes al estadio, somos la calle que baja hacia la avenida de Luis Aragonés.</p></div>
     <div class="donde">
       <dl>
-        <div class="dato"><dt>Dirección</dt><dd>Calle de La Ilíada, 19<br>28022 Madrid (San Blas-Canillejas)</dd></div>
-        <div class="dato"><dt>Metro</dt><dd>Las Musas (L7) · Estadio Metropolitano (L7)</dd></div>
+        <div class="dato"><dt>Dirección</dt><dd>Calle de La Ilíada, 19 · 28022 Madrid (San Blas-Canillejas)</dd></div>
+        <div class="dato"><dt>Metro</dt><dd>Las Musas (L7)</dd></div>
         <div class="dato"><dt>Teléfono</dt><dd><a href="tel:+34910660207">910 66 02 07</a></dd></div>
-        <div class="dato"><dt>WhatsApp</dt><dd><a href="https://wa.me/34910660207" target="_blank" rel="noopener">Escríbenos</a></dd></div>
+        <div class="dato"><dt>WhatsApp</dt><dd><a href="https://wa.me/34910660207" target="_blank" rel="noopener">Escríbenos para reservar</a></dd></div>
         <div class="dato"><dt>Instagram</dt><dd><a href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">@barsalypimienta</a></dd></div>
         <div class="dato"><dt>Acceso</dt><dd>Local accesible en silla de ruedas. Terraza cubierta.</dd></div>
       </dl>
-      <div><iframe title="Mapa de Sal y Pimienta Metropolitano" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=place_id:ChIJ8Vw6OUYvQg0RlvA75Du7SFA&output=embed&hl=es"></iframe><p style="margin:12px 0 0"><a class="btn btn-tinta" href="https://www.google.com/maps/place/?q=place_id:ChIJ8Vw6OUYvQg0RlvA75Du7SFA" target="_blank" rel="noopener">Abrir en Google Maps</a></p></div>
+      <div><iframe title="Mapa de Sal y Pimienta Metropolitano" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=place_id:ChIJ8Vw6OUYvQg0RlvA75Du7SFA&output=embed&hl=es"></iframe><p style="margin:16px 0 0"><a class="link" href="https://www.google.com/maps/dir/?api=1&destination=Sal+y+Pimienta+Metropolitano+Bar,+C.+de+La+Il%C3%ADada+19,+28022+Madrid&destination_place_id=ChIJ8Vw6OUYvQg0RlvA75Du7SFA" target="_blank" rel="noopener">Cómo llegar</a></p></div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <div>© <span id="anio"></span> Sal y Pimienta Metropolitano · Calle de La Ilíada 19, Madrid</div>
-    <nav aria-label="Legal"><a href="#" aria-disabled="true">Aviso legal</a><a href="#" aria-disabled="true">Privacidad</a><a href="#" aria-disabled="true">Cookies</a><a href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">Instagram</a></nav>
+  <div class="wrap cols">
+    <div>
+      <h3>Sal y Pimienta</h3>
+      <p>Calle de La Ilíada, 19</p>
+      <p>28022 Madrid</p>
+      <p>T. <a href="tel:+34910660207">910 66 02 07</a></p>
+    </div>
+    <div>
+      <h3>Horario</h3>
+      <ul class="horas-pie" id="horas-pie"></ul>
+    </div>
+    <div>
+      <h3>Reservas</h3>
+      <p><a href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">WhatsApp</a></p>
+      <p><a href="tel:+34910660207">Llamar</a></p>
+      <p>Grupos de hasta 16 personas</p>
+    </div>
+    <div>
+      <h3>Redes sociales</h3>
+      <p><a href="https://www.instagram.com/barsalypimienta/" target="_blank" rel="noopener">Instagram</a></p>
+      <p><a href="https://g.page/r/CZbwO-Q7u0hQEBE/review" target="_blank" rel="noopener">Reseñas en Google</a></p>
+    </div>
+  </div>
+  <div class="legal">
+    <div class="wrap">
+      <nav aria-label="Legal"><a href="#" aria-disabled="true">Aviso legal</a><a href="#" aria-disabled="true">Privacidad</a><a href="#" aria-disabled="true">Cookies</a></nav>
+      <div>© <span id="anio"></span> Sal y Pimienta Metropolitano</div>
+    </div>
   </div>
 </footer>
 
-<div class="movil" aria-hidden="false">
-  <a class="btn btn-rojo" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener">Reservar</a>
-  <a class="btn btn-linea" href="#carta">Carta</a>
-  <a class="btn btn-linea" href="tel:+34910660207">Llamar</a>
-</div>
+<a class="wa" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5 5 0 0 0 3.1.6 2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+</a>
 
 <script>
 /* ===== DATOS EDITABLES ===================================================
-   Cambia aquí el menú del día, el horario y el próximo partido. Nada más. */
+   El MENÚ DEL DÍA lo cambia el bar desde la ventana del respondedor (menu_web.py reescribe el bloque
+   MENU_DIA; no cambies su formato). Horario y aviso se editan aquí. */
 const MENU_DIA = {
   precio: "18 €",
   primeros: ["Caldo Gallego", "Ensalada de Rulo de Cabra"],
   segundos: ["Chuleta de Cordero lechal", "Lubina a la plancha"],
   postre: "Postre casero (Mousse de chocolate, Flan, Pudin) o café y te invitamos al chupito de la casa"
 };
+
 const HORARIO = { // 0 = domingo … 6 = sábado. null = cerrado. Formato [abre, cierra] en horas (24 = medianoche)
   0: [9, 18], 1: null, 2: [8, 23], 3: [8, 23], 4: [8, 23], 5: [8, 24], 6: [9, 24]
 };
-const PROXIMO_PARTIDO = "Próximo partido en casa: consulta nuestras historias de Instagram. Abrimos dos horas antes.";
+const AVISO = "";   // texto corto bajo el horario (festivos, cierre por vacaciones…). Vacío = no se muestra.
 
 /* carta: copia de carta/carta.json */
 const CARTA = [{"n": "Nuestras ensaladas", "i": [["Ensalada César con pollo crujiente", 12.0], ["Ensalada de rulo de cabra con nueces y balsámica", 12.0], ["Ensalada mixta", 8.5], ["Ensaladilla rusa casera", 8.5]]}, {"n": "Entrantes y picoteo", "i": [["Croquetas de jamón o de cocido", 11.9], ["Lágrimas de pollo", 12.9], ["Tabla de ibéricos", 22.0], ["Tabla de quesos", 19.5], ["Alitas de pollo", 11.9], ["Cazón en adobo (bienmesabe)", 12.0], ["Calamares a la andaluza", 13.9], ["Gambones bomba crujientes", 10.0], ["Zamburiñas a la plancha con ajo y perejil", 18.0], ["Huevos rotos con chorizo o jamón", 12.0], ["Huevos rotos salvajes (jamón, chorizo y bacon)", 14.9], ["Oreja a la plancha", 13.9], ["Patatas bravas o mixtas, con nuestra receta", 8.5], ["Salchipapas", 8.5], ["Tequeños venezolanos", 11.0], ["Torreznos crujientes con patatas revolconas", 14.9]]}, {"n": "Amantes del pan", "i": [["Sándwich mixto", 3.5], ["Sándwich mixto con huevo", 4.5], ["Sándwich vegetal (atún, huevo cocido, espárragos)", 5.9], ["Pintxo de solomillo con cebolla caramelizada", 8.0], ["Pintxo de salmón ahumado con queso crema", 8.0], ["Pintxo de tortilla de patata", 3.3]]}, {"n": "Nuestras especialidades", "i": [["Almejas a la marinera", 17.0], ["Cachopo casero asturiano con patatas", 24.9], ["Chuletón gallego (500 g) con pimientos y patatas", 32.9], ["Entrecot de ternera gallega (350 g) con pimientos y patatas", 24.0], ["Gambones a la plancha", 23.0], ["Albóndigas caseras", 12.0], ["Caracoles en salsa de la casa", 13.5], ["Magro con tomate", 12.9], ["Costillas de cerdo baby en salsa barbacoa con patatas", 18.9], ["Sepia a la plancha con ensalada", 15.9]]}, {"n": "Bocadillos y montados", "i": [["Bocadillo de calamares", 6.8], ["Bocadillo de milanesa de pollo", 6.8], ["Atún con pimiento", [5.8, 3.9]], ["Bacon y queso", [5.8, 3.9]], ["Chorizo frito", [5.8, 3.9]], ["Jamón serrano y tomate", [5.8, 3.9]], ["Panceta", [5.8, 3.9]], ["Queso semicurado", [5.8, 3.9]], ["Tortilla de patata", [5.8, 3.9]]], "nota": "Precio de bocadillo / montado. Extra de queso, tomate, pimiento o huevo: 1 €."}, {"n": "Platos combinados", "i": [["Bacon", 9.0], ["Filete de pollo", 12.0], ["Filete de ternera", 12.0], ["Lomo", 10.5]], "nota": "Todos con huevo y patatas fritas o ensalada."}, {"n": "Burgers caseras", "i": [["Hamburguesa original con queso", 10.0], ["Hamburguesa de pollo crispy y bacon", 11.0], ["Hamburguesa de rulo de cabra y cebolla caramelizada", 12.9], ["Hamburguesa especial: ternera, bacon, queso y huevo", 12.9]], "nota": "Todas con patatas."}, {"n": "Bebidas y bodega", "i": [["Café, infusión, Cola Cao, chocolate; café irlandés, bombón, carajillo", null], ["Agua mineral y con gas, refrescos, Red Bull, zumo natural de naranja, zumos de melocotón, mosto y piña", null], ["Botellín y tercio Mahou, Heineken, Radler limón; tercio Tostada 0,0, Estrella, sin filtrar, Alhambra 1925; doble y jarra; tinto de verano, calimocho", null], ["Combinados nacionales, premium de importación y gran selección gourmet; licores digestivos", null], ["Vino de la casa Batuta; Rioja Faustino; Ribera Delecto Reserva; Legaris Roble; blanco Rueda Verdejo; blanco Legaris", null]], "nota": "Sin precios en la carta original; preguntar en barra."}];
+
 /* ======================================================================= */
 
 const eur = v => v.toFixed(2).replace('.',',') + ' €';
@@ -340,17 +395,19 @@ MENU_DIA.primeros.forEach(x => md.insertAdjacentHTML('beforeend', `<li><span>Pri
 MENU_DIA.segundos.forEach(x => md.insertAdjacentHTML('beforeend', `<li><span>Segundo</span>${x}</li>`));
 md.insertAdjacentHTML('beforeend', `<li><span>Postre</span>${MENU_DIA.postre}</li>`);
 
-const hl = document.getElementById('horas');
+const fmtH = h => h ? `${h[0]}:00 – ${h[1]===24?'00':h[1]}:00` : 'Cerrado';
+const hl = document.getElementById('horas'), hp = document.getElementById('horas-pie');
 [1,2,3,4,5,6,0].forEach(k => {
-  const h = HORARIO[k]; const f = h ? `${h[0]}:00 – ${h[1]===24?'00':h[1]}:00` : 'Cerrado';
-  hl.insertAdjacentHTML('beforeend', `<li class="${k===d?'hoy':''}"><span>${DIAS[k][0].toUpperCase()+DIAS[k].slice(1)}</span><span>${f}</span></li>`);
+  const nombre = DIAS[k][0].toUpperCase()+DIAS[k].slice(1);
+  hl.insertAdjacentHTML('beforeend', `<li class="${k===d?'hoy':''}"><span>${nombre}</span><span>${fmtH(HORARIO[k])}</span></li>`);
+  hp.insertAdjacentHTML('beforeend', `<li><span>${nombre}</span><span>${fmtH(HORARIO[k])}</span></li>`);
 });
 (function estado(){
   const el = document.getElementById('estado'); const h = HORARIO[d]; const ahora = hoy.getHours() + hoy.getMinutes()/60;
   if (h && ahora >= h[0] && ahora < h[1]) { el.querySelector('span').textContent = `Abierto ahora · cerramos a las ${h[1]===24?'00':h[1]}:00`; }
   else { el.classList.add('cerrado'); el.querySelector('span').textContent = h && ahora < h[0] ? `Cerrado · abrimos a las ${h[0]}:00` : 'Cerrado ahora'; }
 })();
-document.getElementById('proximo-partido').textContent = PROXIMO_PARTIDO;
+document.getElementById('aviso').textContent = AVISO;
 document.getElementById('anio').textContent = hoy.getFullYear();
 
 /* carta */
@@ -363,7 +420,7 @@ function pintar(filtro){
   });
 }
 [['Toda la carta',null], ...CARTA.map((s,i)=>[s.n,i])].forEach(([t,i],k) => {
-  const b = document.createElement('button'); b.type='button'; b.role='tab'; b.textContent = t; b.setAttribute('aria-selected', k===0);
+  const b = document.createElement('button'); b.type='button'; b.setAttribute('role','tab'); b.textContent = t; b.setAttribute('aria-selected', k===0);
   b.onclick = () => { tabs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected','false')); b.setAttribute('aria-selected','true'); pintar(i); };
   tabs.appendChild(b);
 });

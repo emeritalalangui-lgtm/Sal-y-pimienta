@@ -21,23 +21,11 @@ Una sola página estática: `index.html` + `img/`. Sin build, sin dependencias. 
 ## Diseño
 Paleta: papel #F3EBDD · tinta #1C1917 · rojo #C8102E · cerveza #D9A441. Tipografías: Caveat (títulos, la manuscrita de la carta/app) + Barlow (texto). Idea: la web es la pizarra del bar.
 
-## Despliegue (GitHub + Vercel)
-
-**Migración prevista (2026-10):** el repo pasa de `BioPhysicistRam/Sal-y-pimienta` a una cuenta de GitHub del bar (Transfer ownership) y el despliegue a un Vercel del bar (Continue with GitHub → Import). Motivo: el menú del día se publica a diario desde la lap del bar y Vercel Hobby bloquea commits de autores ajenos al proyecto. Después: cambiar `URL_WEB` en `replies/menu_web.py`, `web` en `replies/datos_fijos.json`, el enlace en la ficha de Google, y borrar el proyecto viejo de Vercel. Pasos detallados en `replies/README_AGENTE.md` §4.5.
-
-Solo se sube **esta carpeta `web/`** como repo. Nunca la carpeta `13_Sal_y_pimienta` entera (tiene el PDF del plan, la carta y fotos en alta que no deben ser públicas).
-
-```powershell
-cd "C:\Users\Ramon\Documents\Organizado\03_Trabajo\13_Sal_y_pimienta\web"
-git init
-git add .
-git commit -m "Web Sal y Pimienta v1"
-gh repo create salypimienta-web --public --source=. --push
-```
-
-Sin `gh`: crear el repo vacío en GitHub y luego
-`git remote add origin https://github.com/<usuario>/salypimienta-web.git && git branch -M main && git push -u origin main`.
-
-En Vercel: **Add New → Project → Import** el repo → Framework "Other", sin build command, output directory `.` → Deploy.
-Da una URL `*.vercel.app`; el dominio propio se añade después en Settings → Domains.
-Cada `git push` a `main` redespliega solo.
+## Despliegue (GitHub + Vercel) — cuentas del bar desde 2026-10-11
+- Repo: https://github.com/emeritalalangui-lgtm/Sal-y-pimienta (público, rama `main`).
+- Web: https://sal-y-pimienta-livid.vercel.app (Vercel del bar, "Continue with GitHub"; Framework Other, sin build, output `.`).
+- Copia local en la lap del bar: `Escritorio\Sal-y-pimienta`. La ventana del respondedor (`Documents\SalyPimienta\replies\menu_web.py`)
+  edita el bloque `MENU_DIA` de `index.html`, hace commit y push; cada push a `main` redespliega solo en 1-2 min.
+- Vídeo de portada: `video/comida.mp4` (720×900, 30 s, bucle, sin audio) generado con ffmpeg a partir de las fotos `img/pro_*.jpg`.
+  Para regenerarlo con fotos nuevas, ver `Documents\SalyPimienta\PENDIENTES.md`.
+- Rediseño 2026-10-11: concepto familiar, estilo sobrio (Forum + Abhaya Libre, blanco/negro), sin secciones de partido.
