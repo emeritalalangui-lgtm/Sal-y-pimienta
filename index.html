@@ -4,11 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sal y Pimienta Metropolitano · Restaurante familiar en San Blas-Canillejas, Madrid</title>
-<meta name="description" content="Restaurante familiar en San Blas-Canillejas, Madrid. Cocina casera, menú del día entre semana, raciones para compartir y terraza cubierta, a cinco minutos del metro Las Musas. Calle de La Ilíada 19.">
-<meta property="og:title" content="Sal y Pimienta Metropolitano · Restaurante familiar">
-<meta property="og:description" content="Cocina casera para toda la familia en San Blas-Canillejas. Menú del día, raciones y terraza cubierta.">
-<meta property="og:image" content="img/ig_hamburguesa_2.jpg">
-<meta property="og:type" content="restaurant">
+<meta name="description" content="Restaurante con terraza en San Blas-Canillejas, Madrid 28022. Cocina casera en ambiente familiar, menú especial cada día, raciones para compartir y terraza cubierta, a cinco minutos del Riyadh Air Metropolitano. Calle de La Ilíada 19, 28022 Madrid.">
+<link rel="canonical" href="https://www.salypimientametropolitano.com/">
+<meta property="og:site_name" content="Sal y Pimienta Metropolitano">
+<meta property="og:title" content="Sal y Pimienta Metropolitano · Restaurante con terraza en Canillejas">
+<meta property="og:description" content="Calle de La Ilíada 19, 28022 Madrid · Cocina casera, menú del día, raciones y terraza cubierta, a 5 min del Riyadh Air Metropolitano. Reservas por WhatsApp.">
+<meta property="og:url" content="https://www.salypimientametropolitano.com/">
+<meta property="og:image" content="https://www.salypimientametropolitano.com/img/og.jpg">
+<meta property="og:image:secure_url" content="https://www.salypimientametropolitano.com/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hamburguesa casera de Sal y Pimienta">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sal y Pimienta Metropolitano · Restaurante con terraza en Canillejas">
+<meta name="twitter:description" content="Calle de La Ilíada 19, 28022 Madrid · Cocina casera, menú del día, raciones y terraza cubierta.">
+<meta name="twitter:image" content="https://www.salypimientametropolitano.com/img/og.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Sal y Pimienta Metropolitano","url":"https://www.salypimientametropolitano.com/","image":"https://www.salypimientametropolitano.com/img/og.jpg","telephone":"+34910660207","servesCuisine":"Cocina casera española","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Calle de La Ilíada, 19","addressLocality":"Madrid","postalCode":"28022","addressRegion":"Madrid","addressCountry":"ES"},"sameAs":["https://www.instagram.com/barsalypimienta/"]}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%231c1c1c'/%3E%3Ctext x='24' y='31' font-family='Georgia,serif' font-size='22' fill='%23fff' text-anchor='middle'%3ES%26P%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Forum&family=Abhaya+Libre:wght@400;500;600&display=swap" rel="stylesheet">
@@ -85,6 +101,8 @@ section{padding:88px 0}
 .lista-limpia li::before{content:"—";margin-right:12px;color:var(--gris)}
 
 /* pizarra: menú del día + horario */
+.sin-menu h3{margin:14px 0 10px}
+.sin-menu .nota{margin-bottom:18px}
 .pizarra{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:start}
 .menu-card{background:#fff;border:1px solid var(--linea);padding:40px 44px}
 .menu-card .precio{font-family:var(--ff-d);font-size:clamp(52px,6vw,74px);line-height:1;margin:6px 0 4px}
@@ -175,6 +193,15 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
 .wa{position:fixed;left:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.22);transition:transform .2s}
 .wa:hover{transform:scale(1.06)}
 .wa svg{width:30px;height:30px;fill:#fff}
+.pop{position:fixed;right:22px;bottom:22px;z-index:70;width:min(360px,calc(100vw - 36px));background:#fff;border:1.5px solid var(--tinta);box-shadow:0 18px 50px rgba(0,0,0,.22);padding:26px 26px 24px;transform:translateY(30px);opacity:0;pointer-events:none;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s}
+.pop.on{transform:none;opacity:1;pointer-events:auto}
+.pop .eyebrow{margin-bottom:10px}
+.pop h3{font-family:var(--ff-d);font-size:26px;line-height:1.1;margin:0 0 10px}
+.pop p{margin:0 0 16px;font-size:15.5px;color:var(--tinta-2)}
+.pop .btn{font-size:13px;padding:11px 20px 10px}
+.pop .cerrar{position:absolute;top:8px;right:8px;width:36px;height:36px;border:0;background:transparent;font-size:22px;line-height:1;cursor:pointer;color:var(--gris)}
+.pop .cerrar:hover{color:var(--tinta)}
+@media(max-width:700px){.pop{right:12px;left:12px;bottom:90px;width:auto;padding:22px 22px 20px}}
 
 @media (max-width:980px){
   .hero .wrap,.dos,.pizarra,.donde{grid-template-columns:1fr;gap:40px}
@@ -219,11 +246,11 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
 <section class="hero">
   <div class="wrap">
     <div>
-      <p class="eyebrow" data-i18n="hero_eyebrow">Restaurante · San Blas-Canillejas · Madrid</p>
-      <h1 data-i18n="hero_h1">Cocina casera para toda la familia, a cinco minutos del metro Las Musas</h1>
+      <p class="eyebrow" data-i18n="hero_eyebrow">Restaurante con terraza · San Blas-Canillejas · Madrid 28022</p>
+      <h1 data-i18n="hero_h1">Cocina casera en un ambiente cercano y familiar, a cinco minutos del Riyadh Air Metropolitano</h1>
       <div class="regla" style="margin-bottom:28px"></div>
-      <p data-i18n="hero_p1">En <b>Sal y Pimienta</b> cocinamos como en casa: menú del día entre semana, raciones para compartir, bocadillos de los de verdad y postres caseros. Un sitio de barrio donde venir con los niños, con los abuelos y sin prisa.</p>
-      <p data-i18n="hero_p2">Terraza cubierta, local accesible y una mesa larga para cuando sois muchos. Reserva por WhatsApp y te guardamos sitio.</p>
+      <p data-i18n="hero_p1">En <b>Sal y Pimienta</b> cocinamos como en casa un menú especial cada día, además de nuestra variedad de raciones, bocadillos y postres caseros. Un sitio amplio para disfrutar con tranquilidad y sin prisas.</p>
+      <p data-i18n="hero_p2">Gran terraza cubierta y descubierta, y local accesible. Si sois un grupo grande, reserva por WhatsApp y te guardamos sitio.</p>
       <div class="cta">
         <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener" data-i18n="btn_reserva">Reserva</a>
         <a class="link" href="#carta" data-i18n="hero_carta">Ver la carta</a>
@@ -259,6 +286,12 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
         </div>
         <p class="nota" data-i18n="hoy_nota">De lunes a viernes al mediodía. El menú cambia cada día; si no has podido verlo, pregunta por WhatsApp y te lo mandamos.</p>
       </div>
+      <div class="menu-card sin-menu" id="sin-menu" hidden>
+        <p class="eyebrow" style="margin-bottom:0" data-i18n="hoy_card_eyebrow2">Menú del día</p>
+        <h3 data-i18n="sinmenu_h3">Hoy no hay menú del día</h3>
+        <p class="nota" data-i18n="sinmenu_p">Tienes toda la carta disponible: raciones, bocadillos, platos combinados y nuestras especialidades. Si tienes dudas, escríbenos por WhatsApp.</p>
+        <a class="link" href="#carta" data-i18n="sinmenu_btn">Ver la carta</a>
+      </div>
       <div>
         <h3 style="margin-bottom:18px" data-i18n="horario_h3">Horario</h3>
         <ul class="horas" id="horas"></ul>
@@ -280,14 +313,14 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
     </figure>
     <div class="txt">
       <p class="eyebrow" data-i18n="fam_eyebrow">En familia</p>
-      <h2 data-i18n="fam_h2">Para venir con los niños, con los abuelos y sin prisa</h2>
+      <h2 data-i18n="fam_h2">Sal y Pimienta, restaurante familiar en Canillejas</h2>
       <div class="regla" style="margin-bottom:28px"></div>
-      <p data-i18n="fam_p">Somos un restaurante de barrio de los de toda la vida: comida casera, raciones generosas y trato cercano. Los domingos y las comidas en familia son lo nuestro.</p>
+      <p data-i18n="fam_p">Somos un restaurante de toda la vida: menú del día, comida casera, terraza cubierta, raciones para compartir y un ambiente acogedor cerca del estadio del Atlético, el Metropolitano.</p>
       <ul class="lista-limpia">
-        <li data-i18n="fam_li1">Platos que gustan a los pequeños: lágrimas de pollo, croquetas, platos combinados y sándwiches</li>
-        <li data-i18n="fam_li2">Raciones para compartir en el centro de la mesa</li>
+        <li data-i18n="fam_li1">Platos favoritos para los más pequeños, como lágrimas de pollo, croquetas, platos combinados y sándwiches</li>
+        <li data-i18n="fam_li2">Raciones generosas para compartir, ideales para comidas familiares y reuniones con amigos</li>
         <li data-i18n="fam_li3">Terraza cubierta y local accesible en silla de ruedas</li>
-        <li data-i18n="fam_li4">Menú del día entre semana y carta completa todos los días</li>
+        <li data-i18n="fam_li4">Menú especial cada día y una amplia carta con recetas tradicionales elaboradas en el momento</li>
       </ul>
       <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20para%20comer%20en%20familia" target="_blank" rel="noopener" data-i18n="fam_btn">Reserva mesa</a>
     </div>
@@ -439,6 +472,13 @@ footer .horas-pie li{display:flex;justify-content:space-between;gap:12px;color:#
   </div>
 </footer>
 
+<aside class="pop" id="pop-paellas" role="dialog" aria-labelledby="pop-t" hidden>
+  <button class="cerrar" type="button" id="pop-cerrar" aria-label="Cerrar">×</button>
+  <p class="eyebrow" data-i18n="pae_eyebrow">Por encargo</p>
+  <h3 id="pop-t" data-i18n="pae_h3">Encarga tus paellas</h3>
+  <p data-i18n="pae_p">Paella casera para llevar o para tu celebración. Pídela con un día de antelación y la tienes lista a tu hora.</p>
+  <a class="btn" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20encargar%20una%20paella" target="_blank" rel="noopener" data-i18n="pae_btn">Encargar por WhatsApp</a>
+</aside>
 <a class="wa" href="https://wa.me/34910660207?text=Hola%2C%20quiero%20reservar%20mesa%20en%20Sal%20y%20Pimienta" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5 5 0 0 0 3.1.6 2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
 </a>
@@ -459,6 +499,16 @@ const MEDIO_MENU = {
 };
 const DIA_PARTIDO = {
   activo: false
+};
+
+/* menú del día visible en la web: true/false (desde la ventana: casilla "Ocultar menú") */
+const MENU_VISIBLE = {
+  activo: true
+};
+
+/* aviso emergente "Encarga tus paellas": activo true/false */
+const PAELLAS = {
+  activo: true
 };
 
 const HORARIO = { // 0 = domingo … 6 = sábado. null = cerrado. Formato [abre, cierra] en horas (24 = medianoche)
@@ -485,23 +535,25 @@ const CARTA_PARTIDO = ["Ensalada César con pollo crujiente","Ensalada de rulo d
    Los nombres de los platos y el menú del día se quedan en español. */
 const I18N = {
 ca: {
+ hoy_card_eyebrow2:"Menú del dia", sinmenu_h3:"Avui no hi ha menú del dia", sinmenu_p:"Tens tota la carta disponible: racions, entrepans, plats combinats i les nostres especialitats. Si tens dubtes, escriu-nos per WhatsApp.", sinmenu_btn:"Veure la carta",
+ pae_eyebrow:"Per encàrrec", pae_h3:"Encarrega les teves paelles", pae_p:"Paella casolana per endur o per a la teva celebració. Demana-la amb un dia d'antelació i la tens llesta a la teva hora.", pae_btn:"Encarregar per WhatsApp",
  medio_h:"Mig menú", partido_aviso:"Avui hi ha partit al Metropolitano: carta reduïda perquè tot surti ràpid. A sota tens els plats d'avui.", partido_carta:"Dia de partit: avui només servim aquests plats.",
  nav_hoy:"Avui", nav_familia:"En família", nav_carta:"Carta", nav_celeb:"Celebracions", nav_opin:"Opinions", nav_ig:"Instagram", nav_donde:"On som",
  btn_reserva:"Reserva",
- hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
- hero_h1:"Cuina casolana per a tota la família, a cinc minuts del metro Las Musas",
- hero_p1:"A <b>Sal y Pimienta</b> cuinem com a casa: menú del dia entre setmana, racions per compartir, entrepans dels de debò i postres casolanes. Un lloc de barri on venir amb els nens, amb els avis i sense presses.",
- hero_p2:"Terrassa coberta, local accessible i una taula llarga per quan sou molts. Reserva per WhatsApp i et guardem lloc.",
+ hero_eyebrow:"Restaurant amb terrassa · San Blas-Canillejas · Madrid 28022",
+ hero_h1:"Cuina casolana en un ambient proper i familiar, a cinc minuts del Riyadh Air Metropolitano",
+ hero_p1:"A <b>Sal y Pimienta</b> cuinem com a casa un menú especial cada dia, a més de la nostra varietat de racions, entrepans i postres casolanes. Un lloc ampli per gaudir amb tranquil·litat i sense presses.",
+ hero_p2:"Gran terrassa coberta i descoberta, i local accessible. Si sou un grup gran, reserva per WhatsApp i et guardem lloc.",
  hero_carta:"Veure la carta", video_cap:"La nostra cuina", evento_cap:"Celebracions a la terrassa",
  hoy_eyebrow:"Menú del dia", hoy_h2:"Avui a la pissarra", hoy_card_eyebrow:"Menú del dia",
  hoy_incluye:"Primer, segon, pa, beguda i postres o cafè",
  hoy_nota:"De dilluns a divendres al migdia. El menú canvia cada dia; si no l'has pogut veure, pregunta per WhatsApp i te l'enviem.",
  horario_h3:"Horari",
- fam_eyebrow:"En família", fam_h2:"Per venir amb els nens, amb els avis i sense presses",
- fam_p:"Som un restaurant de barri de tota la vida: menjar casolà, racions generoses i tracte proper. Els diumenges i els dinars en família són el nostre fort.",
- fam_li1:"Plats que agraden als petits: llàgrimes de pollastre, croquetes, plats combinats i sandvitxos",
- fam_li2:"Racions per compartir al centre de la taula", fam_li3:"Terrassa coberta i local accessible en cadira de rodes",
- fam_li4:"Menú del dia entre setmana i carta completa cada dia", fam_btn:"Reserva taula",
+ fam_eyebrow:"En família", fam_h2:"Sal y Pimienta, restaurant familiar a Canillejas",
+ fam_p:"Som un restaurant de tota la vida: menú del dia, menjar casolà, terrassa coberta, racions per compartir i un ambient acollidor a prop de l'estadi de l'Atlético, el Metropolitano.",
+ fam_li1:"Plats preferits dels més petits, com llàgrimes de pollastre, croquetes, plats combinats i sandvitxos",
+ fam_li2:"Racions generoses per compartir, ideals per a dinars familiars i trobades amb amics", fam_li3:"Terrassa coberta i local accessible en cadira de rodes",
+ fam_li4:"Menú especial cada dia i una carta àmplia amb receptes tradicionals fetes al moment", fam_btn:"Reserva taula",
  carta_eyebrow:"La carta", carta_h2:"Cuina casolana, de sempre",
  carta_p:"Racions per compartir, entrepans dels de debò, cachopo i txuletó per als dies grans, i postres de casa. Els preus són els de la carta del local.",
  carta_alerg:"Si tens alguna al·lèrgia o intolerància, digues-ho a qui t'atengui: la carta física porta les icones d'al·lèrgens de cada plat i a cuina t'ho confirmen.",
@@ -524,23 +576,25 @@ ca: {
  _dias:["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"]
 },
 en: {
+ hoy_card_eyebrow2:"Set menu", sinmenu_h3:"No set menu today", sinmenu_p:"The full menu is available: sharing plates, sandwiches, combo plates and our specialities. Any questions, message us on WhatsApp.", sinmenu_btn:"See the menu",
+ pae_eyebrow:"Made to order", pae_h3:"Order your paella", pae_p:"Homemade paella to take away or for your celebration. Order a day ahead and it's ready when you need it.", pae_btn:"Order on WhatsApp",
  medio_h:"Half menu", partido_aviso:"Match day at the Metropolitano: reduced menu so everything comes out fast. Today's dishes are below.", partido_carta:"Match day: today we only serve these dishes.",
  nav_hoy:"Today", nav_familia:"Family", nav_carta:"Menu", nav_celeb:"Celebrations", nav_opin:"Reviews", nav_ig:"Instagram", nav_donde:"Find us",
  btn_reserva:"Book",
- hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
- hero_h1:"Home cooking for the whole family, five minutes from Las Musas metro",
- hero_p1:"At <b>Sal y Pimienta</b> we cook like at home: a weekday set lunch, sharing plates, proper sandwiches and homemade desserts. A neighbourhood spot to come with the kids, the grandparents, and no hurry.",
- hero_p2:"Covered terrace, step-free access and a long table for big groups. Book on WhatsApp and we'll keep you a spot.",
+ hero_eyebrow:"Restaurant with terrace · San Blas-Canillejas · Madrid 28022",
+ hero_h1:"Home cooking in a warm, family atmosphere, five minutes from the Riyadh Air Metropolitano",
+ hero_p1:"At <b>Sal y Pimienta</b> we cook like at home: a special set menu every day, plus our range of sharing plates, sandwiches and homemade desserts. A spacious place to enjoy a meal in peace, with no rush.",
+ hero_p2:"Large covered and open-air terrace, step-free access. Coming as a big group? Book on WhatsApp and we'll keep you a table.",
  hero_carta:"See the menu", video_cap:"Our kitchen", evento_cap:"Celebrations on the terrace",
  hoy_eyebrow:"Set lunch", hoy_h2:"Today's board", hoy_card_eyebrow:"Set lunch",
  hoy_incluye:"Starter, main, bread, drink and dessert or coffee",
  hoy_nota:"Monday to Friday at lunchtime. The menu changes every day; if you missed it, ask on WhatsApp and we'll send it over.",
  horario_h3:"Opening hours",
- fam_eyebrow:"Family", fam_h2:"Come with the kids, the grandparents, and no hurry",
- fam_p:"We're an old-school neighbourhood restaurant: homemade food, generous portions and friendly service. Sundays and family lunches are our thing.",
- fam_li1:"Dishes kids love: chicken fingers, croquettes, combo plates and sandwiches",
- fam_li2:"Sharing plates for the middle of the table", fam_li3:"Covered terrace and wheelchair-accessible premises",
- fam_li4:"Weekday set lunch and full menu every day", fam_btn:"Book a table",
+ fam_eyebrow:"Family", fam_h2:"Sal y Pimienta, a family restaurant in Canillejas",
+ fam_p:"We're an old-school restaurant: daily set menu, homemade food, covered terrace, sharing plates and a cosy atmosphere close to Atlético's stadium, the Metropolitano.",
+ fam_li1:"Kids' favourites such as chicken fingers, croquettes, combo plates and sandwiches",
+ fam_li2:"Generous sharing plates, ideal for family meals and get-togethers with friends", fam_li3:"Covered terrace and wheelchair-accessible premises",
+ fam_li4:"A special menu every day and a wide à la carte selection of traditional recipes made to order", fam_btn:"Book a table",
  carta_eyebrow:"The menu", carta_h2:"Home cooking, the way it's always been",
  carta_p:"Sharing plates, proper sandwiches, cachopo and T-bone steak for the big days, and homemade desserts. Prices are those of the menu in the restaurant.",
  carta_alerg:"If you have any allergy or intolerance, tell your server: the printed menu shows the allergen icons for every dish and the kitchen will confirm.",
@@ -563,23 +617,25 @@ en: {
  _dias:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 },
 fr: {
+ hoy_card_eyebrow2:"Menu du jour", sinmenu_h3:"Pas de menu du jour aujourd'hui", sinmenu_p:"Toute la carte est disponible : assiettes à partager, sandwichs, assiettes composées et nos spécialités. Une question ? Écrivez-nous sur WhatsApp.", sinmenu_btn:"Voir la carte",
+ pae_eyebrow:"Sur commande", pae_h3:"Commandez vos paellas", pae_p:"Paella maison à emporter ou pour votre fête. Commandez la veille et elle est prête à l'heure voulue.", pae_btn:"Commander sur WhatsApp",
  medio_h:"Demi-menu", partido_aviso:"Jour de match au Metropolitano : carte réduite pour que tout sorte vite. Les plats du jour sont ci-dessous.", partido_carta:"Jour de match : aujourd'hui nous ne servons que ces plats.",
  nav_hoy:"Aujourd'hui", nav_familia:"En famille", nav_carta:"Carte", nav_celeb:"Fêtes", nav_opin:"Avis", nav_ig:"Instagram", nav_donde:"Où",
  btn_reserva:"Réserver",
- hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
- hero_h1:"Cuisine maison pour toute la famille, à cinq minutes du métro Las Musas",
- hero_p1:"Chez <b>Sal y Pimienta</b>, on cuisine comme à la maison : menu du jour en semaine, assiettes à partager, vrais sandwichs et desserts maison. Un restaurant de quartier où venir avec les enfants, les grands-parents, et sans se presser.",
- hero_p2:"Terrasse couverte, accès de plain-pied et une grande table quand vous êtes nombreux. Réservez sur WhatsApp, on vous garde une place.",
+ hero_eyebrow:"Restaurant avec terrasse · San Blas-Canillejas · Madrid 28022",
+ hero_h1:"Cuisine maison dans une ambiance chaleureuse et familiale, à cinq minutes du Riyadh Air Metropolitano",
+ hero_p1:"Chez <b>Sal y Pimienta</b>, on cuisine comme à la maison : un menu spécial chaque jour, plus nos assiettes à partager, nos sandwichs et nos desserts maison. Un lieu spacieux pour profiter en toute tranquillité, sans se presser.",
+ hero_p2:"Grande terrasse couverte et découverte, salle accessible. Vous êtes un grand groupe ? Réservez sur WhatsApp et on vous garde une table.",
  hero_carta:"Voir la carte", video_cap:"Notre cuisine", evento_cap:"Fêtes sur la terrasse",
  hoy_eyebrow:"Menu du jour", hoy_h2:"Aujourd'hui à l'ardoise", hoy_card_eyebrow:"Menu du jour",
  hoy_incluye:"Entrée, plat, pain, boisson et dessert ou café",
  hoy_nota:"Du lundi au vendredi, le midi. Le menu change chaque jour ; si vous l'avez manqué, demandez-le sur WhatsApp.",
  horario_h3:"Horaires",
- fam_eyebrow:"En famille", fam_h2:"Pour venir avec les enfants, les grands-parents, et sans se presser",
- fam_p:"Un restaurant de quartier à l'ancienne : cuisine maison, portions généreuses et accueil chaleureux. Les dimanches et les repas en famille, c'est notre spécialité.",
- fam_li1:"Des plats que les petits adorent : aiguillettes de poulet, croquettes, assiettes composées et sandwichs",
- fam_li2:"Des assiettes à partager au milieu de la table", fam_li3:"Terrasse couverte et salle accessible en fauteuil roulant",
- fam_li4:"Menu du jour en semaine et carte complète tous les jours", fam_btn:"Réserver une table",
+ fam_eyebrow:"En famille", fam_h2:"Sal y Pimienta, restaurant familial à Canillejas",
+ fam_p:"Un restaurant à l'ancienne : menu du jour, cuisine maison, terrasse couverte, assiettes à partager et une ambiance accueillante près du stade de l'Atlético, le Metropolitano.",
+ fam_li1:"Les plats préférés des enfants : aiguillettes de poulet, croquettes, assiettes composées et sandwichs",
+ fam_li2:"Des assiettes généreuses à partager, idéales pour les repas en famille et entre amis", fam_li3:"Terrasse couverte et salle accessible en fauteuil roulant",
+ fam_li4:"Un menu spécial chaque jour et une large carte de recettes traditionnelles préparées à la minute", fam_btn:"Réserver une table",
  carta_eyebrow:"La carte", carta_h2:"Cuisine maison, comme toujours",
  carta_p:"Assiettes à partager, vrais sandwichs, cachopo et côte de bœuf pour les grandes occasions, et desserts maison. Les prix sont ceux de la carte du restaurant.",
  carta_alerg:"En cas d'allergie ou d'intolérance, dites-le à votre serveur : la carte papier indique les allergènes de chaque plat et la cuisine vous le confirme.",
@@ -602,23 +658,25 @@ fr: {
  _dias:["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"]
 },
 it: {
+ hoy_card_eyebrow2:"Menù del giorno", sinmenu_h3:"Oggi non c'è menù del giorno", sinmenu_p:"È disponibile tutta la carta: porzioni da condividere, panini, piatti combinati e le nostre specialità. Per qualsiasi dubbio scrivici su WhatsApp.", sinmenu_btn:"Vedi il menù",
+ pae_eyebrow:"Su ordinazione", pae_h3:"Ordina le tue paelle", pae_p:"Paella fatta in casa da asporto o per la tua festa. Ordinala con un giorno di anticipo e la trovi pronta all'ora che vuoi.", pae_btn:"Ordina su WhatsApp",
  medio_h:"Mezzo menù", partido_aviso:"Oggi c'è partita al Metropolitano: menù ridotto perché tutto esca veloce. Qui sotto i piatti di oggi.", partido_carta:"Giorno di partita: oggi serviamo solo questi piatti.",
  nav_hoy:"Oggi", nav_familia:"In famiglia", nav_carta:"Menù", nav_celeb:"Feste", nav_opin:"Recensioni", nav_ig:"Instagram", nav_donde:"Dove siamo",
  btn_reserva:"Prenota",
- hero_eyebrow:"Ristorante · San Blas-Canillejas · Madrid",
- hero_h1:"Cucina casalinga per tutta la famiglia, a cinque minuti dalla metro Las Musas",
- hero_p1:"Da <b>Sal y Pimienta</b> cuciniamo come a casa: menù del giorno nei giorni feriali, porzioni da condividere, panini veri e dolci fatti in casa. Un posto di quartiere dove venire con i bambini, con i nonni e senza fretta.",
- hero_p2:"Terrazza coperta, locale accessibile e un tavolo lungo per quando siete in tanti. Prenota su WhatsApp e ti teniamo il posto.",
+ hero_eyebrow:"Ristorante con terrazza · San Blas-Canillejas · Madrid 28022",
+ hero_h1:"Cucina casalinga in un ambiente accogliente e familiare, a cinque minuti dal Riyadh Air Metropolitano",
+ hero_p1:"Da <b>Sal y Pimienta</b> cuciniamo come a casa un menù speciale ogni giorno, oltre alla nostra varietà di porzioni da condividere, panini e dolci fatti in casa. Un locale ampio per godersi il pasto con calma, senza fretta.",
+ hero_p2:"Grande terrazza coperta e scoperta, locale accessibile. Siete un gruppo numeroso? Prenota su WhatsApp e ti teniamo il tavolo.",
  hero_carta:"Vedi il menù", video_cap:"La nostra cucina", evento_cap:"Feste in terrazza",
  hoy_eyebrow:"Menù del giorno", hoy_h2:"Oggi alla lavagna", hoy_card_eyebrow:"Menù del giorno",
  hoy_incluye:"Primo, secondo, pane, bevanda e dolce o caffè",
  hoy_nota:"Dal lunedì al venerdì a pranzo. Il menù cambia ogni giorno; se non l'hai visto, chiedilo su WhatsApp e te lo mandiamo.",
  horario_h3:"Orari",
- fam_eyebrow:"In famiglia", fam_h2:"Per venire con i bambini, con i nonni e senza fretta",
- fam_p:"Siamo un ristorante di quartiere di quelli di una volta: cucina casalinga, porzioni generose e accoglienza calorosa. Le domeniche e i pranzi in famiglia sono il nostro forte.",
- fam_li1:"Piatti che piacciono ai piccoli: straccetti di pollo, crocchette, piatti combinati e sandwich",
- fam_li2:"Porzioni da condividere al centro del tavolo", fam_li3:"Terrazza coperta e locale accessibile in sedia a rotelle",
- fam_li4:"Menù del giorno nei feriali e menù completo tutti i giorni", fam_btn:"Prenota un tavolo",
+ fam_eyebrow:"In famiglia", fam_h2:"Sal y Pimienta, ristorante di famiglia a Canillejas",
+ fam_p:"Siamo un ristorante di una volta: menù del giorno, cucina casalinga, terrazza coperta, porzioni da condividere e un ambiente accogliente vicino allo stadio dell'Atlético, il Metropolitano.",
+ fam_li1:"I piatti preferiti dei più piccoli, come straccetti di pollo, crocchette, piatti combinati e sandwich",
+ fam_li2:"Porzioni generose da condividere, ideali per pranzi in famiglia e ritrovi tra amici", fam_li3:"Terrazza coperta e locale accessibile in sedia a rotelle",
+ fam_li4:"Un menù speciale ogni giorno e un'ampia carta di ricette tradizionali preparate al momento", fam_btn:"Prenota un tavolo",
  carta_eyebrow:"Il menù", carta_h2:"Cucina casalinga, di sempre",
  carta_p:"Porzioni da condividere, panini veri, cachopo e bistecca per le grandi occasioni, e dolci di casa. I prezzi sono quelli del menù del locale.",
  carta_alerg:"Se hai allergie o intolleranze, dillo a chi ti serve: il menù cartaceo riporta le icone degli allergeni di ogni piatto e la cucina te lo conferma.",
@@ -641,23 +699,25 @@ it: {
  _dias:["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"]
 },
 pt: {
+ hoy_card_eyebrow2:"Menu do dia", sinmenu_h3:"Hoje não há menu do dia", sinmenu_p:"Tem toda a carta disponível: doses, sandes, pratos combinados e as nossas especialidades. Se tiver dúvidas, escreva-nos por WhatsApp.", sinmenu_btn:"Ver a carta",
+ pae_eyebrow:"Por encomenda", pae_h3:"Encomende as suas paellas", pae_p:"Paella caseira para levar ou para a sua celebração. Encomende com um dia de antecedência e fica pronta à hora combinada.", pae_btn:"Encomendar por WhatsApp",
  medio_h:"Meio menu", partido_aviso:"Hoje há jogo no Metropolitano: carta reduzida para que tudo saia rápido. Em baixo tem os pratos de hoje.", partido_carta:"Dia de jogo: hoje só servimos estes pratos.",
  nav_hoy:"Hoje", nav_familia:"Em família", nav_carta:"Carta", nav_celeb:"Celebrações", nav_opin:"Opiniões", nav_ig:"Instagram", nav_donde:"Onde",
  btn_reserva:"Reservar",
- hero_eyebrow:"Restaurante · San Blas-Canillejas · Madrid",
- hero_h1:"Comida caseira para toda a família, a cinco minutos do metro Las Musas",
- hero_p1:"No <b>Sal y Pimienta</b> cozinhamos como em casa: menu do dia durante a semana, doses para partilhar, sandes a sério e sobremesas caseiras. Um sítio de bairro para vir com as crianças, com os avós e sem pressa.",
- hero_p2:"Esplanada coberta, local acessível e uma mesa comprida para quando são muitos. Reserve por WhatsApp e guardamos-lhe lugar.",
+ hero_eyebrow:"Restaurante com esplanada · San Blas-Canillejas · Madrid 28022",
+ hero_h1:"Comida caseira num ambiente próximo e familiar, a cinco minutos do Riyadh Air Metropolitano",
+ hero_p1:"No <b>Sal y Pimienta</b> cozinhamos como em casa um menu especial todos os dias, além da nossa variedade de doses para partilhar, sandes e sobremesas caseiras. Um espaço amplo para desfrutar com tranquilidade e sem pressa.",
+ hero_p2:"Grande esplanada coberta e descoberta, espaço acessível. Se forem um grupo grande, reserve por WhatsApp e guardamos-lhe lugar.",
  hero_carta:"Ver a carta", video_cap:"A nossa cozinha", evento_cap:"Celebrações na esplanada",
  hoy_eyebrow:"Menu do dia", hoy_h2:"Hoje no quadro", hoy_card_eyebrow:"Menu do dia",
  hoy_incluye:"Entrada, prato, pão, bebida e sobremesa ou café",
  hoy_nota:"De segunda a sexta ao almoço. O menu muda todos os dias; se não o viu, pergunte por WhatsApp e enviamos.",
  horario_h3:"Horário",
- fam_eyebrow:"Em família", fam_h2:"Para vir com as crianças, com os avós e sem pressa",
- fam_p:"Somos um restaurante de bairro dos de sempre: comida caseira, doses generosas e atendimento próximo. Os domingos e os almoços em família são a nossa especialidade.",
- fam_li1:"Pratos de que os mais pequenos gostam: tiras de frango, croquetes, pratos combinados e sandes",
- fam_li2:"Doses para partilhar no meio da mesa", fam_li3:"Esplanada coberta e local acessível a cadeiras de rodas",
- fam_li4:"Menu do dia durante a semana e carta completa todos os dias", fam_btn:"Reservar mesa",
+ fam_eyebrow:"Em família", fam_h2:"Sal y Pimienta, restaurante familiar em Canillejas",
+ fam_p:"Somos um restaurante de sempre: menu do dia, comida caseira, esplanada coberta, doses para partilhar e um ambiente acolhedor perto do estádio do Atlético, o Metropolitano.",
+ fam_li1:"Os pratos preferidos dos mais pequenos, como tiras de frango, croquetes, pratos combinados e sandes",
+ fam_li2:"Doses generosas para partilhar, ideais para almoços em família e encontros com amigos", fam_li3:"Esplanada coberta e local acessível a cadeiras de rodas",
+ fam_li4:"Menu especial todos os dias e uma carta ampla com receitas tradicionais feitas na hora", fam_btn:"Reservar mesa",
  carta_eyebrow:"A carta", carta_h2:"Comida caseira, de sempre",
  carta_p:"Doses para partilhar, sandes a sério, cachopo e bife da vazia para os dias grandes, e sobremesas de casa. Os preços são os da carta do restaurante.",
  carta_alerg:"Se tem alguma alergia ou intolerância, diga a quem o atende: a carta em papel tem os ícones dos alergénios de cada prato e a cozinha confirma.",
@@ -680,23 +740,25 @@ pt: {
  _dias:["domingo","segunda","terça","quarta","quinta","sexta","sábado"]
 },
 de: {
+ hoy_card_eyebrow2:"Tagesmenü", sinmenu_h3:"Heute kein Tagesmenü", sinmenu_p:"Die gesamte Karte ist verfügbar: Portionen zum Teilen, belegte Brote, Tellergerichte und unsere Spezialitäten. Bei Fragen schreiben Sie uns per WhatsApp.", sinmenu_btn:"Zur Karte",
+ pae_eyebrow:"Auf Bestellung", pae_h3:"Bestellen Sie Ihre Paella", pae_p:"Hausgemachte Paella zum Mitnehmen oder für Ihre Feier. Einen Tag vorher bestellen, pünktlich abholbereit.", pae_btn:"Per WhatsApp bestellen",
  medio_h:"Halbes Menü", partido_aviso:"Heute Spieltag im Metropolitano: reduzierte Karte, damit alles schnell rauskommt. Unten die Gerichte von heute.", partido_carta:"Spieltag: heute servieren wir nur diese Gerichte.",
  nav_hoy:"Heute", nav_familia:"Familie", nav_carta:"Karte", nav_celeb:"Feiern", nav_opin:"Bewertungen", nav_ig:"Instagram", nav_donde:"Anfahrt",
  btn_reserva:"Reservieren",
- hero_eyebrow:"Restaurant · San Blas-Canillejas · Madrid",
- hero_h1:"Hausmannskost für die ganze Familie, fünf Minuten von der Metro Las Musas",
- hero_p1:"Im <b>Sal y Pimienta</b> kochen wir wie zu Hause: Tagesmenü unter der Woche, Portionen zum Teilen, echte Bocadillos und hausgemachte Desserts. Ein Viertel-Lokal, in das man mit Kindern und Großeltern kommt, ganz ohne Eile.",
- hero_p2:"Überdachte Terrasse, barrierefreier Zugang und ein langer Tisch für große Runden. Reservieren Sie per WhatsApp, wir halten Ihnen einen Platz frei.",
+ hero_eyebrow:"Restaurant mit Terrasse · San Blas-Canillejas · Madrid 28022",
+ hero_h1:"Hausmannskost in herzlicher, familiärer Atmosphäre, fünf Minuten vom Riyadh Air Metropolitano",
+ hero_p1:"Im <b>Sal y Pimienta</b> kochen wir wie zu Hause: jeden Tag ein besonderes Menü, dazu unsere Auswahl an Portionen zum Teilen, belegten Broten und hausgemachten Desserts. Ein großzügiges Lokal, um in Ruhe und ohne Eile zu genießen.",
+ hero_p2:"Große überdachte und offene Terrasse, barrierefreies Lokal. Kommen Sie als große Gruppe? Reservieren Sie per WhatsApp, wir halten Ihnen einen Tisch frei.",
  hero_carta:"Zur Karte", video_cap:"Unsere Küche", evento_cap:"Feiern auf der Terrasse",
  hoy_eyebrow:"Tagesmenü", hoy_h2:"Heute auf der Tafel", hoy_card_eyebrow:"Tagesmenü",
  hoy_incluye:"Vorspeise, Hauptgang, Brot, Getränk und Dessert oder Kaffee",
  hoy_nota:"Montag bis Freitag mittags. Das Menü wechselt täglich; fragen Sie einfach per WhatsApp, wir schicken es Ihnen.",
  horario_h3:"Öffnungszeiten",
- fam_eyebrow:"Familie", fam_h2:"Mit Kindern, mit Großeltern und ganz ohne Eile",
- fam_p:"Wir sind ein Viertel-Restaurant alter Schule: hausgemachtes Essen, großzügige Portionen und herzlicher Service. Sonntage und Familienessen sind unsere Stärke.",
- fam_li1:"Gerichte, die Kinder lieben: Hähnchenstreifen, Kroketten, Tellergerichte und Sandwiches",
- fam_li2:"Portionen zum Teilen in der Tischmitte", fam_li3:"Überdachte Terrasse und rollstuhlgerechter Zugang",
- fam_li4:"Tagesmenü unter der Woche und volle Karte an allen Tagen", fam_btn:"Tisch reservieren",
+ fam_eyebrow:"Familie", fam_h2:"Sal y Pimienta, Familienrestaurant in Canillejas",
+ fam_p:"Wir sind ein Restaurant wie früher: Tagesmenü, Hausmannskost, überdachte Terrasse, Portionen zum Teilen und eine gemütliche Atmosphäre nahe dem Stadion von Atlético, dem Metropolitano.",
+ fam_li1:"Lieblingsgerichte der Kleinen wie Hähnchenstreifen, Kroketten, Tellergerichte und Sandwiches",
+ fam_li2:"Großzügige Portionen zum Teilen, ideal für Familienessen und Treffen mit Freunden", fam_li3:"Überdachte Terrasse und rollstuhlgerechter Zugang",
+ fam_li4:"Jeden Tag ein besonderes Menü und eine große Karte mit traditionellen, frisch zubereiteten Gerichten", fam_btn:"Tisch reservieren",
  carta_eyebrow:"Die Karte", carta_h2:"Hausmannskost wie früher",
  carta_p:"Portionen zum Teilen, echte Bocadillos, Cachopo und Chuletón für die großen Tage, dazu Desserts aus eigener Küche. Es gelten die Preise der Karte im Lokal.",
  carta_alerg:"Bei Allergien oder Unverträglichkeiten sagen Sie es dem Service: Die gedruckte Karte zeigt die Allergen-Symbole jedes Gerichts, die Küche bestätigt es Ihnen.",
@@ -759,6 +821,8 @@ function pintarMenu(){
   const mm = document.getElementById('medio-menu');
   if (MEDIO_MENU.precio) { mm.hidden = false; document.getElementById('medio-precio').textContent = conEuro(MEDIO_MENU.precio); document.getElementById('medio-nota').textContent = MEDIO_MENU.nota || ''; }
   else mm.hidden = true;
+  const vis = MENU_VISIBLE.activo !== false;
+  md.closest('.menu-card').hidden = !vis; document.getElementById('sin-menu').hidden = vis;
   document.getElementById('aviso-partido').hidden = !DIA_PARTIDO.activo;
   document.getElementById('aviso-partido-carta').hidden = !DIA_PARTIDO.activo;
 }
@@ -808,6 +872,21 @@ document.getElementById('anio').textContent = hoy.getFullYear();
   if (!code) { try { code = localStorage.getItem("lang"); } catch(e){} }
   if (!code) { const nav = (navigator.language || "es").slice(0,2).toLowerCase(); code = LANGS.includes(nav) ? nav : "es"; }
   setLang(code, false);
+})();
+
+/* aviso emergente de paellas: aparece al bajar un poco (o a los 8 s), se cierra con la X y no vuelve a salir en esa visita */
+(function(){
+  const pop = document.getElementById('pop-paellas');
+  if (!PAELLAS.activo) return;
+  let visto = false; try { visto = sessionStorage.getItem('pop-paellas') === '1'; } catch(e){}
+  if (visto) return;
+  let abierto = false;
+  const abrir = () => { if (abierto) return; abierto = true; pop.hidden = false; requestAnimationFrame(() => pop.classList.add('on')); };
+  const cerrar = () => { pop.classList.remove('on'); setTimeout(() => { pop.hidden = true; }, 500); try { sessionStorage.setItem('pop-paellas','1'); } catch(e){} };
+  document.getElementById('pop-cerrar').addEventListener('click', cerrar);
+  pop.querySelector('.btn').addEventListener('click', () => { try { sessionStorage.setItem('pop-paellas','1'); } catch(e){} });
+  window.addEventListener('scroll', () => { if (window.scrollY > window.innerHeight * 0.4) abrir(); }, {passive:true});
+  setTimeout(abrir, 8000);
 })();
 </script>
 </body>
